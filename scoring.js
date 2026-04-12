@@ -7,34 +7,32 @@ class ScoringSystem {
         let lengthScore = 0;
         const text = output.toLowerCase();
         
-        // 1. Keyword testing
-        if (criteria.keywords && criteria.keywords.length > 0) {
-            const matches = criteria.keywords.filter(kw => text.includes(kw.toLowerCase()));
-            keywordScore = matches.length / criteria.keywords.length; 
-        } else {
-            keywordScore = 1; 
-        }
+        // 1. Keyword testing: "example", "applications", "definition"
+        const targetKeywords = ["example", "applications", "definition"];
+        const matches = targetKeywords.filter(kw => text.includes(kw));
+        keywordScore = (matches.length / targetKeywords.length) * 5; 
         
-        // 2. Length testing (0 or 1)
+        // 2. Length testing: short output -> low, long output -> high
+        // Let's say < 150 chars is low, > 400 chars is high
         const len = output.length;
-        const min = criteria.min_length || 0;
-        const max = criteria.max_length || Infinity;
-        
-        if (len >= min && len <= max) {
-            lengthScore = 1;
+        if (len < 150) {
+            lengthScore = 1.5;
+        } else if (len < 300) {
+            lengthScore = 3.5;
+        } else {
+            lengthScore = 5;
         }
         
         // 3. Total score calculation
         // Components: Manual(5 max) + Keyword(5 max) + Length(5 max) = 15 points
-        const computedKeywordScore = keywordScore * 5;
-        const computedLengthScore = lengthScore * 5;
-        const totalScore = manualScore + computedKeywordScore + computedLengthScore;
+        const totalScore = manualScore + keywordScore + lengthScore;
         
         return {
             manualScore,
-            keywordScore: computedKeywordScore,
-            lengthScore: computedLengthScore,
-            totalScore: parseFloat(totalScore.toFixed(2))
+            keywordScore: parseFloat(keywordScore.toFixed(2)),
+            lengthScore: parseFloat(lengthScore.toFixed(2)),
+            totalScore: parseFloat(totalScore.toFixed(2)),
+            keywordMatches: matches
         };
     }
     

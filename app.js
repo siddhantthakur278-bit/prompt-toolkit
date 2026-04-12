@@ -16,33 +16,33 @@ async function main() {
     const promptId = `prompt-${runTimestamp}`;
     const suiteId = `suite-${runTimestamp}`;
     
-    console.log(`[Task Info] Task Name: Dynamic Content Generation`);
+    console.log(`[Task Info] Task Name: Fully Dynamic Evaluation`);
     console.log(`[Task Info] Input Text: "${dynamicInput}"`);
 
     console.log("\n[1] Creating initial prompt (v1)...");
     promptManager.createPrompt(
         promptId, 
-        "Dynamic Topic Context", 
-        "Answer basically"
+        "Dynamic Topic Analysis", 
+        `Explain "${dynamicInput}" briefly`
     );
     
     console.log("[2] Adding new versions (v2, v3)...");
     promptManager.addVersion(
         promptId, 
-        "Answer in detail"
+        `Explain "${dynamicInput}" in detail with examples`
     );
     const promptData = promptManager.addVersion(
         promptId, 
-        "Answer in a structured format with keywords"
+        `Explain "${dynamicInput}" with key points and real-world applications`
     );
     
     console.log("\n[3] Creating test suite and adding criteria...");
-    testSuiteManager.createSuite(suiteId, "Dynamic Validation Suite");
+    testSuiteManager.createSuite(suiteId, "Automated Prompt Evaluation");
     
+    // Criteria is now mostly handled in scoring.js for keywords, but we pass constraints here
     const criteria = {
-        keywords: ['important', 'details', 'structure'],
-        min_length: 50,
-        max_length: 600
+        min_length: 100,
+        max_length: 800
     };
     testSuiteManager.addTest(suiteId, dynamicInput, criteria);
     
@@ -57,17 +57,17 @@ async function main() {
             const output = await executionEngine.runPrompt(version.content, test.input);
             console.log(`  > Raw Output: "${output}"`);
             
-            // Manual score variance mimicking real test results evaluating formats
-            let manualScore = 3;
-            if (version.version === 'v1') manualScore = 2; // too brief
-            if (version.version === 'v2') manualScore = 3.5; // informative but blocky
-            if (version.version === 'v3') manualScore = 5; // excellent semantic structuring
+            // Manual score variance simulated based on version complexity
+            let manualScore = 3.0; // base
+            if (version.version === 'v1') manualScore = 2.5; 
+            if (version.version === 'v2') manualScore = 4.0; 
+            if (version.version === 'v3') manualScore = 5.0; 
             
             const scores = scoring.calculateScore(output, test.criteria, manualScore);
             console.log(`  > Derived Scores: ` + JSON.stringify(scores));
             
             resultManager.saveResult(promptId, version.version, suiteId, test.input, output, scores);
-            console.log(`  ✓ Result saved to logs.\n`);
+            console.log(`  ✓ Result saved.\n`);
         }
     }
     

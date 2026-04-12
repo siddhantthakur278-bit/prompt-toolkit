@@ -47,5 +47,47 @@
     "bestVersion": "v3",
     "content": "Answer in a structured format with keywords",
     "savedAt": "2026-04-12T05:27:59.253Z"
+  },
+  {
+    "id": "prompt-1776019426886",
+    "title": "Dynamic Topic Context",
+    "bestVersion": "v3",
+    "content": "Answer in a structured format with keywords",
+    "savedAt": "2026-04-12T18:43:47.801Z"
+  },
+  {
+    "id": "prompt-1776020026143",
+    "title": "Dynamic Topic Context",
+    "bestVersion": "v3",
+    "content": "Answer in a structured format with keywords",
+    "savedAt": "2026-04-12T18:53:47.059Z"
+  },
+  {
+    "id": "prompt-1776020141609",
+    "title": "Dynamic Topic Context",
+    "bestVersion": "v3",
+    "content": "Answer in a structured format with keywords",
+    "savedAt": "2026-04-12T18:55:42.528Z"
+  },
+  {
+    "id": "prompt-1776020160990",
+    "title": "Dynamic Topic Context",
+    "bestVersion": "v3",
+    "content": "Answer in a structured format with keywords",
+    "savedAt": "2026-04-12T18:56:01.901Z"
+  },
+  {
+    "id": "prompt-1776020950365",
+    "title": "Dynamic Topic Analysis",
+    "bestVersion": "v3",
+    "content": "Explain \"What are the core concepts of an API?\" with key points and real-world applications",
+    "savedAt": "2026-04-12T19:09:12.183Z"
+  },
+  {
+    "id": "prompt-1776020967243",
+    "title": "Dynamic Topic Analysis",
+    "bestVersion": "v3",
+    "content": "Explain \"how is vaibhav singh\" with key points and real-world applications",
+    "savedAt": "2026-04-12T19:09:29.058Z"
   }
 ]

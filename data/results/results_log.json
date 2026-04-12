@@ -1,0 +1,827 @@
+[
+  {
+    "id": "1775968191494fv8",
+    "promptId": "prompt-core-agent",
+    "promptVersion": "v1",
+    "suiteId": "suite-core-queries",
+    "input": "How do I ensure my module works?",
+    "output": "Start of response for: \"How do I ensure my module works?\". This is a concise reply without many keywords.",
+    "scores": {
+      "manualScore": 4,
+      "keywordScore": 0,
+      "lengthScore": 5,
+      "totalScore": 9
+    },
+    "timestamp": "2026-04-12T04:29:51.494Z"
+  },
+  {
+    "id": "17759681917956c4",
+    "promptId": "prompt-core-agent",
+    "promptVersion": "v2",
+    "suiteId": "suite-core-queries",
+    "input": "How do I ensure my module works?",
+    "output": "Start of response for: \"How do I ensure my module works?\". Here is a highly detailed and thoroughly explained reply. \nWe must provide comprehensive results that encompass many tests, proper evaluation tactics,\nand in-depth scrutiny to ensure everything works wonderfully.",
+    "scores": {
+      "manualScore": 4,
+      "keywordScore": 5,
+      "lengthScore": 5,
+      "totalScore": 14
+    },
+    "timestamp": "2026-04-12T04:29:51.795Z"
+  },
+  {
+    "id": "1775968294416z8q",
+    "promptId": "prompt-core-agent",
+    "promptVersion": "v1",
+    "suiteId": "suite-core-queries",
+    "input": "How do I ensure my module works?",
+    "output": "Start of response for: \"How do I ensure my module works?\". This is a concise reply without many keywords.",
+    "scores": {
+      "manualScore": 4,
+      "keywordScore": 0,
+      "lengthScore": 5,
+      "totalScore": 9
+    },
+    "timestamp": "2026-04-12T04:31:34.416Z"
+  },
+  {
+    "id": "1775968294719t75",
+    "promptId": "prompt-core-agent",
+    "promptVersion": "v2",
+    "suiteId": "suite-core-queries",
+    "input": "How do I ensure my module works?",
+    "output": "Start of response for: \"How do I ensure my module works?\". Here is a highly detailed and thoroughly explained reply. \nWe must provide comprehensive results that encompass many tests, proper evaluation tactics,\nand in-depth scrutiny to ensure everything works wonderfully.",
+    "scores": {
+      "manualScore": 4,
+      "keywordScore": 5,
+      "lengthScore": 5,
+      "totalScore": 14
+    },
+    "timestamp": "2026-04-12T04:31:34.719Z"
+  },
+  {
+    "id": "1775969304705x2h",
+    "promptId": "prompt-core-agent",
+    "promptVersion": "v1",
+    "suiteId": "suite-core-queries",
+    "input": "How do I ensure my module works?",
+    "output": "Start of response for: \"How do I ensure my module works?\". This is a concise reply without many keywords.",
+    "scores": {
+      "manualScore": 4,
+      "keywordScore": 0,
+      "lengthScore": 5,
+      "totalScore": 9
+    },
+    "timestamp": "2026-04-12T04:48:24.705Z"
+  },
+  {
+    "id": "1775969305007ucx",
+    "promptId": "prompt-core-agent",
+    "promptVersion": "v2",
+    "suiteId": "suite-core-queries",
+    "input": "How do I ensure my module works?",
+    "output": "Start of response for: \"How do I ensure my module works?\". Here is a highly detailed and thoroughly explained reply. \nWe must provide comprehensive results that encompass many tests, proper evaluation tactics,\nand in-depth scrutiny to ensure everything works wonderfully.",
+    "scores": {
+      "manualScore": 4,
+      "keywordScore": 5,
+      "lengthScore": 5,
+      "totalScore": 14
+    },
+    "timestamp": "2026-04-12T04:48:25.007Z"
+  },
+  {
+    "id": "17759693078311jw",
+    "promptId": "prompt-core-agent",
+    "promptVersion": "v1",
+    "suiteId": "suite-core-queries",
+    "input": "How do I ensure my module works?",
+    "output": "Start of response for: \"How do I ensure my module works?\". This is a concise reply without many keywords.",
+    "scores": {
+      "manualScore": 4,
+      "keywordScore": 0,
+      "lengthScore": 5,
+      "totalScore": 9
+    },
+    "timestamp": "2026-04-12T04:48:27.831Z"
+  },
+  {
+    "id": "1775969308133khd",
+    "promptId": "prompt-core-agent",
+    "promptVersion": "v2",
+    "suiteId": "suite-core-queries",
+    "input": "How do I ensure my module works?",
+    "output": "Start of response for: \"How do I ensure my module works?\". Here is a highly detailed and thoroughly explained reply. \nWe must provide comprehensive results that encompass many tests, proper evaluation tactics,\nand in-depth scrutiny to ensure everything works wonderfully.",
+    "scores": {
+      "manualScore": 4,
+      "keywordScore": 5,
+      "lengthScore": 5,
+      "totalScore": 14
+    },
+    "timestamp": "2026-04-12T04:48:28.133Z"
+  },
+  {
+    "id": "1775969309752h2s",
+    "promptId": "prompt-core-agent",
+    "promptVersion": "v1",
+    "suiteId": "suite-core-queries",
+    "input": "How do I ensure my module works?",
+    "output": "Start of response for: \"How do I ensure my module works?\". This is a concise reply without many keywords.",
+    "scores": {
+      "manualScore": 4,
+      "keywordScore": 0,
+      "lengthScore": 5,
+      "totalScore": 9
+    },
+    "timestamp": "2026-04-12T04:48:29.752Z"
+  },
+  {
+    "id": "1775969310055fy8",
+    "promptId": "prompt-core-agent",
+    "promptVersion": "v2",
+    "suiteId": "suite-core-queries",
+    "input": "How do I ensure my module works?",
+    "output": "Start of response for: \"How do I ensure my module works?\". Here is a highly detailed and thoroughly explained reply. \nWe must provide comprehensive results that encompass many tests, proper evaluation tactics,\nand in-depth scrutiny to ensure everything works wonderfully.",
+    "scores": {
+      "manualScore": 4,
+      "keywordScore": 5,
+      "lengthScore": 5,
+      "totalScore": 14
+    },
+    "timestamp": "2026-04-12T04:48:30.055Z"
+  },
+  {
+    "id": "17759693157063vw",
+    "promptId": "prompt-core-agent",
+    "promptVersion": "v1",
+    "suiteId": "suite-core-queries",
+    "input": "How do I ensure my module works?",
+    "output": "Start of response for: \"How do I ensure my module works?\". This is a concise reply without many keywords.",
+    "scores": {
+      "manualScore": 4,
+      "keywordScore": 0,
+      "lengthScore": 5,
+      "totalScore": 9
+    },
+    "timestamp": "2026-04-12T04:48:35.706Z"
+  },
+  {
+    "id": "1775969316009lkp",
+    "promptId": "prompt-core-agent",
+    "promptVersion": "v2",
+    "suiteId": "suite-core-queries",
+    "input": "How do I ensure my module works?",
+    "output": "Start of response for: \"How do I ensure my module works?\". Here is a highly detailed and thoroughly explained reply. \nWe must provide comprehensive results that encompass many tests, proper evaluation tactics,\nand in-depth scrutiny to ensure everything works wonderfully.",
+    "scores": {
+      "manualScore": 4,
+      "keywordScore": 5,
+      "lengthScore": 5,
+      "totalScore": 14
+    },
+    "timestamp": "2026-04-12T04:48:36.009Z"
+  },
+  {
+    "id": "1775969317174l3c",
+    "promptId": "prompt-core-agent",
+    "promptVersion": "v1",
+    "suiteId": "suite-core-queries",
+    "input": "How do I ensure my module works?",
+    "output": "Start of response for: \"How do I ensure my module works?\". This is a concise reply without many keywords.",
+    "scores": {
+      "manualScore": 4,
+      "keywordScore": 0,
+      "lengthScore": 5,
+      "totalScore": 9
+    },
+    "timestamp": "2026-04-12T04:48:37.174Z"
+  },
+  {
+    "id": "1775969317477dj1",
+    "promptId": "prompt-core-agent",
+    "promptVersion": "v2",
+    "suiteId": "suite-core-queries",
+    "input": "How do I ensure my module works?",
+    "output": "Start of response for: \"How do I ensure my module works?\". Here is a highly detailed and thoroughly explained reply. \nWe must provide comprehensive results that encompass many tests, proper evaluation tactics,\nand in-depth scrutiny to ensure everything works wonderfully.",
+    "scores": {
+      "manualScore": 4,
+      "keywordScore": 5,
+      "lengthScore": 5,
+      "totalScore": 14
+    },
+    "timestamp": "2026-04-12T04:48:37.477Z"
+  },
+  {
+    "id": "1775969772476lkc",
+    "promptId": "prompt-core-agent",
+    "promptVersion": "v1",
+    "suiteId": "suite-core-queries",
+    "input": "How do I ensure my module works?",
+    "output": "Start of response for: \"How do I ensure my module works?\". This is a concise reply without many keywords.",
+    "scores": {
+      "manualScore": 4,
+      "keywordScore": 0,
+      "lengthScore": 5,
+      "totalScore": 9
+    },
+    "timestamp": "2026-04-12T04:56:12.476Z"
+  },
+  {
+    "id": "1775969772780fn7",
+    "promptId": "prompt-core-agent",
+    "promptVersion": "v2",
+    "suiteId": "suite-core-queries",
+    "input": "How do I ensure my module works?",
+    "output": "Start of response for: \"How do I ensure my module works?\". Here is a highly detailed and thoroughly explained reply. \nWe must provide comprehensive results that encompass many tests, proper evaluation tactics,\nand in-depth scrutiny to ensure everything works wonderfully.",
+    "scores": {
+      "manualScore": 4,
+      "keywordScore": 5,
+      "lengthScore": 5,
+      "totalScore": 14
+    },
+    "timestamp": "2026-04-12T04:56:12.780Z"
+  },
+  {
+    "id": "1775969773729ioh",
+    "promptId": "prompt-core-agent",
+    "promptVersion": "v1",
+    "suiteId": "suite-core-queries",
+    "input": "How do I ensure my module works?",
+    "output": "Start of response for: \"How do I ensure my module works?\". This is a concise reply without many keywords.",
+    "scores": {
+      "manualScore": 4,
+      "keywordScore": 0,
+      "lengthScore": 5,
+      "totalScore": 9
+    },
+    "timestamp": "2026-04-12T04:56:13.729Z"
+  },
+  {
+    "id": "1775969774031d1y",
+    "promptId": "prompt-core-agent",
+    "promptVersion": "v2",
+    "suiteId": "suite-core-queries",
+    "input": "How do I ensure my module works?",
+    "output": "Start of response for: \"How do I ensure my module works?\". Here is a highly detailed and thoroughly explained reply. \nWe must provide comprehensive results that encompass many tests, proper evaluation tactics,\nand in-depth scrutiny to ensure everything works wonderfully.",
+    "scores": {
+      "manualScore": 4,
+      "keywordScore": 5,
+      "lengthScore": 5,
+      "totalScore": 14
+    },
+    "timestamp": "2026-04-12T04:56:14.031Z"
+  },
+  {
+    "id": "1775970474332jvd",
+    "promptId": "prompt-core-agent",
+    "promptVersion": "v1",
+    "suiteId": "suite-core-queries",
+    "input": "How do I ensure my module works?",
+    "output": "Start of response for: \"How do I ensure my module works?\". This is a concise reply without many keywords.",
+    "scores": {
+      "manualScore": 4,
+      "keywordScore": 0,
+      "lengthScore": 5,
+      "totalScore": 9
+    },
+    "timestamp": "2026-04-12T05:07:54.332Z"
+  },
+  {
+    "id": "1775970474635n7q",
+    "promptId": "prompt-core-agent",
+    "promptVersion": "v2",
+    "suiteId": "suite-core-queries",
+    "input": "How do I ensure my module works?",
+    "output": "Start of response for: \"How do I ensure my module works?\". Here is a highly detailed and thoroughly explained reply. \nWe must provide comprehensive results that encompass many tests, proper evaluation tactics,\nand in-depth scrutiny to ensure everything works wonderfully.",
+    "scores": {
+      "manualScore": 4,
+      "keywordScore": 5,
+      "lengthScore": 5,
+      "totalScore": 14
+    },
+    "timestamp": "2026-04-12T05:07:54.635Z"
+  },
+  {
+    "id": "17759704966150r4",
+    "promptId": "prompt-core-agent",
+    "promptVersion": "v1",
+    "suiteId": "suite-core-queries",
+    "input": "How do I ensure my module works?",
+    "output": "Start of response for: \"How do I ensure my module works?\". This is a concise reply without many keywords.",
+    "scores": {
+      "manualScore": 4,
+      "keywordScore": 0,
+      "lengthScore": 5,
+      "totalScore": 9
+    },
+    "timestamp": "2026-04-12T05:08:16.615Z"
+  },
+  {
+    "id": "177597049691896t",
+    "promptId": "prompt-core-agent",
+    "promptVersion": "v2",
+    "suiteId": "suite-core-queries",
+    "input": "How do I ensure my module works?",
+    "output": "Start of response for: \"How do I ensure my module works?\". Here is a highly detailed and thoroughly explained reply. \nWe must provide comprehensive results that encompass many tests, proper evaluation tactics,\nand in-depth scrutiny to ensure everything works wonderfully.",
+    "scores": {
+      "manualScore": 4,
+      "keywordScore": 5,
+      "lengthScore": 5,
+      "totalScore": 14
+    },
+    "timestamp": "2026-04-12T05:08:16.918Z"
+  },
+  {
+    "id": "1775970498209ro1",
+    "promptId": "prompt-core-agent",
+    "promptVersion": "v1",
+    "suiteId": "suite-core-queries",
+    "input": "How do I ensure my module works?",
+    "output": "Start of response for: \"How do I ensure my module works?\". This is a concise reply without many keywords.",
+    "scores": {
+      "manualScore": 4,
+      "keywordScore": 0,
+      "lengthScore": 5,
+      "totalScore": 9
+    },
+    "timestamp": "2026-04-12T05:08:18.209Z"
+  },
+  {
+    "id": "1775970498512ioz",
+    "promptId": "prompt-core-agent",
+    "promptVersion": "v2",
+    "suiteId": "suite-core-queries",
+    "input": "How do I ensure my module works?",
+    "output": "Start of response for: \"How do I ensure my module works?\". Here is a highly detailed and thoroughly explained reply. \nWe must provide comprehensive results that encompass many tests, proper evaluation tactics,\nand in-depth scrutiny to ensure everything works wonderfully.",
+    "scores": {
+      "manualScore": 4,
+      "keywordScore": 5,
+      "lengthScore": 5,
+      "totalScore": 14
+    },
+    "timestamp": "2026-04-12T05:08:18.512Z"
+  },
+  {
+    "id": "1775970503339hgw",
+    "promptId": "prompt-core-agent",
+    "promptVersion": "v1",
+    "suiteId": "suite-core-queries",
+    "input": "How do I ensure my module works?",
+    "output": "Start of response for: \"How do I ensure my module works?\". This is a concise reply without many keywords.",
+    "scores": {
+      "manualScore": 4,
+      "keywordScore": 0,
+      "lengthScore": 5,
+      "totalScore": 9
+    },
+    "timestamp": "2026-04-12T05:08:23.339Z"
+  },
+  {
+    "id": "1775970503642cab",
+    "promptId": "prompt-core-agent",
+    "promptVersion": "v2",
+    "suiteId": "suite-core-queries",
+    "input": "How do I ensure my module works?",
+    "output": "Start of response for: \"How do I ensure my module works?\". Here is a highly detailed and thoroughly explained reply. \nWe must provide comprehensive results that encompass many tests, proper evaluation tactics,\nand in-depth scrutiny to ensure everything works wonderfully.",
+    "scores": {
+      "manualScore": 4,
+      "keywordScore": 5,
+      "lengthScore": 5,
+      "totalScore": 14
+    },
+    "timestamp": "2026-04-12T05:08:23.642Z"
+  },
+  {
+    "id": "1775970509622xye",
+    "promptId": "prompt-core-agent",
+    "promptVersion": "v1",
+    "suiteId": "suite-core-queries",
+    "input": "How do I ensure my module works?",
+    "output": "Start of response for: \"How do I ensure my module works?\". This is a concise reply without many keywords.",
+    "scores": {
+      "manualScore": 4,
+      "keywordScore": 0,
+      "lengthScore": 5,
+      "totalScore": 9
+    },
+    "timestamp": "2026-04-12T05:08:29.622Z"
+  },
+  {
+    "id": "1775970509925u81",
+    "promptId": "prompt-core-agent",
+    "promptVersion": "v2",
+    "suiteId": "suite-core-queries",
+    "input": "How do I ensure my module works?",
+    "output": "Start of response for: \"How do I ensure my module works?\". Here is a highly detailed and thoroughly explained reply. \nWe must provide comprehensive results that encompass many tests, proper evaluation tactics,\nand in-depth scrutiny to ensure everything works wonderfully.",
+    "scores": {
+      "manualScore": 4,
+      "keywordScore": 5,
+      "lengthScore": 5,
+      "totalScore": 14
+    },
+    "timestamp": "2026-04-12T05:08:29.925Z"
+  },
+  {
+    "id": "17759705273805vg",
+    "promptId": "prompt-core-agent",
+    "promptVersion": "v1",
+    "suiteId": "suite-core-queries",
+    "input": "How do I ensure my module works?",
+    "output": "Start of response for: \"How do I ensure my module works?\". This is a concise reply without many keywords.",
+    "scores": {
+      "manualScore": 4,
+      "keywordScore": 0,
+      "lengthScore": 5,
+      "totalScore": 9
+    },
+    "timestamp": "2026-04-12T05:08:47.380Z"
+  },
+  {
+    "id": "17759705276836wz",
+    "promptId": "prompt-core-agent",
+    "promptVersion": "v2",
+    "suiteId": "suite-core-queries",
+    "input": "How do I ensure my module works?",
+    "output": "Start of response for: \"How do I ensure my module works?\". Here is a highly detailed and thoroughly explained reply. \nWe must provide comprehensive results that encompass many tests, proper evaluation tactics,\nand in-depth scrutiny to ensure everything works wonderfully.",
+    "scores": {
+      "manualScore": 4,
+      "keywordScore": 5,
+      "lengthScore": 5,
+      "totalScore": 14
+    },
+    "timestamp": "2026-04-12T05:08:47.683Z"
+  },
+  {
+    "id": "1775970541702kh3",
+    "promptId": "prompt-core-agent",
+    "promptVersion": "v1",
+    "suiteId": "suite-core-queries",
+    "input": "How do I ensure my module works?",
+    "output": "Start of response for: \"How do I ensure my module works?\". This is a concise reply without many keywords.",
+    "scores": {
+      "manualScore": 4,
+      "keywordScore": 0,
+      "lengthScore": 5,
+      "totalScore": 9
+    },
+    "timestamp": "2026-04-12T05:09:01.702Z"
+  },
+  {
+    "id": "1775970542005fsx",
+    "promptId": "prompt-core-agent",
+    "promptVersion": "v2",
+    "suiteId": "suite-core-queries",
+    "input": "How do I ensure my module works?",
+    "output": "Start of response for: \"How do I ensure my module works?\". Here is a highly detailed and thoroughly explained reply. \nWe must provide comprehensive results that encompass many tests, proper evaluation tactics,\nand in-depth scrutiny to ensure everything works wonderfully.",
+    "scores": {
+      "manualScore": 4,
+      "keywordScore": 5,
+      "lengthScore": 5,
+      "totalScore": 14
+    },
+    "timestamp": "2026-04-12T05:09:02.005Z"
+  },
+  {
+    "id": "177597059974157a",
+    "promptId": "prompt-core-agent",
+    "promptVersion": "v1",
+    "suiteId": "suite-core-queries",
+    "input": "How do I ensure my module works?",
+    "output": "Start of response for: \"How do I ensure my module works?\". This is a concise reply without many keywords.",
+    "scores": {
+      "manualScore": 4,
+      "keywordScore": 0,
+      "lengthScore": 5,
+      "totalScore": 9
+    },
+    "timestamp": "2026-04-12T05:09:59.741Z"
+  },
+  {
+    "id": "1775970600045cnt",
+    "promptId": "prompt-core-agent",
+    "promptVersion": "v2",
+    "suiteId": "suite-core-queries",
+    "input": "How do I ensure my module works?",
+    "output": "Start of response for: \"How do I ensure my module works?\". Here is a highly detailed and thoroughly explained reply. \nWe must provide comprehensive results that encompass many tests, proper evaluation tactics,\nand in-depth scrutiny to ensure everything works wonderfully.",
+    "scores": {
+      "manualScore": 4,
+      "keywordScore": 5,
+      "lengthScore": 5,
+      "totalScore": 14
+    },
+    "timestamp": "2026-04-12T05:10:00.045Z"
+  },
+  {
+    "id": "1775970774891a9i",
+    "promptId": "prompt-1775970774582",
+    "promptVersion": "v1",
+    "suiteId": "suite-1775970774582",
+    "input": "How do I ensure my module works?",
+    "output": "Start of response for: \"How do I ensure my module works?\". This is a concise reply without many keywords.",
+    "scores": {
+      "manualScore": 3,
+      "keywordScore": 0,
+      "lengthScore": 5,
+      "totalScore": 8
+    },
+    "timestamp": "2026-04-12T05:12:54.891Z"
+  },
+  {
+    "id": "17759707751934rt",
+    "promptId": "prompt-1775970774582",
+    "promptVersion": "v2",
+    "suiteId": "suite-1775970774582",
+    "input": "How do I ensure my module works?",
+    "output": "Start of response for: \"How do I ensure my module works?\". Here is a highly detailed and thoroughly explained reply. We must provide comprehensive evaluation results that encompass many tests, proper evaluation tactics, and in-depth scrutiny to ensure everything works wonderfully.",
+    "scores": {
+      "manualScore": 4,
+      "keywordScore": 5,
+      "lengthScore": 5,
+      "totalScore": 14
+    },
+    "timestamp": "2026-04-12T05:12:55.193Z"
+  },
+  {
+    "id": "1775970775496cy0",
+    "promptId": "prompt-1775970774582",
+    "promptVersion": "v3",
+    "suiteId": "suite-1775970774582",
+    "input": "How do I ensure my module works?",
+    "output": "Start of response for: \"How do I ensure my module works?\". I am happy to help! Let us run a quick test to ensure the evaluation passes correctly. This should give you exactly what you need.",
+    "scores": {
+      "manualScore": 5,
+      "keywordScore": 5,
+      "lengthScore": 5,
+      "totalScore": 15
+    },
+    "timestamp": "2026-04-12T05:12:55.496Z"
+  },
+  {
+    "id": "1775970775797dld",
+    "promptId": "prompt-1775970774582",
+    "promptVersion": "v4",
+    "suiteId": "suite-1775970774582",
+    "input": "How do I ensure my module works?",
+    "output": "Start of response for: \"How do I ensure my module works?\". test completed.",
+    "scores": {
+      "manualScore": 2,
+      "keywordScore": 2.5,
+      "lengthScore": 5,
+      "totalScore": 9.5
+    },
+    "timestamp": "2026-04-12T05:12:55.797Z"
+  },
+  {
+    "id": "17759707907765kb",
+    "promptId": "prompt-1775970790472",
+    "promptVersion": "v1",
+    "suiteId": "suite-1775970790472",
+    "input": "How do I ensure my module works?",
+    "output": "Start of response for: \"How do I ensure my module works?\". This is a concise reply without many keywords.",
+    "scores": {
+      "manualScore": 3,
+      "keywordScore": 0,
+      "lengthScore": 5,
+      "totalScore": 8
+    },
+    "timestamp": "2026-04-12T05:13:10.776Z"
+  },
+  {
+    "id": "1775970791077fno",
+    "promptId": "prompt-1775970790472",
+    "promptVersion": "v2",
+    "suiteId": "suite-1775970790472",
+    "input": "How do I ensure my module works?",
+    "output": "Start of response for: \"How do I ensure my module works?\". Here is a highly detailed and thoroughly explained reply. We must provide comprehensive evaluation results that encompass many tests, proper evaluation tactics, and in-depth scrutiny to ensure everything works wonderfully.",
+    "scores": {
+      "manualScore": 4,
+      "keywordScore": 5,
+      "lengthScore": 5,
+      "totalScore": 14
+    },
+    "timestamp": "2026-04-12T05:13:11.077Z"
+  },
+  {
+    "id": "1775970791380qmy",
+    "promptId": "prompt-1775970790472",
+    "promptVersion": "v3",
+    "suiteId": "suite-1775970790472",
+    "input": "How do I ensure my module works?",
+    "output": "Start of response for: \"How do I ensure my module works?\". I am happy to help! Let us run a quick test to ensure the evaluation passes correctly. This should give you exactly what you need.",
+    "scores": {
+      "manualScore": 5,
+      "keywordScore": 5,
+      "lengthScore": 5,
+      "totalScore": 15
+    },
+    "timestamp": "2026-04-12T05:13:11.380Z"
+  },
+  {
+    "id": "1775970791683uvv",
+    "promptId": "prompt-1775970790472",
+    "promptVersion": "v4",
+    "suiteId": "suite-1775970790472",
+    "input": "How do I ensure my module works?",
+    "output": "Start of response for: \"How do I ensure my module works?\". test completed.",
+    "scores": {
+      "manualScore": 2,
+      "keywordScore": 2.5,
+      "lengthScore": 5,
+      "totalScore": 9.5
+    },
+    "timestamp": "2026-04-12T05:13:11.683Z"
+  },
+  {
+    "id": "1775971043438shs",
+    "promptId": "prompt-1775971043125",
+    "promptVersion": "v1",
+    "suiteId": "suite-1775971043125",
+    "input": "Artificial intelligence (AI) is intelligence demonstrated by machines, as opposed to the natural intelligence displayed by animals including humans. Leading AI textbooks define the field as the study of intelligent agents: any system that perceives its environment and takes actions that maximize its chance of achieving its goals. Some popular accounts use the term artificial intelligence to describe machines that mimic cognitive functions that humans associate with the human mind, such as learning and problem solving; however, this definition is rejected by major AI researchers. AI applications include advanced web search engines (e.g., Google Search), recommendation systems (used by YouTube, Amazon, and Netflix), understanding human speech (such as Siri and Alexa), self-driving cars (e.g., Waymo), generative or creative tools (ChatGPT and AI art), automated decision-making, and competing at the highest level in strategic game systems (such as chess and Go).",
+    "output": "Artificial intelligence is the study of intelligent machines that act to achieve goals across diverse applications.",
+    "scores": {
+      "manualScore": 4,
+      "keywordScore": 5,
+      "lengthScore": 5,
+      "totalScore": 14
+    },
+    "timestamp": "2026-04-12T05:17:23.438Z"
+  },
+  {
+    "id": "1775971043741f51",
+    "promptId": "prompt-1775971043125",
+    "promptVersion": "v2",
+    "suiteId": "suite-1775971043125",
+    "input": "Artificial intelligence (AI) is intelligence demonstrated by machines, as opposed to the natural intelligence displayed by animals including humans. Leading AI textbooks define the field as the study of intelligent agents: any system that perceives its environment and takes actions that maximize its chance of achieving its goals. Some popular accounts use the term artificial intelligence to describe machines that mimic cognitive functions that humans associate with the human mind, such as learning and problem solving; however, this definition is rejected by major AI researchers. AI applications include advanced web search engines (e.g., Google Search), recommendation systems (used by YouTube, Amazon, and Netflix), understanding human speech (such as Siri and Alexa), self-driving cars (e.g., Waymo), generative or creative tools (ChatGPT and AI art), automated decision-making, and competing at the highest level in strategic game systems (such as chess and Go).",
+    "output": "Artificial intelligence involves intelligence demonstrated by machines, perceiving their environments to achieve goals. It rejects the simple mimicry of the human mind and focuses on intelligent agents. Modern AI applications include search engines like Google, recommendation systems such as Netflix, generative tools, and even strategic game systems.",
+    "scores": {
+      "manualScore": 3,
+      "keywordScore": 5,
+      "lengthScore": 5,
+      "totalScore": 13
+    },
+    "timestamp": "2026-04-12T05:17:23.741Z"
+  },
+  {
+    "id": "17759710440437g1",
+    "promptId": "prompt-1775971043125",
+    "promptVersion": "v3",
+    "suiteId": "suite-1775971043125",
+    "input": "Artificial intelligence (AI) is intelligence demonstrated by machines, as opposed to the natural intelligence displayed by animals including humans. Leading AI textbooks define the field as the study of intelligent agents: any system that perceives its environment and takes actions that maximize its chance of achieving its goals. Some popular accounts use the term artificial intelligence to describe machines that mimic cognitive functions that humans associate with the human mind, such as learning and problem solving; however, this definition is rejected by major AI researchers. AI applications include advanced web search engines (e.g., Google Search), recommendation systems (used by YouTube, Amazon, and Netflix), understanding human speech (such as Siri and Alexa), self-driving cars (e.g., Waymo), generative or creative tools (ChatGPT and AI art), automated decision-making, and competing at the highest level in strategic game systems (such as chess and Go).",
+    "output": "• AI is intelligence demonstrated by machines.\n• It involves agents acting to achieve goals.\n• Key applications span across search engines, conversational AI, and self-driving technologies.",
+    "scores": {
+      "manualScore": 5,
+      "keywordScore": 5,
+      "lengthScore": 5,
+      "totalScore": 15
+    },
+    "timestamp": "2026-04-12T05:17:24.044Z"
+  },
+  {
+    "id": "1775971044346v7s",
+    "promptId": "prompt-1775971043125",
+    "promptVersion": "v4",
+    "suiteId": "suite-1775971043125",
+    "input": "Artificial intelligence (AI) is intelligence demonstrated by machines, as opposed to the natural intelligence displayed by animals including humans. Leading AI textbooks define the field as the study of intelligent agents: any system that perceives its environment and takes actions that maximize its chance of achieving its goals. Some popular accounts use the term artificial intelligence to describe machines that mimic cognitive functions that humans associate with the human mind, such as learning and problem solving; however, this definition is rejected by major AI researchers. AI applications include advanced web search engines (e.g., Google Search), recommendation systems (used by YouTube, Amazon, and Netflix), understanding human speech (such as Siri and Alexa), self-driving cars (e.g., Waymo), generative or creative tools (ChatGPT and AI art), automated decision-making, and competing at the highest level in strategic game systems (such as chess and Go).",
+    "output": "Machines intelligence and AI applications.",
+    "scores": {
+      "manualScore": 1,
+      "keywordScore": 5,
+      "lengthScore": 0,
+      "totalScore": 6
+    },
+    "timestamp": "2026-04-12T05:17:24.346Z"
+  },
+  {
+    "id": "17759712846790w2",
+    "promptId": "prompt-1775971284374",
+    "promptVersion": "v1",
+    "suiteId": "suite-1775971284374",
+    "input": "My internet is not working. What should I do?",
+    "output": "Please restart your router. Contact support if it still does not work.",
+    "scores": {
+      "manualScore": 2,
+      "keywordScore": 5,
+      "lengthScore": 5,
+      "totalScore": 12
+    },
+    "timestamp": "2026-04-12T05:21:24.679Z"
+  },
+  {
+    "id": "17759712849820bz",
+    "promptId": "prompt-1775971284374",
+    "promptVersion": "v2",
+    "suiteId": "suite-1775971284374",
+    "input": "My internet is not working. What should I do?",
+    "output": "Hello there! I'm sorry to hear your internet isn't working. Typically, connection disruptions occur due to a temporary desynchronization between your router and the main network grid. We recommend you try to restart the hardware. If that does not re-establish the connection reliably, our technical support team is standing by to investigate the outage further for you.",
+    "scores": {
+      "manualScore": 3.5,
+      "keywordScore": 5,
+      "lengthScore": 5,
+      "totalScore": 13.5
+    },
+    "timestamp": "2026-04-12T05:21:24.982Z"
+  },
+  {
+    "id": "1775971285285qpw",
+    "promptId": "prompt-1775971284374",
+    "promptVersion": "v3",
+    "suiteId": "suite-1775971284374",
+    "input": "My internet is not working. What should I do?",
+    "output": "Hello! I apologize for the inconvenience with your internet connection. We can resolve this together.\n\n1. First, please restart your router by unplugging it for 30 seconds.\n2. Plug it back in and wait for the lights to stabilize.\n3. If the issue persists, please contact our technical support hotline.\n\nLet us know if you need further assistance!",
+    "scores": {
+      "manualScore": 5,
+      "keywordScore": 5,
+      "lengthScore": 5,
+      "totalScore": 15
+    },
+    "timestamp": "2026-04-12T05:21:25.285Z"
+  },
+  {
+    "id": "1775971656760139",
+    "promptId": "prompt-1775971656454",
+    "promptVersion": "v1",
+    "suiteId": "suite-1775971656454",
+    "input": "What are the core concepts of an API?",
+    "output": "Assessing topic: \"What are the core concepts of an API?\"\n\nHere is a brief and basic answer to your topic.",
+    "scores": {
+      "manualScore": 2,
+      "keywordScore": 0,
+      "lengthScore": 5,
+      "totalScore": 7
+    },
+    "timestamp": "2026-04-12T05:27:36.760Z"
+  },
+  {
+    "id": "1775971657063jjt",
+    "promptId": "prompt-1775971656454",
+    "promptVersion": "v2",
+    "suiteId": "suite-1775971656454",
+    "input": "What are the core concepts of an API?",
+    "output": "Assessing topic: \"What are the core concepts of an API?\"\n\nTo answer your query comprehensively: The subject involves many important nuances. It is essential to consider the underlying details that support the major framework. We can look at this from multiple angles to ensure the explanation provides deep insight without losing structure.",
+    "scores": {
+      "manualScore": 3.5,
+      "keywordScore": 5,
+      "lengthScore": 5,
+      "totalScore": 13.5
+    },
+    "timestamp": "2026-04-12T05:27:37.063Z"
+  },
+  {
+    "id": "1775971657366pyp",
+    "promptId": "prompt-1775971656454",
+    "promptVersion": "v3",
+    "suiteId": "suite-1775971656454",
+    "input": "What are the core concepts of an API?",
+    "output": "Assessing topic: \"What are the core concepts of an API?\"\n\nHere is a structured breakdown regarding your request:\n• Important foundational concepts.\n• Crucial details and underlying functionality.\n• Optimized structure for maximum clarity.\n\nLet me know if you need further assistance!",
+    "scores": {
+      "manualScore": 5,
+      "keywordScore": 5,
+      "lengthScore": 5,
+      "totalScore": 15
+    },
+    "timestamp": "2026-04-12T05:27:37.366Z"
+  },
+  {
+    "id": "1775971678644fqk",
+    "promptId": "prompt-1775971678339",
+    "promptVersion": "v1",
+    "suiteId": "suite-1775971678339",
+    "input": "\"What are the core concepts of an API?\"",
+    "output": "Assessing topic: \"\"What are the core concepts of an API?\"\"\n\nHere is a brief and basic answer to your topic.",
+    "scores": {
+      "manualScore": 2,
+      "keywordScore": 0,
+      "lengthScore": 5,
+      "totalScore": 7
+    },
+    "timestamp": "2026-04-12T05:27:58.644Z"
+  },
+  {
+    "id": "1775971678948dqw",
+    "promptId": "prompt-1775971678339",
+    "promptVersion": "v2",
+    "suiteId": "suite-1775971678339",
+    "input": "\"What are the core concepts of an API?\"",
+    "output": "Assessing topic: \"\"What are the core concepts of an API?\"\"\n\nTo answer your query comprehensively: The subject involves many important nuances. It is essential to consider the underlying details that support the major framework. We can look at this from multiple angles to ensure the explanation provides deep insight without losing structure.",
+    "scores": {
+      "manualScore": 3.5,
+      "keywordScore": 5,
+      "lengthScore": 5,
+      "totalScore": 13.5
+    },
+    "timestamp": "2026-04-12T05:27:58.948Z"
+  },
+  {
+    "id": "1775971679251g2v",
+    "promptId": "prompt-1775971678339",
+    "promptVersion": "v3",
+    "suiteId": "suite-1775971678339",
+    "input": "\"What are the core concepts of an API?\"",
+    "output": "Assessing topic: \"\"What are the core concepts of an API?\"\"\n\nHere is a structured breakdown regarding your request:\n• Important foundational concepts.\n• Crucial details and underlying functionality.\n• Optimized structure for maximum clarity.\n\nLet me know if you need further assistance!",
+    "scores": {
+      "manualScore": 5,
+      "keywordScore": 5,
+      "lengthScore": 5,
+      "totalScore": 15
+    },
+    "timestamp": "2026-04-12T05:27:59.251Z"
+  }
+]

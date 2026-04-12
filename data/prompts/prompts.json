@@ -1,0 +1,159 @@
+[
+  {
+    "id": "prompt-core-agent",
+    "title": "Customer Support Bot",
+    "versions": [
+      {
+        "version": "v1",
+        "content": "You are a concise customer support agent. Give short answers.",
+        "createdAt": "2026-04-12T05:09:59.435Z"
+      },
+      {
+        "version": "v2",
+        "content": "You are a detailed customer support expert. Produce long answers and always use words like 'test', 'results', and 'evaluation'.",
+        "createdAt": "2026-04-12T05:09:59.437Z"
+      }
+    ]
+  },
+  {
+    "id": "prompt-1775970774582",
+    "title": "Customer Support Bot",
+    "versions": [
+      {
+        "version": "v1",
+        "content": "You are a concise customer support agent. Give short answers.",
+        "createdAt": "2026-04-12T05:12:54.582Z"
+      },
+      {
+        "version": "v2",
+        "content": "You are a detailed customer support expert. Produce long answers and always use words like 'test', 'results', and 'evaluation'.",
+        "createdAt": "2026-04-12T05:12:54.585Z"
+      },
+      {
+        "version": "v3",
+        "content": "You are a helpful customer support rep. Answer fully and include keywords like 'test' and 'evaluation' but keep it under 500 characters.",
+        "createdAt": "2026-04-12T05:12:54.585Z"
+      },
+      {
+        "version": "v4",
+        "content": "You are an AI assistant. Just say 'test' to fulfill keywords.",
+        "createdAt": "2026-04-12T05:12:54.585Z"
+      }
+    ]
+  },
+  {
+    "id": "prompt-1775970790472",
+    "title": "Customer Support Bot",
+    "versions": [
+      {
+        "version": "v1",
+        "content": "You are a concise customer support agent. Give short answers.",
+        "createdAt": "2026-04-12T05:13:10.472Z"
+      },
+      {
+        "version": "v2",
+        "content": "You are a detailed customer support expert. Produce long answers and always use words like 'test', 'results', and 'evaluation'.",
+        "createdAt": "2026-04-12T05:13:10.473Z"
+      },
+      {
+        "version": "v3",
+        "content": "You are a helpful customer support rep. Answer fully and include keywords like 'test' and 'evaluation' but keep it under 500 characters.",
+        "createdAt": "2026-04-12T05:13:10.473Z"
+      },
+      {
+        "version": "v4",
+        "content": "You are an AI assistant. Just say 'test' to fulfill keywords.",
+        "createdAt": "2026-04-12T05:13:10.473Z"
+      }
+    ]
+  },
+  {
+    "id": "prompt-1775971043125",
+    "title": "Text Summarization Task",
+    "versions": [
+      {
+        "version": "v1",
+        "content": "Summarize the text in one sentence",
+        "createdAt": "2026-04-12T05:17:23.125Z"
+      },
+      {
+        "version": "v2",
+        "content": "Summarize the text in detail",
+        "createdAt": "2026-04-12T05:17:23.132Z"
+      },
+      {
+        "version": "v3",
+        "content": "Summarize the text with bullet points and include keywords",
+        "createdAt": "2026-04-12T05:17:23.132Z"
+      },
+      {
+        "version": "v4",
+        "content": "Summarize the text in under 5 words.",
+        "createdAt": "2026-04-12T05:17:23.133Z"
+      }
+    ]
+  },
+  {
+    "id": "prompt-1775971284374",
+    "title": "Customer Support Context",
+    "versions": [
+      {
+        "version": "v1",
+        "content": "Answer briefly",
+        "createdAt": "2026-04-12T05:21:24.374Z"
+      },
+      {
+        "version": "v2",
+        "content": "Answer politely with explanation",
+        "createdAt": "2026-04-12T05:21:24.375Z"
+      },
+      {
+        "version": "v3",
+        "content": "Answer politely with step-by-step solution",
+        "createdAt": "2026-04-12T05:21:24.376Z"
+      }
+    ]
+  },
+  {
+    "id": "prompt-1775971656454",
+    "title": "Dynamic Topic Context",
+    "versions": [
+      {
+        "version": "v1",
+        "content": "Answer basically",
+        "createdAt": "2026-04-12T05:27:36.454Z"
+      },
+      {
+        "version": "v2",
+        "content": "Answer in detail",
+        "createdAt": "2026-04-12T05:27:36.456Z"
+      },
+      {
+        "version": "v3",
+        "content": "Answer in a structured format with keywords",
+        "createdAt": "2026-04-12T05:27:36.456Z"
+      }
+    ]
+  },
+  {
+    "id": "prompt-1775971678339",
+    "title": "Dynamic Topic Context",
+    "versions": [
+      {
+        "version": "v1",
+        "content": "Answer basically",
+        "createdAt": "2026-04-12T05:27:58.339Z"
+      },
+      {
+        "version": "v2",
+        "content": "Answer in detail",
+        "createdAt": "2026-04-12T05:27:58.341Z"
+      },
+      {
+        "version": "v3",
+        "content": "Answer in a structured format with keywords",
+        "createdAt": "2026-04-12T05:27:58.341Z"
+      }
+    ]
+  }
+]

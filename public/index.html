@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prompt Engineering Toolkit</title>
+    <style>
+        /* Modern Dark Mode CSS - No Frameworks used */
+        :root {
+            --bg-body: #0a0a0a;
+            --bg-card: #151515;
+            --bg-card-hover: #1e1e1e;
+            --text-main: #e2e8f0;
+            --text-muted: #94a3b8;
+            --border-color: #262626;
+            --accent-color: #3b82f6; 
+            --highlight: #10b981; 
+            --highlight-bg: rgba(16, 185, 129, 0.08);
+            --header-bg: #111111;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-body);
+            color: var(--text-main);
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            line-height: 1.6;
+        }
+        
+        h1, h2, h3, h4 { color: #ffffff; letter-spacing: -0.01em; }
+        h1 { margin-bottom: 5px; font-size: 2.2rem; }
+        h2 { border-bottom: 1px solid var(--border-color); padding-bottom: 12px; margin-top: 5px; font-size: 1.4rem;}
+        
+        .dashboard-header {
+            text-align: center;
+            background: var(--header-bg);
+            border: 1px solid var(--border-color);
+            padding: 40px;
+            border-radius: 12px;
+            margin-bottom: 30px;
+        }
+        .subtitle { color: var(--text-muted); margin-bottom: 25px; font-size: 1.1rem;}
+        
+        input[type="text"] {
+            padding: 16px 20px;
+            width: 50%;
+            font-size: 16px;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+            background: var(--bg-body);
+            color: white;
+            outline: none;
+            transition: border-color 0.2s;
+        }
+        
+        input[type="text"]:focus {
+            border-color: var(--accent-color);
+        }
+        
+        button {
+            background-color: var(--accent-color);
+            color: white;
+            border: none;
+            padding: 16px 36px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            border-radius: 8px;
+            transition: all 0.2s ease;
+            margin-left: 10px;
+        }
+        button:hover { background-color: #2563eb; transform: translateY(-2px); box-shadow: 0 4px 15px rgba(59, 130, 246, 0.2);}
+        button:disabled { background-color: #334155; color: #94a3b8; cursor: not-allowed; transform: none; box-shadow: none; }
+
+        .input-group {
+            margin-top: 30px;
+            margin-bottom: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        @media (max-width: 768px) {
+            .input-group { flex-direction: column; gap: 15px; }
+            input[type="text"] { width: 90%; }
+            button { margin-left: 0; width: 90%; }
+        }
+
+        .row { display: flex; gap: 25px; margin-bottom: 25px; }
+        .col { flex: 1; }
+        .align-start { align-items: flex-start; }
+        @media (max-width: 768px) { .row { flex-direction: column; } }
+
+        .card {
+            background: var(--bg-card);
+            border-radius: 12px;
+            padding: 30px;
+            border: 1px solid var(--border-color);
+            box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+        }
+        .card h2 { border-bottom: none; padding-bottom: 0; margin-top: 0; margin-bottom: 20px;}
+        .full-width { width: 100%; box-sizing: border-box; margin-bottom: 25px; }
+        
+        .badge {
+            padding: 5px 12px;
+            border-radius: 6px;
+            font-size: 13px;
+            font-weight: 700;
+            display: inline-block;
+            text-transform: uppercase;
+        }
+        .badge-dark { background: #262626; color: #f8fafc; }
+        .badge-outline { border: 1px solid #475569; color: #cbd5e1; }
+        .highlight-badge { background: var(--highlight); color: #064e3b; }
+        
+        .table-container { overflow-x: auto; }
+        .dashboard-table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: left;
+            margin-top: 5px;
+        }
+        .dashboard-table th {
+            padding: 14px 20px;
+            background: #1a1a1a;
+            color: #94a3b8;
+            font-weight: 600;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            border-bottom: 1px solid #333;
+        }
+        .dashboard-table td {
+            padding: 16px 20px;
+            border-bottom: 1px solid var(--border-color);
+            color: #e2e8f0;
+        }
+        .dashboard-table .row-winner {
+            background-color: var(--highlight-bg);
+        }
+        .dashboard-table .row-winner td { border-bottom-color: #1a4d34; }
+        .total-col { font-weight: bold; font-size: 1.1rem; color: #fff; }
+        
+        .execution-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 25px; margin-top: 20px;}
+        .execution-card { display: flex; flex-direction: column; padding: 25px; margin-bottom: 0; border: 1px solid #262626; }
+        .card-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; }
+        .card-header h3 { margin: 0; padding: 0;}
+        .winner-card { border-color: #1a4d34; background: linear-gradient(180deg, rgba(16,185,129,0.03) 0%, rgba(21,21,21,1) 100%); }
+        .winner-star { color: var(--highlight); font-weight: 800; font-size: 11px; letter-spacing: 1px; }
+        
+        .output-box blockquote {
+            background: #0f0f0f;
+            border-left: 3px solid var(--accent-color);
+            padding: 18px;
+            margin: 0;
+            color: #cbd5e1;
+            border-radius: 6px;
+            font-style: italic;
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+        
+        .best-section { background: #0f1714; border-color: #1a4d34; padding: 35px;}
+        .best-header { display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #1a4d34; padding-bottom: 20px;}
+        .best-score { font-size: 2.2rem; font-weight: 800; color: var(--highlight); line-height: 1;}
+        .best-score span { font-size: 1.1rem; color: #10b981; font-weight: normal; opacity: 0.7;}
+        
+        .reason-list { padding-left: 20px; color: #cbd5e1; line-height: 1.9; margin-bottom: 0;}
+        .reason-list strong { color: #f8fafc; }
+    </style>
+</head>
+<body>
+    <div class="dashboard-header">
+        <h1>Prompt Engineering Toolkit</h1>
+        <p class="subtitle">Execution & Evaluation Environment</p>
+        
+        <div class="input-group">
+            <input type="text" id="userInput" placeholder="Enter topic (e.g., Explain AI)" autocomplete="off">
+            <button id="runBtn" onclick="runProject()">Run Dashboard 🚀</button>
+        </div>
+    </div>
+
+    <!-- Active render DOM hook -->
+    <div id="output-container">
+        <div class="card" style="text-align: center; color: var(--text-muted); padding: 60px;">
+            <svg style="width: 48px; height: 48px; margin-bottom: 15px; opacity: 0.2;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path></svg>
+            <h3>Dashboard Ready</h3>
+            <p>Input a topic in the field above and run the test sequence dynamically.</p>
+        </div>
+    </div>
+
+    <script>
+        // Trigger run logic
+        async function runProject() {
+            const btn = document.getElementById('runBtn');
+            const outputDiv = document.getElementById('output-container');
+            const userTextEntry = document.getElementById('userInput').value || "What are the core concepts of an API?";
+            
+            btn.disabled = true;
+            btn.innerText = "Simulating LLM Engines...";
+            outputDiv.innerHTML = `
+                <div class="card" style="text-align: center; padding: 60px;">
+                    <div style="color: var(--accent-color); font-size: 20px; font-weight: 600; animation: pulse 1.5s infinite;">Evaluating Prompt Variants...</div>
+                    <p style="color: var(--text-muted); margin-top: 15px;">Assessing criteria matches across generated logic outputs.</p>
+                </div>
+                <style>@keyframes pulse { 0% { opacity: 0.4; } 50% { opacity: 1; } 100% { opacity: 0.4; } }</style>
+            `;
+            
+            try {
+                // Post dynamically payload to our Express server
+                const response = await fetch('/run', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ input: userTextEntry })
+                });
+                
+                if (!response.ok) throw new Error("Server error occurred.");
+                
+                // Read and insert natively parsed DOM nodes seamlessly back to the page
+                outputDiv.innerHTML = await response.text();
+            } catch (error) {
+                outputDiv.innerHTML = `<div class="card"><p style="color: #ef4444;">System Error: ${error.message}</p></div>`;
+            } finally {
+                btn.disabled = false;
+                btn.innerText = "Run Dashboard 🚀";
+            }
+        }
+
+        // Allow pressing 'Enter' in the input box seamlessly
+        document.getElementById("userInput").addEventListener("keypress", function(event) {
+            if (event.key === "Enter") {
+                event.preventDefault();
+                runProject();
+            }
+        });
+    </script>
+</body>
+</html>

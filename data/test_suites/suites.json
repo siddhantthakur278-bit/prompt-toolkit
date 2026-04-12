@@ -1,0 +1,125 @@
+[
+  {
+    "id": "suite-core-queries",
+    "title": "General Queries",
+    "tests": [
+      {
+        "input": "How do I ensure my module works?",
+        "criteria": {
+          "keywords": [
+            "test",
+            "evaluation"
+          ],
+          "min_length": 50,
+          "max_length": 1000
+        }
+      }
+    ]
+  },
+  {
+    "id": "suite-1775970774582",
+    "title": "General Queries",
+    "tests": [
+      {
+        "input": "How do I ensure my module works?",
+        "criteria": {
+          "keywords": [
+            "test",
+            "evaluation"
+          ],
+          "min_length": 50,
+          "max_length": 1000
+        }
+      }
+    ]
+  },
+  {
+    "id": "suite-1775970790472",
+    "title": "General Queries",
+    "tests": [
+      {
+        "input": "How do I ensure my module works?",
+        "criteria": {
+          "keywords": [
+            "test",
+            "evaluation"
+          ],
+          "min_length": 50,
+          "max_length": 1000
+        }
+      }
+    ]
+  },
+  {
+    "id": "suite-1775971043125",
+    "title": "Text Summarization Tests",
+    "tests": [
+      {
+        "input": "Artificial intelligence (AI) is intelligence demonstrated by machines, as opposed to the natural intelligence displayed by animals including humans. Leading AI textbooks define the field as the study of intelligent agents: any system that perceives its environment and takes actions that maximize its chance of achieving its goals. Some popular accounts use the term artificial intelligence to describe machines that mimic cognitive functions that humans associate with the human mind, such as learning and problem solving; however, this definition is rejected by major AI researchers. AI applications include advanced web search engines (e.g., Google Search), recommendation systems (used by YouTube, Amazon, and Netflix), understanding human speech (such as Siri and Alexa), self-driving cars (e.g., Waymo), generative or creative tools (ChatGPT and AI art), automated decision-making, and competing at the highest level in strategic game systems (such as chess and Go).",
+        "criteria": {
+          "keywords": [
+            "intelligence",
+            "machines",
+            "applications"
+          ],
+          "min_length": 50,
+          "max_length": 500
+        }
+      }
+    ]
+  },
+  {
+    "id": "suite-1775971284374",
+    "title": "Customer Support Validation",
+    "tests": [
+      {
+        "input": "My internet is not working. What should I do?",
+        "criteria": {
+          "keywords": [
+            "restart",
+            "router",
+            "support"
+          ],
+          "min_length": 50,
+          "max_length": 600
+        }
+      }
+    ]
+  },
+  {
+    "id": "suite-1775971656454",
+    "title": "Dynamic Validation Suite",
+    "tests": [
+      {
+        "input": "What are the core concepts of an API?",
+        "criteria": {
+          "keywords": [
+            "important",
+            "details",
+            "structure"
+          ],
+          "min_length": 50,
+          "max_length": 600
+        }
+      }
+    ]
+  },
+  {
+    "id": "suite-1775971678339",
+    "title": "Dynamic Validation Suite",
+    "tests": [
+      {
+        "input": "\"What are the core concepts of an API?\"",
+        "criteria": {
+          "keywords": [
+            "important",
+            "details",
+            "structure"
+          ],
+          "min_length": 50,
+          "max_length": 600
+        }
+      }
+    ]
+  }
+]

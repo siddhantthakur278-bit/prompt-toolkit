@@ -1,0 +1,51 @@
+[
+  {
+    "id": "prompt-core-agent",
+    "title": "Customer Support Bot",
+    "bestVersion": "v2",
+    "content": "You are a detailed customer support expert. Produce long answers and always use words like 'test', 'results', and 'evaluation'.",
+    "savedAt": "2026-04-12T05:10:00.047Z"
+  },
+  {
+    "id": "prompt-1775970774582",
+    "title": "Customer Support Bot",
+    "bestVersion": "v3",
+    "content": "You are a helpful customer support rep. Answer fully and include keywords like 'test' and 'evaluation' but keep it under 500 characters.",
+    "savedAt": "2026-04-12T05:12:55.799Z"
+  },
+  {
+    "id": "prompt-1775970790472",
+    "title": "Customer Support Bot",
+    "bestVersion": "v3",
+    "content": "You are a helpful customer support rep. Answer fully and include keywords like 'test' and 'evaluation' but keep it under 500 characters.",
+    "savedAt": "2026-04-12T05:13:11.685Z"
+  },
+  {
+    "id": "prompt-1775971043125",
+    "title": "Text Summarization Task",
+    "bestVersion": "v3",
+    "content": "Summarize the text with bullet points and include keywords",
+    "savedAt": "2026-04-12T05:17:24.349Z"
+  },
+  {
+    "id": "prompt-1775971284374",
+    "title": "Customer Support Context",
+    "bestVersion": "v3",
+    "content": "Answer politely with step-by-step solution",
+    "savedAt": "2026-04-12T05:21:25.288Z"
+  },
+  {
+    "id": "prompt-1775971656454",
+    "title": "Dynamic Topic Context",
+    "bestVersion": "v3",
+    "content": "Answer in a structured format with keywords",
+    "savedAt": "2026-04-12T05:27:37.368Z"
+  },
+  {
+    "id": "prompt-1775971678339",
+    "title": "Dynamic Topic Context",
+    "bestVersion": "v3",
+    "content": "Answer in a structured format with keywords",
+    "savedAt": "2026-04-12T05:27:59.253Z"
+  }
+]

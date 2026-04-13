@@ -1,106 +1,108 @@
-# 🌌 Quantum Command v7.0: Elite Prompt Intelligence Suite
+<div align="center">
+  <img src="public/logo_quantum.png" alt="Quantum Command Logo" width="300" />
+  <h1>🌌 QUANTUM COMMAND v7.1</h1>
+  <p><b>Elite Autonomous Prompt Intelligence & Optimization Suite</b></p>
+  <p><i>The gold standard for high-performance AI signal architecture.</i></p>
 
-**Quantum Command** is a state-of-the-art, autonomous prompt engineering laboratory designed for the next generation of AI research. It provides a premium, commercial-grade environment for architecting, benchmarking, and archiving high-performance neural signals.
-
-![Quantum Command Banner](public/bg_quantum.png)
-
----
-
-## 🛰️ Core Features
-
-*   **⚡ Neural Forge (v7.0)**: Sub-second prompt cluster creation with integrated **Tactical Recipes** for Chain-of-Thought, Self-Critique, and Persona injection.
-*   **🛰️ Matrix Runner**: Simulates prompt performance across multiple models simultaneously (Llama-3, Mixtral, Elite-8B) with side-by-side efficiency benchmarking.
-*   **🧠 Autonomous Neural Optimizer**: One-click expansion into 3 high-performance variations (Chain-of-Thought, Professional, Creative).
-*   **🛡️ Golden Signal Vault**: Persistent archival of your highest-scoring prompts, including the peak AI response reference.
-*   **🧬 Core Metrics Dashboard**: Real-time visualization of signal strength, latency distribution, and architectural stability.
-*   **🌌 Cinematic UI/UX**: Premium glassmorphism design system with animated neural backgrounds and effortless navigation.
+  <img src="https://img.shields.io/badge/Version-7.1%20Elite-blueviolet?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/Substrate-Groq%20Llama--3-orange?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/Aesthetic-Commercial%20Glass-black?style=for-the-badge" />
+</div>
 
 ---
 
-## 🧪 Operational Workflow
+## 🏛️ Project Philosophy
+In the era of Generative AI, the **Prompt** is the new source code. Most toolkits treat prompting as a simple text exercise; **Quantum Command** treats it as a high-fidelity signal engineering discipline. By combining **autonomous AI optimization** with **multi-model benchmarking**, we enable researchers to find the "Champion Signal" that maximizes both logical precision and neural efficiency.
 
-The Quantum Command workflow is designed as a closed-loop optimization cycle:
+---
 
+## 🚀 Key Innovation Pillars
+
+### 1. ⚡ Neural Forge & Tactical Nexus
+The Forge is where signal architecture begins. Unlike standard editors, it features a **Nexus**—a version-controlled workspace that tracks the "lineage" of a prompt. 
+- **Lineage Tracking**: Every version (v1, v2, v3...) is archived with its creation date and efficiency score.
+- **Autonomous Evolution**: Our AI Optimizer uses a three-pronged strategy to expand seed prompts into specialized variants (Chain-of-Thought, Professional, and Edge-Case Creative).
+
+### 2. 🧪 Tactical Recipes Hub
+Inject world-class prompt engineering patterns into your workspace with a single click:
+- **🧠 Chain-of-Thought**: Forces explicit reasoning phases.
+- **⚖️ Self-Critique**: Implements an internal feedback loop for accuracy.
+- **📦 Structural JSON**: Automates complex schema enforcement.
+- **👤 Persona Injection**: Calibrates the AI substrate for senior-expert roles.
+
+### 3. 🛰️ Matrix Runner (Multi-Model simulation)
+The Matrix Runner is a high-performance simulation environment. It allows you to:
+- **Cross-Benchmark**: Run the same prompt against multiple models (Llama 70B, 8B, etc.) simultaneously.
+- **Auto-Compare**: Automatically identifies the "Champion" variant based on a proprietary 15-point efficiency scale.
+
+---
+
+## 🛰️ Technical Architecture
+
+### **The Signal Pipeline**
 ```mermaid
-graph TD
-    A[Forge: Seed Prompt] -->|Tactical Recipe| B(Neural Forge)
-    B -->|Turbo-Optimize| C{Optimization Matrix}
-    C -->|Autonomous Flow| D[Benchmark Lab]
-    D -->|Real-world Data| E{Execution Engine}
-    E -->|Scoring Matrix| F[Identify Champion]
-    F -->|Signal Lock| G[Golden Signal Vault]
-    G -->|Continuous Improvement| B
+graph LR
+    A[Seed Input] --> B{Forge Engine}
+    B -->|Optimization| C[Neural Variants]
+    C --> D{Matrix Runner}
+    D -->|Simulation| E[Efficiency Scores]
+    E --> F{Logic Gate}
+    F -->|Champion| G[Golden Vault]
+    F -->|Struggling| B
 ```
 
-1.  **Forge Phase**: Initialize your signal seed and apply tactical reasoning recipes.
-2.  **Benchmark Phase**: Stress-test variations across the intelligence matrix using real-world datasets.
-3.  **Archival Phase**: Commit only the most efficient signals (Champions) to the production library.
+### **File Substrate Map**
+| Layer | Component | Core Function |
+| :--- | :--- | :--- |
+| **Logic** | `app.js` | Orchestrates the child process execution and AI optimization. |
+| **Engine** | `scoring.js` | Calculates efficiency based on latency, logic, and safety metrics. |
+| **AI** | `lib/aiOptimizer.js` | Uses Llama-3.3 to autonomously evolve prompt variations. |
+| **Data** | `data/` | Symmetrical storage (JSON fallback) ensuring 100% uptime. |
+| **UI** | `app/page.js` | The Quantum Command Center—built with premium Glassmorphism. |
 
 ---
 
-## 📑 Project Structure
+## ⚙️ Engineering Setup
 
-```bash
-├── 📁 app/                 # Next.js Application Core
-│   ├── 📁 api/             # High-Performance API Substrate
-│   │   ├── 📁 analytics/   # Metric Aggregation Services
-│   │   ├── 📁 run/         # Matrix Execution Engine
-│   │   └── 📁 prompts/     # Neural Signal Management
-│   ├── 📄 globals.css      # Quantum Design System (v7.0)
-│   └── 📄 page.js          # Unified Command Center UI
-├── 📁 data/                # Persistent Local Storage (JSON Fallback)
-├── 📁 lib/                 # Core Intelligence Logic
-│   ├── 📄 aiOptimizer.js   # Autonomous Variation Generator
-│   ├── 📄 parser.js        # Benchmark Signal Parser
-│   └── 📄 db.js            # MongoDB Symmetrical Bridge
-├── 📁 models/              # Mongoose Schema Definitions
-├── 📄 app.js               # Orchestration Layer (Node.js Processor)
-├── 📄 scoring.js           # Efficiency Calculation Logic
-└── 📄 public/              # Cinematic Assets & Logotypes
+### **Environmental Calibration**
+Create a `.env.local` file in the root directory:
+```env
+# Required for AI Optimization & Inference
+GROQ_API_KEY=your_high_speed_api_key
+
+# Optional: MongoDB Integration
+MONGODB_URI=your_cluster_address
 ```
 
----
-
-## 🛠️ System Requirements
-
-*   **Backend Substrate**: Node.js 18+ / npm
-*   **Database**: MongoDB (Local JSON Fallback enabled)
-*   **Intelligence Source**: Groq API Key (Llama-3.3-70B recommended)
-*   **Framework**: Next.js 14+ (App Router)
-
----
-
-## ⚡ Quick Start
-
-1.  **Clone the matrix**:
-    ```bash
-    git clone https://github.com/onkarswamii/prompt-toolkit.git
-    cd prompt-toolkit
-    ```
-2.  **Synchronize Dependencies**:
-    ```bash
-    npm install
-    ```
-3.  **Inject Neural Key**:
-    Add `GROQ_API_KEY` to your `.env.local`.
-4.  **Initiate Protocol**:
-    ```bash
-    npm run dev
-    ```
+### **Deployment Command Sequence**
+1. **Synchronize Substrate**:
+   ```bash
+   npm install
+   ```
+2. **Initiate Dev-Matrix**:
+   ```bash
+   npm run dev
+   ```
+3. **Access Command Center**:
+   Open [http://localhost:3000](http://localhost:3000)
 
 ---
 
-## 🧬 Tactical Specs
-
-| Specification | Value |
-| :--- | :--- |
-| **Model Focus** | Llama-3.3-70B-Versatile |
-| **Scoring Scale** | 0-15 (Efficiency, Logic, Safety) |
-| **UI Design** | Cinematic Glassmorphism v7.0 |
-| **Persistence** | Symmetrical (Mongo + JSON Fallback) |
-| **Intros** | Animated Quantum Cinematic Logo Sequence |
+## 🧬 Tactical Guide: Finding the Champion
+1. **Initialize**: Paste your base prompt in the **Neural Forge**.
+2. **Evolve**: Click **Turbo-Optimize** to generate 3 specialized AI variations.
+3. **Refine**: Use **Tactical Recipes** (like Self-Critique) to polish the best version.
+4. **Stress-Test**: Go to the **Matrix Runner**, enter a complex test input, and run the simulation.
+5. **Archive**: The winner is automatically saved to the **Golden Signal Vault** with its peak AI response and identity ID.
 
 ---
 
-## 📄 License
-**QUANTUM.PROMPT** is licensed under private distribution for Elite AI Research. 🚀
+## 🛡️ Security & Performance
+- **Zero-Data Loss**: If MongoDB is unreachable, the system automatically redirects signal traffic to the `data/` JSON registry.
+- **Cinematic Performance**: Optimized Next.js 14 architecture with CSS-hardware acceleration for background animations.
+- **Latency Monitoring**: Every run is timed to the millisecond to ensure production readiness.
+
+---
+
+## 📄 License & Distribution
+**QUANTUM COMMAND** is a proprietary research tool designed by **Elite AI Solutions**. Unauthorized distribution of the Neural Substrate is prohibited. 🛰️

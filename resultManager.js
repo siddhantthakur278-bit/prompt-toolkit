@@ -22,8 +22,8 @@ class ResultManager {
         return results.filter(r => r.promptId === promptId);
     }
     
-    saveTemplate(promptObj, versionId) {
-        return templateLibrary.saveTemplate(promptObj.id, versionId, 15); // Default high score for manual save
+    saveTemplate(promptObj, versionId, averageScore, bestResponse) {
+        return templateLibrary.saveTemplate(promptObj.id, versionId, averageScore, bestResponse);
     }
 }
 

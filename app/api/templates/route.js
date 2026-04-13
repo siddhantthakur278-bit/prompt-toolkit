@@ -11,6 +11,7 @@ const TemplateSchema = new mongoose.Schema({
   title: String,
   versionId: String,
   content: String,
+  bestResponse: String, // Added field for optimized AI output
   averageScore: Number,
   savedAt: { type: Date, default: Date.now }
 }, { timestamps: true });
@@ -20,7 +21,7 @@ const Template = mongoose.models.Template || mongoose.model('Template', Template
 export async function GET() {
     try {
         await connectDB();
-        const mongoTemplates = await Template.find({});
+        const mongoTemplates = await Template.find({}).sort({ savedAt: -1 });
         if (mongoTemplates.length > 0) return NextResponse.json(mongoTemplates);
     } catch (e) {
         // Fallback to JSON
@@ -28,7 +29,8 @@ export async function GET() {
     
     if (fs.existsSync(TEMPLATES_FILE)) {
         const data = JSON.parse(fs.readFileSync(TEMPLATES_FILE, 'utf8'));
-        return NextResponse.json(data);
+        // Ensure reverse chronological order for aesthetics
+        return NextResponse.json(data.reverse ? data.reverse() : data);
     }
     return NextResponse.json([]);
 }

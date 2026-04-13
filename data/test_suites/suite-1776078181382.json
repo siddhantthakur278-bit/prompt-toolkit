@@ -1,0 +1,19 @@
+{
+  "id": "suite-1776078181382",
+  "title": "Production Validation Suite",
+  "tests": [
+    {
+      "input": "solve two sum leet code problem",
+      "criteria": {
+        "keywords": [
+          "clarity",
+          "comprehensive",
+          "efficiency",
+          "structure"
+        ],
+        "min_length": 50,
+        "max_length": 800
+      }
+    }
+  ]
+}

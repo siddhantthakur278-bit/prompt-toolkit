@@ -54,6 +54,8 @@ async function main() {
         }
     }
 
+    const currentRunResults = [];
+
     for (const test of suiteData.tests) {
         for (const version of versionsToRun) {
             console.log(`Executing Output for Version: [${version.version}] | Prompt: ${version.content}`);
@@ -78,16 +80,24 @@ async function main() {
             console.log(`  > Derived Scores: ` + JSON.stringify(scores));
             console.log(`  > Elite Metadata: ` + JSON.stringify(metadata));
             
-            resultManager.saveResult(promptId, version.version, suiteId, test.input, output, scores);
+            const savedResult = resultManager.saveResult(promptId, version.version, suiteId, test.input, output, scores);
+            currentRunResults.push(savedResult);
         }
     }
     
-    const allResults = resultManager.getResultsByPrompt(promptId);
-    if (!allResults || allResults.length === 0) return;
+    if (currentRunResults.length === 0) return;
     
-    const comparison = scoring.compareVersions(allResults);
-    console.log(`🏆 Best Version found: ${comparison.bestVersion} (Average Score: ${comparison.averageScore.toFixed(2)} / 15)`);
-    resultManager.saveTemplate(promptData, comparison.bestVersion);
+    const comparison = scoring.compareVersions(currentRunResults);
+    const bestResult = currentRunResults.find(r => r.promptVersion === comparison.version);
+
+    console.log(`🏆 Best Version found: ${comparison.version} (Average Score: ${comparison.averageScore.toFixed(2)} / 15)`);
+    
+    resultManager.saveTemplate(
+        promptData, 
+        comparison.version, 
+        comparison.averageScore, 
+        bestResult ? bestResult.output : "N/A"
+    );
 }
 
 main().catch(console.error);

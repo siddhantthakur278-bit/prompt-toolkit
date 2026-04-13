@@ -1,0 +1,19 @@
+{
+  "id": "suite-1776079812485",
+  "title": "Production Validation Suite",
+  "tests": [
+    {
+      "input": "Explain how 'Decorators' work in Python. Use a high-school analogy.",
+      "criteria": {
+        "keywords": [
+          "clarity",
+          "comprehensive",
+          "efficiency",
+          "structure"
+        ],
+        "min_length": 50,
+        "max_length": 800
+      }
+    }
+  ]
+}

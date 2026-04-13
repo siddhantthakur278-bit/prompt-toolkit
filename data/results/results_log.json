@@ -825,297 +825,768 @@
     "timestamp": "2026-04-12T05:27:59.251Z"
   },
   {
-    "id": "1776019427192pdc",
-    "promptId": "prompt-1776019426886",
+    "id": "1776054052727p0e",
+    "promptId": "prompt-1776054052420",
     "promptVersion": "v1",
-    "suiteId": "suite-1776019426886",
-    "input": "What are the core concepts of an API?",
-    "output": "Assessing topic: \"What are the core concepts of an API?\"\n\nHere is a brief and basic answer to your topic.",
+    "suiteId": "suite-1776054052420",
+    "input": "cricket",
+    "output": "Assessing topic: \"cricket\"\n\nHere is a brief and basic answer to your topic.",
     "scores": {
       "manualScore": 2,
       "keywordScore": 0,
       "lengthScore": 5,
       "totalScore": 7
     },
-    "timestamp": "2026-04-12T18:43:47.192Z"
+    "timestamp": "2026-04-13T04:20:52.727Z"
   },
   {
-    "id": "177601942749491w",
-    "promptId": "prompt-1776019426886",
+    "id": "1776054053039q6t",
+    "promptId": "prompt-1776054052420",
     "promptVersion": "v2",
-    "suiteId": "suite-1776019426886",
-    "input": "What are the core concepts of an API?",
-    "output": "Assessing topic: \"What are the core concepts of an API?\"\n\nTo answer your query comprehensively: The subject involves many important nuances. It is essential to consider the underlying details that support the major framework. We can look at this from multiple angles to ensure the explanation provides deep insight without losing structure.",
+    "suiteId": "suite-1776054052420",
+    "input": "cricket",
+    "output": "Assessing topic: \"cricket\"\n\nTo answer your query comprehensively: The subject involves many important nuances. It is essential to consider the underlying details that support the major framework. We can look at this from multiple angles to ensure the explanation provides deep insight without losing structure.",
     "scores": {
       "manualScore": 3.5,
       "keywordScore": 5,
       "lengthScore": 5,
       "totalScore": 13.5
     },
-    "timestamp": "2026-04-12T18:43:47.494Z"
+    "timestamp": "2026-04-13T04:20:53.039Z"
   },
   {
-    "id": "17760194277984sf",
-    "promptId": "prompt-1776019426886",
+    "id": "1776054053341ziv",
+    "promptId": "prompt-1776054052420",
     "promptVersion": "v3",
-    "suiteId": "suite-1776019426886",
-    "input": "What are the core concepts of an API?",
-    "output": "Assessing topic: \"What are the core concepts of an API?\"\n\nHere is a structured breakdown regarding your request:\n• Important foundational concepts.\n• Crucial details and underlying functionality.\n• Optimized structure for maximum clarity.\n\nLet me know if you need further assistance!",
+    "suiteId": "suite-1776054052420",
+    "input": "cricket",
+    "output": "Assessing topic: \"cricket\"\n\nHere is a structured breakdown regarding your request:\n• Important foundational concepts.\n• Crucial details and underlying functionality.\n• Optimized structure for maximum clarity.\n\nLet me know if you need further assistance!",
     "scores": {
       "manualScore": 5,
       "keywordScore": 5,
       "lengthScore": 5,
       "totalScore": 15
     },
-    "timestamp": "2026-04-12T18:43:47.798Z"
+    "timestamp": "2026-04-13T04:20:53.341Z"
   },
   {
-    "id": "1776020026450bct",
-    "promptId": "prompt-1776020026143",
+    "id": "1776054299845a02",
+    "promptId": "prompt-1776054299184",
     "promptVersion": "v1",
-    "suiteId": "suite-1776020026143",
-    "input": "explain ai",
-    "output": "Assessing topic: \"explain ai\"\n\nHere is a brief and basic answer to your topic.",
-    "scores": {
-      "manualScore": 2,
-      "keywordScore": 0,
-      "lengthScore": 5,
-      "totalScore": 7
-    },
-    "timestamp": "2026-04-12T18:53:46.450Z"
-  },
-  {
-    "id": "1776020026754zjt",
-    "promptId": "prompt-1776020026143",
-    "promptVersion": "v2",
-    "suiteId": "suite-1776020026143",
-    "input": "explain ai",
-    "output": "Assessing topic: \"explain ai\"\n\nTo answer your query comprehensively: The subject involves many important nuances. It is essential to consider the underlying details that support the major framework. We can look at this from multiple angles to ensure the explanation provides deep insight without losing structure.",
-    "scores": {
-      "manualScore": 3.5,
-      "keywordScore": 5,
-      "lengthScore": 5,
-      "totalScore": 13.5
-    },
-    "timestamp": "2026-04-12T18:53:46.754Z"
-  },
-  {
-    "id": "1776020027057bp6",
-    "promptId": "prompt-1776020026143",
-    "promptVersion": "v3",
-    "suiteId": "suite-1776020026143",
-    "input": "explain ai",
-    "output": "Assessing topic: \"explain ai\"\n\nHere is a structured breakdown regarding your request:\n• Important foundational concepts.\n• Crucial details and underlying functionality.\n• Optimized structure for maximum clarity.\n\nLet me know if you need further assistance!",
-    "scores": {
-      "manualScore": 5,
-      "keywordScore": 5,
-      "lengthScore": 5,
-      "totalScore": 15
-    },
-    "timestamp": "2026-04-12T18:53:47.057Z"
-  },
-  {
-    "id": "1776020141916oas",
-    "promptId": "prompt-1776020141609",
-    "promptVersion": "v1",
-    "suiteId": "suite-1776020141609",
-    "input": "who is vaibhav singh",
-    "output": "Assessing topic: \"who is vaibhav singh\"\n\nHere is a brief and basic answer to your topic.",
-    "scores": {
-      "manualScore": 2,
-      "keywordScore": 0,
-      "lengthScore": 5,
-      "totalScore": 7
-    },
-    "timestamp": "2026-04-12T18:55:41.916Z"
-  },
-  {
-    "id": "1776020142220bk4",
-    "promptId": "prompt-1776020141609",
-    "promptVersion": "v2",
-    "suiteId": "suite-1776020141609",
-    "input": "who is vaibhav singh",
-    "output": "Assessing topic: \"who is vaibhav singh\"\n\nTo answer your query comprehensively: The subject involves many important nuances. It is essential to consider the underlying details that support the major framework. We can look at this from multiple angles to ensure the explanation provides deep insight without losing structure.",
-    "scores": {
-      "manualScore": 3.5,
-      "keywordScore": 5,
-      "lengthScore": 5,
-      "totalScore": 13.5
-    },
-    "timestamp": "2026-04-12T18:55:42.220Z"
-  },
-  {
-    "id": "1776020142525mte",
-    "promptId": "prompt-1776020141609",
-    "promptVersion": "v3",
-    "suiteId": "suite-1776020141609",
-    "input": "who is vaibhav singh",
-    "output": "Assessing topic: \"who is vaibhav singh\"\n\nHere is a structured breakdown regarding your request:\n• Important foundational concepts.\n• Crucial details and underlying functionality.\n• Optimized structure for maximum clarity.\n\nLet me know if you need further assistance!",
-    "scores": {
-      "manualScore": 5,
-      "keywordScore": 5,
-      "lengthScore": 5,
-      "totalScore": 15
-    },
-    "timestamp": "2026-04-12T18:55:42.525Z"
-  },
-  {
-    "id": "1776020161295for",
-    "promptId": "prompt-1776020160990",
-    "promptVersion": "v1",
-    "suiteId": "suite-1776020160990",
-    "input": "who is vaibhav singh",
-    "output": "Assessing topic: \"who is vaibhav singh\"\n\nHere is a brief and basic answer to your topic.",
-    "scores": {
-      "manualScore": 2,
-      "keywordScore": 0,
-      "lengthScore": 5,
-      "totalScore": 7
-    },
-    "timestamp": "2026-04-12T18:56:01.295Z"
-  },
-  {
-    "id": "17760201615971dw",
-    "promptId": "prompt-1776020160990",
-    "promptVersion": "v2",
-    "suiteId": "suite-1776020160990",
-    "input": "who is vaibhav singh",
-    "output": "Assessing topic: \"who is vaibhav singh\"\n\nTo answer your query comprehensively: The subject involves many important nuances. It is essential to consider the underlying details that support the major framework. We can look at this from multiple angles to ensure the explanation provides deep insight without losing structure.",
-    "scores": {
-      "manualScore": 3.5,
-      "keywordScore": 5,
-      "lengthScore": 5,
-      "totalScore": 13.5
-    },
-    "timestamp": "2026-04-12T18:56:01.597Z"
-  },
-  {
-    "id": "1776020161900uu8",
-    "promptId": "prompt-1776020160990",
-    "promptVersion": "v3",
-    "suiteId": "suite-1776020160990",
-    "input": "who is vaibhav singh",
-    "output": "Assessing topic: \"who is vaibhav singh\"\n\nHere is a structured breakdown regarding your request:\n• Important foundational concepts.\n• Crucial details and underlying functionality.\n• Optimized structure for maximum clarity.\n\nLet me know if you need further assistance!",
-    "scores": {
-      "manualScore": 5,
-      "keywordScore": 5,
-      "lengthScore": 5,
-      "totalScore": 15
-    },
-    "timestamp": "2026-04-12T18:56:01.900Z"
-  },
-  {
-    "id": "1776020950970wyp",
-    "promptId": "prompt-1776020950365",
-    "promptVersion": "v1",
-    "suiteId": "suite-1776020950365",
-    "input": "What are the core concepts of an API?",
-    "output": "Definition: What are the core concepts of an API? is a fundamental concept in its field. It focuses on core principles and provides a basic understanding of the topic without complex overhauls.",
+    "suiteId": "suite-1776054299184",
+    "input": "who is the pm of india",
+    "output": "Strategic assessment for vector: \"who is the pm of india\"\n\nBASIC RESPONSE:\nTask processed using standard baseline logic. The inquiry on \"who is the pm of india\" has been cataloged and resolved with minimal overhead. Higher-order reasoning versions are recommended for complex vectors.",
     "scores": {
       "manualScore": 2.5,
-      "keywordScore": 1.67,
-      "lengthScore": 3.5,
-      "totalScore": 7.67,
-      "keywordMatches": [
-        "definition"
-      ]
-    },
-    "timestamp": "2026-04-12T19:09:10.970Z"
-  },
-  {
-    "id": "17760209515753tg",
-    "promptId": "prompt-1776020950365",
-    "promptVersion": "v2",
-    "suiteId": "suite-1776020950365",
-    "input": "What are the core concepts of an API?",
-    "output": "Definition: What are the core concepts of an API? refers to a comprehensive system or concept that requires deep exploration. \n\nFor example, when applying What are the core concepts of an API? in a practical scenario, we see how its components interact. Another example would be its integration in modern workflows where it enhances efficiency. In detail, What are the core concepts of an API? operates by balancing various factors to achieve a specific goal.",
-    "scores": {
-      "manualScore": 4,
-      "keywordScore": 3.33,
+      "keywordScore": 0,
       "lengthScore": 5,
-      "totalScore": 12.33,
-      "keywordMatches": [
-        "example",
-        "definition"
-      ]
+      "totalScore": 7.5
     },
-    "timestamp": "2026-04-12T19:09:11.575Z"
+    "timestamp": "2026-04-13T04:24:59.845Z"
   },
   {
-    "id": "1776020952179ipr",
-    "promptId": "prompt-1776020950365",
+    "id": "1776054300694q4c",
+    "promptId": "prompt-1776054299184",
+    "promptVersion": "v2",
+    "suiteId": "suite-1776054299184",
+    "input": "who is the pm of india",
+    "output": "Strategic assessment for vector: \"who is the pm of india\"\n\nANALYTICAL DEEP-DIVE:\nInvestigation into the core subject revealed several critical success factors. By analyzing the intersection of theoretical frameworks and practical applications, we identify a clear path for optimization. The nuanced details support a robust implementation strategy across all major infrastructure layers.",
+    "scores": {
+      "manualScore": 4.2,
+      "keywordScore": 1.25,
+      "lengthScore": 5,
+      "totalScore": 10.45
+    },
+    "timestamp": "2026-04-13T04:25:00.694Z"
+  },
+  {
+    "id": "17760543013526ni",
+    "promptId": "prompt-1776054299184",
     "promptVersion": "v3",
-    "suiteId": "suite-1776020950365",
-    "input": "What are the core concepts of an API?",
-    "output": "Overview: What are the core concepts of an API? is a versatile topic with numerous real-world applications. Here is a breakdown of key points:\n\n• Definition: The core essence of What are the core concepts of an API? involves systematic application of principles.\n• Applications: Widely used in technology, science, and business to optimize processes.\n• Real-world Example: What are the core concepts of an API? is used in urban planning to create smarter cities.\n• Efficiency: It reduces overhead and improves response times in complex systems.\n\nIn conclusion, What are the core concepts of an API? is essential for modern development.",
+    "suiteId": "suite-1776054299184",
+    "input": "who is the pm of india",
+    "output": "Strategic assessment for vector: \"who is the pm of india\"\n\nELITE DATA ARCHITECTURE:\n1. PRIMARY ANALYSIS: Comprehensive breakdown of foundational elements.\n2. CORE FUNCTIONALITY: Explicit mapping of underlying procedural logic.\n3. OPTIMIZED CONCLUSION: Finalized strategic synthesis for production use.\n\nSummary: High-fidelity structured output achieved.",
     "scores": {
       "manualScore": 5,
-      "keywordScore": 5,
+      "keywordScore": 2.5,
       "lengthScore": 5,
-      "totalScore": 15,
-      "keywordMatches": [
-        "example",
-        "applications",
-        "definition"
-      ]
+      "totalScore": 12.5
     },
-    "timestamp": "2026-04-12T19:09:12.179Z"
+    "timestamp": "2026-04-13T04:25:01.352Z"
   },
   {
-    "id": "177602096784988t",
-    "promptId": "prompt-1776020967243",
+    "id": "1776060574218hy9",
+    "promptId": "demo-1776060574068",
     "promptVersion": "v1",
-    "suiteId": "suite-1776020967243",
-    "input": "how is vaibhav singh",
-    "output": "Definition: how is vaibhav singh is a fundamental concept in its field. It focuses on core principles and provides a basic understanding of the topic without complex overhauls.",
+    "suiteId": "suite-1776060574068",
+    "input": "You are an expert copywriter. Generate 5 catchy and professional email subject lines based on the user's topic.",
+    "output": "[API Error] The model `llama3-8b-8192` has been decommissioned and is no longer supported. Please refer to https://console.groq.com/docs/deprecations for a recommendation on which model to use instead.",
     "scores": {
+      "keywordScore": 0,
+      "lengthScore": 5,
       "manualScore": 2.5,
-      "keywordScore": 1.67,
-      "lengthScore": 3.5,
-      "totalScore": 7.67,
-      "keywordMatches": [
-        "definition"
-      ]
+      "totalScore": 7.5
     },
-    "timestamp": "2026-04-12T19:09:27.849Z"
+    "timestamp": "2026-04-13T06:09:34.218Z"
   },
   {
-    "id": "1776020968453kvq",
-    "promptId": "prompt-1776020967243",
+    "id": "1776060574519vfa",
+    "promptId": "demo-1776060574068",
     "promptVersion": "v2",
-    "suiteId": "suite-1776020967243",
-    "input": "how is vaibhav singh",
-    "output": "Definition: how is vaibhav singh refers to a comprehensive system or concept that requires deep exploration. \n\nFor example, when applying how is vaibhav singh in a practical scenario, we see how its components interact. Another example would be its integration in modern workflows where it enhances efficiency. In detail, how is vaibhav singh operates by balancing various factors to achieve a specific goal.",
+    "suiteId": "suite-1776060574068",
+    "input": "You are an expert copywriter. Generate 5 catchy and professional email subject lines based on the user's topic.",
+    "output": "[API Error] The model `llama3-8b-8192` has been decommissioned and is no longer supported. Please refer to https://console.groq.com/docs/deprecations for a recommendation on which model to use instead.",
     "scores": {
-      "manualScore": 4,
-      "keywordScore": 3.33,
+      "keywordScore": 0,
       "lengthScore": 5,
-      "totalScore": 12.33,
-      "keywordMatches": [
-        "example",
-        "definition"
-      ]
+      "manualScore": 4.2,
+      "totalScore": 9.2
     },
-    "timestamp": "2026-04-12T19:09:28.453Z"
+    "timestamp": "2026-04-13T06:09:34.519Z"
   },
   {
-    "id": "1776020969055dfm",
-    "promptId": "prompt-1776020967243",
+    "id": "1776060574578b5c",
+    "promptId": "demo-1776060574068",
     "promptVersion": "v3",
-    "suiteId": "suite-1776020967243",
-    "input": "how is vaibhav singh",
-    "output": "Overview: how is vaibhav singh is a versatile topic with numerous real-world applications. Here is a breakdown of key points:\n\n• Definition: The core essence of how is vaibhav singh involves systematic application of principles.\n• Applications: Widely used in technology, science, and business to optimize processes.\n• Real-world Example: how is vaibhav singh is used in urban planning to create smarter cities.\n• Efficiency: It reduces overhead and improves response times in complex systems.\n\nIn conclusion, how is vaibhav singh is essential for modern development.",
+    "suiteId": "suite-1776060574068",
+    "input": "You are an expert copywriter. Generate 5 catchy and professional email subject lines based on the user's topic.",
+    "output": "[API Error] The model `llama3-8b-8192` has been decommissioned and is no longer supported. Please refer to https://console.groq.com/docs/deprecations for a recommendation on which model to use instead.",
     "scores": {
-      "manualScore": 5,
-      "keywordScore": 5,
+      "keywordScore": 0,
       "lengthScore": 5,
-      "totalScore": 15,
-      "keywordMatches": [
-        "example",
-        "applications",
-        "definition"
-      ]
+      "manualScore": 5,
+      "totalScore": 10
     },
-    "timestamp": "2026-04-12T19:09:29.055Z"
+    "timestamp": "2026-04-13T06:09:34.578Z"
+  },
+  {
+    "id": "1776060577709buj",
+    "promptId": "demo-1776060577546",
+    "promptVersion": "v1",
+    "suiteId": "suite-1776060577546",
+    "input": "You are an expert copywriter. Generate 5 catchy and professional email subject lines based on the user's topic.",
+    "output": "[API Error] The model `llama3-8b-8192` has been decommissioned and is no longer supported. Please refer to https://console.groq.com/docs/deprecations for a recommendation on which model to use instead.",
+    "scores": {
+      "keywordScore": 0,
+      "lengthScore": 5,
+      "manualScore": 2.5,
+      "totalScore": 7.5
+    },
+    "timestamp": "2026-04-13T06:09:37.709Z"
+  },
+  {
+    "id": "1776060577734xn8",
+    "promptId": "demo-1776060577546",
+    "promptVersion": "v2",
+    "suiteId": "suite-1776060577546",
+    "input": "You are an expert copywriter. Generate 5 catchy and professional email subject lines based on the user's topic.",
+    "output": "[API Error] The model `llama3-8b-8192` has been decommissioned and is no longer supported. Please refer to https://console.groq.com/docs/deprecations for a recommendation on which model to use instead.",
+    "scores": {
+      "keywordScore": 0,
+      "lengthScore": 5,
+      "manualScore": 4.2,
+      "totalScore": 9.2
+    },
+    "timestamp": "2026-04-13T06:09:37.734Z"
+  },
+  {
+    "id": "1776060577755ulb",
+    "promptId": "demo-1776060577546",
+    "promptVersion": "v3",
+    "suiteId": "suite-1776060577546",
+    "input": "You are an expert copywriter. Generate 5 catchy and professional email subject lines based on the user's topic.",
+    "output": "[API Error] The model `llama3-8b-8192` has been decommissioned and is no longer supported. Please refer to https://console.groq.com/docs/deprecations for a recommendation on which model to use instead.",
+    "scores": {
+      "keywordScore": 0,
+      "lengthScore": 5,
+      "manualScore": 5,
+      "totalScore": 10
+    },
+    "timestamp": "2026-04-13T06:09:37.755Z"
+  },
+  {
+    "id": "177606072145891i",
+    "promptId": "demo-1776060720757",
+    "promptVersion": "v1",
+    "suiteId": "suite-1776060720757",
+    "input": "You are an expert copywriter. Generate 5 catchy and professional email subject lines based on the user's topic.",
+    "output": "Since I don't have a specific topic from you, I'll create five general email subject lines that can be applied to various industries. Here they are:\n\n1. **Unlock Exclusive Opportunities: Your Invitation Inside**\n2. **Transform Your [Industry/Field] with Our Expert Solutions**\n3. **Your Path to Success Starts Here: Limited-Time Offer**\n4. **Stay Ahead of the Curve: The Latest [Industry/Field] Insights**\n5. **Elevate Your [Business/Personal] Growth with Our Proven Strategies**\n\nIf you provide a specific topic, I can generate more targeted and relevant email subject lines for you.",
+    "scores": {
+      "keywordScore": 0,
+      "lengthScore": 5,
+      "manualScore": 2.5,
+      "totalScore": 7.5
+    },
+    "timestamp": "2026-04-13T06:12:01.458Z"
+  },
+  {
+    "id": "1776060722571cn1",
+    "promptId": "demo-1776060720757",
+    "promptVersion": "v2",
+    "suiteId": "suite-1776060720757",
+    "input": "You are an expert copywriter. Generate 5 catchy and professional email subject lines based on the user's topic.",
+    "output": "I'd be happy to help you with some catchy and professional email subject lines. Since you didn't specify a particular topic, I'll provide five general options that can be applied to various subjects:\n\n1. **Unlock Exclusive Insights: Your Guide to [Topic]** - This subject line creates curiosity and encourages the reader to open the email to learn more about the topic.\n2. **Transform Your [Industry/Field] with Our Expert Tips** - This subject line positions your email as a valuable resource that can help the reader improve their skills or knowledge in a specific area.\n3. **Your Invitation to [Event/Webinar/Workshop]: Don't Miss Out** - This subject line creates a sense of urgency and exclusivity, making the reader feel like they're part of a select group.\n4. **The Ultimate [Tool/Resource] for [Desired Outcome]** - This subject line clearly communicates the value proposition of your email and promises to deliver a solution to a specific problem or goal.\n5. **Stay Ahead of the Curve: The Latest [Industry/Field] Updates** - This subject line appeals to the reader's desire to stay informed and up-to-date, making them more likely to open the email to learn about the latest developments.\n\nIf you provide a specific topic, I can generate more tailored and relevant subject lines for you.",
+    "scores": {
+      "keywordScore": 0,
+      "lengthScore": 2,
+      "manualScore": 4.2,
+      "totalScore": 6.2
+    },
+    "timestamp": "2026-04-13T06:12:02.571Z"
+  },
+  {
+    "id": "1776060723292cj2",
+    "promptId": "demo-1776060720757",
+    "promptVersion": "v3",
+    "suiteId": "suite-1776060720757",
+    "input": "You are an expert copywriter. Generate 5 catchy and professional email subject lines based on the user's topic.",
+    "output": "I'd be happy to help you with some catchy and professional email subject lines. However, you haven't specified a topic yet. Please provide a topic, and I'll generate five email subject lines for you.\n\nIf you'd like, I can suggest some general topics to get started. For example, we could explore topics like:\n\n* Career Development\n* Marketing Strategies\n* Financial Planning\n* Health and Wellness\n* Technology Updates\n\nPlease let me know which topic you're interested in, and I'll create five email subject lines for you.\n\nOnce I have the topic, I'll provide you with email subject lines that are:\n\n* Attention-grabbing\n* Informative\n* Relevant\n* Concise\n* Professionally written\n\nPlease provide the topic, and I'll get started on crafting some compelling email subject lines for you.",
+    "scores": {
+      "keywordScore": 0,
+      "lengthScore": 5,
+      "manualScore": 5,
+      "totalScore": 10
+    },
+    "timestamp": "2026-04-13T06:12:03.292Z"
+  },
+  {
+    "id": "1776060743720od1",
+    "promptId": "demo-1776060743093",
+    "promptVersion": "v1",
+    "suiteId": "suite-1776060743093",
+    "input": "You are an expert copywriter. Generate 5 catchy and professional email subject lines based on the user's topic.",
+    "output": "Since the user didn't specify a topic, I'll provide 5 general yet versatile email subject lines that can be applied to various topics. Here they are:\n\n1. **Unlock Exclusive Insights: Your Guide to [Topic]**\n2. **Transform Your [Area of Interest] with Our Latest Update**\n3. **Your Journey to [Desired Outcome] Starts Here**\n4. **Stay Ahead of the Curve: [Topic] News and Updates**\n5. **Discover the Secret to [Achieving a Specific Goal]**\n\nIf you provide a specific topic, I can generate more targeted and relevant email subject lines for you.",
+    "scores": {
+      "keywordScore": 0,
+      "lengthScore": 5,
+      "manualScore": 2.5,
+      "totalScore": 7.5
+    },
+    "timestamp": "2026-04-13T06:12:23.720Z"
+  },
+  {
+    "id": "17760607444046fu",
+    "promptId": "demo-1776060743093",
+    "promptVersion": "v2",
+    "suiteId": "suite-1776060743093",
+    "input": "You are an expert copywriter. Generate 5 catchy and professional email subject lines based on the user's topic.",
+    "output": "Since the user hasn't specified a topic, I'll provide 5 general email subject lines that can be applied to various industries and topics. Here they are:\n\n1. **Unlock Exclusive Insights: Your Ultimate Guide Inside**\n2. **Take Your Business to the Next Level: Expert Tips and Tricks**\n3. **You're Invited: Join the Conversation and Shape the Future**\n4. **Transform Your Workflow: Introducing the Latest Innovations**\n5. **Stay Ahead of the Curve: The Latest News, Trends, and Updates**\n\nIf you provide a specific topic, I can generate more targeted and relevant email subject lines for you.",
+    "scores": {
+      "keywordScore": 0,
+      "lengthScore": 5,
+      "manualScore": 4.2,
+      "totalScore": 9.2
+    },
+    "timestamp": "2026-04-13T06:12:24.404Z"
+  },
+  {
+    "id": "1776060745512ept",
+    "promptId": "demo-1776060743093",
+    "promptVersion": "v3",
+    "suiteId": "suite-1776060743093",
+    "input": "You are an expert copywriter. Generate 5 catchy and professional email subject lines based on the user's topic.",
+    "output": "I'd be happy to help you with some professional email subject lines. However, I don't see a specific topic mentioned. Let's assume a general business topic. Here are five options:\n\n1. **Boost Your Business: Expert Insights Inside** - This subject line is short, attention-grabbing, and promises valuable content.\n2. **Your Path to Success: Exclusive Opportunities Ahead** - This subject line creates a sense of anticipation and encourages the recipient to open the email.\n3. **Stay Ahead of the Curve: Industry News and Updates** - This subject line positions the email as a valuable resource for staying informed about the latest industry developments.\n4. **Transform Your Strategy: Proven Tips and Best Practices** - This subject line promises actionable advice and expert guidance, making it more likely to be opened.\n5. **Unlock Your Potential: Innovative Solutions and Services** - This subject line emphasizes the potential benefits of opening the email, such as discovering new solutions or services that can help the recipient achieve their goals.\n\nIf you provide a specific topic, I can generate more tailored and relevant subject lines for you.",
+    "scores": {
+      "keywordScore": 0,
+      "lengthScore": 2,
+      "manualScore": 5,
+      "totalScore": 7
+    },
+    "timestamp": "2026-04-13T06:12:25.512Z"
+  },
+  {
+    "id": "1776060942639lru",
+    "promptId": "demo-1776060940981",
+    "promptVersion": "v1",
+    "suiteId": "suite-1776060940981",
+    "input": "You are an expert copywriter. Generate 5 catchy and professional email subject lines based on the user's topic.",
+    "output": "Since you didn't specify a topic, I'll provide 5 general catchy and professional email subject lines that can be applied to various topics. If you provide a specific topic, I can generate more tailored subject lines.\n\n1. **Unlock Exclusive Insights: [Topic]** - This subject line creates curiosity and encourages the recipient to open the email to learn more.\n2. **Your [Topic] Update: Latest News and Trends** - This subject line is informative and keeps the recipient up-to-date on the latest developments.\n3. **Transform Your [Topic] with Our Expert Guidance** - This subject line positions your brand as a trusted authority and offers help to the recipient.\n4. **Don't Miss Out: [Topic] Opportunities and Offers** - This subject line creates a sense of urgency and encourages the recipient to take action.\n5. **Elevate Your [Topic] Experience: Tips and Best Practices** - This subject line provides value to the recipient and offers helpful advice to improve their experience.\n\nIf you provide a specific topic, I can generate more targeted and effective subject lines.",
+    "scores": {
+      "keywordScore": 0,
+      "lengthScore": 2,
+      "manualScore": 2.5,
+      "totalScore": 4.5
+    },
+    "timestamp": "2026-04-13T06:15:42.639Z"
+  },
+  {
+    "id": "1776060943768sls",
+    "promptId": "demo-1776060940981",
+    "promptVersion": "v2",
+    "suiteId": "suite-1776060940981",
+    "input": "You are an expert copywriter. Generate 5 catchy and professional email subject lines based on the user's topic.",
+    "output": "I'd be happy to help you with some catchy and professional email subject lines. Since you didn't specify a particular topic, I'll provide five general options that can be adapted to various subjects. Here they are:\n\n1. **Unlock Exclusive Insights: [Topic] Update**\nThis subject line creates a sense of curiosity and importance, making the recipient want to open the email to learn more.\n2. **Your [Topic] Journey Starts Here: Expert Guidance**\nThis subject line is more personalized and inviting, implying that the email will provide valuable guidance and support.\n3. **Breaking News: [Topic] Revolutionizes [Industry/Field]**\nThis subject line is attention-grabbing and timely, suggesting that the email contains important and potentially game-changing information.\n4. **Maximize Your [Topic] Potential: Proven Strategies Inside**\nThis subject line is more results-oriented, promising the recipient that the email will provide actionable advice and strategies for success.\n5. **Stay Ahead of the Curve: The Latest [Topic] Trends and Updates**\nThis subject line is informative and relevant, implying that the email will keep the recipient up-to-date with the latest developments and trends in the topic.\n\nFeel free to customize these subject lines to fit your specific topic and audience, and A/B test them to see which ones perform best.",
+    "scores": {
+      "keywordScore": 0,
+      "lengthScore": 2,
+      "manualScore": 4.2,
+      "totalScore": 6.2
+    },
+    "timestamp": "2026-04-13T06:15:43.768Z"
+  },
+  {
+    "id": "17760609444756wh",
+    "promptId": "demo-1776060940981",
+    "promptVersion": "v3",
+    "suiteId": "suite-1776060940981",
+    "input": "You are an expert copywriter. Generate 5 catchy and professional email subject lines based on the user's topic.",
+    "output": "I'm happy to help, but I don't see a specific topic provided. Please provide a topic, and I'll generate 5 catchy and professional email subject lines for you. If you'd like, I can suggest some general topics and provide subject lines for those instead.\n\nAssuming a general business topic, here are 5 examples:\n\n1. **Boost Your Business: Expert Insights Inside**\n2. **Your Key to Success: Exclusive Industry Updates**\n3. **Transform Your Workflow: Innovative Solutions Ahead**\n4. **Stay Ahead of the Curve: Latest Trends and News**\n5. **Unlock Your Potential: Expert Guidance and Support**\n\nPlease provide a specific topic, and I'll create more tailored subject lines for you.",
+    "scores": {
+      "keywordScore": 0,
+      "lengthScore": 5,
+      "manualScore": 5,
+      "totalScore": 10
+    },
+    "timestamp": "2026-04-13T06:15:44.475Z"
+  },
+  {
+    "id": "177606098734751e",
+    "promptId": "demo-1776060986513",
+    "promptVersion": "v1",
+    "suiteId": "suite-1776060986513",
+    "input": "You are an expert copywriter. Generate 5 catchy and professional email subject lines based on the user's topic.",
+    "output": "Since you didn't specify a particular topic, I'll create five general email subject lines that can be adapted to various topics. Here they are:\n\n1. **Unlock Exclusive Insights: [Topic] Update Inside**\n2. **Your [Topic] Journey Starts Here: Expert Tips and Advice**\n3. **Get Ahead of the Curve: The Latest [Topic] Trends and News**\n4. **Transform Your [Topic] Experience: Proven Strategies and Results**\n5. **Stay Informed, Stay Ahead: Your Weekly [Topic] Newsletter**\n\nThese subject lines aim to be catchy, professional, and adaptable to various topics. Feel free to replace [Topic] with your specific subject, and adjust as needed to fit your email content and audience.",
+    "scores": {
+      "keywordScore": 0,
+      "lengthScore": 5,
+      "manualScore": 2.5,
+      "totalScore": 7.5
+    },
+    "timestamp": "2026-04-13T06:16:27.347Z"
+  },
+  {
+    "id": "17760609882035ye",
+    "promptId": "demo-1776060986513",
+    "promptVersion": "v2",
+    "suiteId": "suite-1776060986513",
+    "input": "You are an expert copywriter. Generate 5 catchy and professional email subject lines based on the user's topic.",
+    "output": "Since the user didn't specify a topic, I'll provide 5 general email subject lines that can be applied to various industries and contexts. Here they are:\n\n1. **Unlock Exclusive Insights: Your Path to Success Starts Here**\n2. **Transform Your Business: Expert Solutions for a Changing World**\n3. **Your Invitation to Innovate: Discover the Latest Trends and Opportunities**\n4. **Elevate Your Game: Proven Strategies for Achieving Your Goals**\n5. **Stay Ahead of the Curve: Expert Advice and Industry News You Can't Miss**\n\nThese subject lines aim to capture the reader's attention by:\n\n* Emphasizing exclusivity and scarcity\n* Promising solutions and transformation\n* Inviting the reader to explore new opportunities\n* Offering expert guidance and proven strategies\n* Encouraging the reader to stay informed and up-to-date\n\nFeel free to modify them to fit your specific needs and topic. If you have a specific topic in mind, I'd be happy to generate more tailored subject lines for you.",
+    "scores": {
+      "keywordScore": 0,
+      "lengthScore": 2,
+      "manualScore": 4.2,
+      "totalScore": 6.2
+    },
+    "timestamp": "2026-04-13T06:16:28.203Z"
+  },
+  {
+    "id": "1776060989031wzc",
+    "promptId": "demo-1776060986513",
+    "promptVersion": "v3",
+    "suiteId": "suite-1776060986513",
+    "input": "You are an expert copywriter. Generate 5 catchy and professional email subject lines based on the user's topic.",
+    "output": "I'm ready to create some compelling email subject lines. However, I don't see a specific topic provided. Please give me a topic, and I'll generate five catchy and professional email subject lines for you.\n\nIf you'd like, I can suggest some general topics, or you can provide one. Some examples of topics might include:\n\n* Introduction to a new product or service\n* Invitation to a webinar or event\n* Exclusive offer or promotion\n* Newsletter or blog update\n* Request for feedback or survey\n\nPlease let me know your topic, and I'll create five email subject lines that are sure to grab attention.\n\n(Once you provide the topic, I'll generate the subject lines in the following format:\n\n1. **Subject Line 1**: Brief description\n2. **Subject Line 2**: Brief description\n3. **Subject Line 3**: Brief description\n4. **Subject Line 4**: Brief description\n5. **Subject Line 5**: Brief description)",
+    "scores": {
+      "keywordScore": 0,
+      "lengthScore": 2,
+      "manualScore": 5,
+      "totalScore": 7
+    },
+    "timestamp": "2026-04-13T06:16:29.031Z"
+  },
+  {
+    "id": "17760610378065ia",
+    "promptId": "demo-1776061037083",
+    "promptVersion": "v1",
+    "suiteId": "suite-1776061037083",
+    "input": "You are an expert copywriter. Generate 5 catchy and professional email subject lines based on the user's topic.",
+    "output": "Since you didn't provide a specific topic, I'll choose a general topic - \"productivity\" - to generate five catchy and professional email subject lines. Here they are:\n\n1. **Boost Your Day: 5 Minutes to Peak Productivity**\n2. **Unlock Your Full Potential: Expert Productivity Hacks Inside**\n3. **Get More Done in Less Time: The Ultimate Productivity Secrets**\n4. **Transform Your Workflow: Proven Strategies for Maximum Productivity**\n5. **Achieve More, Stress Less: Your Path to Optimal Productivity Starts Here**\n\nIf you provide a specific topic, I'd be happy to generate more tailored email subject lines for you.",
+    "scores": {
+      "keywordScore": 0,
+      "lengthScore": 5,
+      "manualScore": 2.5,
+      "totalScore": 7.5
+    },
+    "timestamp": "2026-04-13T06:17:17.806Z"
+  },
+  {
+    "id": "1776061039577gt5",
+    "promptId": "demo-1776061037083",
+    "promptVersion": "v2",
+    "suiteId": "suite-1776061037083",
+    "input": "You are an expert copywriter. Generate 5 catchy and professional email subject lines based on the user's topic.",
+    "output": "Since you didn't specify a topic, I'll provide five general yet versatile email subject lines that can be applied to various topics, along with a brief explanation of how they can be tailored to fit specific subjects:\n\n1. **Unlock Exclusive Insights: Your [Topic] Update** - This subject line can be customized by replacing \"[Topic]\" with the user's specific area of interest, such as \"industry trends\" or \"product updates.\"\n2. **Transform Your [Industry/Field] with Our Expertise** - By specifying the industry or field, this subject line can be made more relevant to the user's topic, highlighting the benefits of the sender's expertise.\n3. **Your [Topic] Journey Starts Here: Get the Inside Scoop** - This subject line invites the user to embark on a journey of discovery, with the sender serving as a guide. It can be tailored to fit various topics by replacing \"[Topic]\" with the user's specific area of interest.\n4. **Stay Ahead of the Curve: [Topic] News and Updates** - This subject line emphasizes the importance of staying informed and up-to-date in a rapidly changing environment. By specifying the topic, the sender can make the subject line more relevant and attention-grabbing.\n5. **Elevate Your [Goal/Objective] with Our Proven Strategies** - This subject line can be customized by replacing \"[Goal/Objective]\" with the user's specific aspirations or challenges, making it more relatable and compelling.\n\nTo illustrate how these subject lines can be applied to specific topics, let's consider a few examples:\n\n* For a topic like \"marketing automation,\" the subject line could be \"Unlock Exclusive Insights: Your Marketing Automation Update\" or \"Transform Your Marketing Team with Our Expertise.\"\n* For a topic like \"sustainable energy,\" the subject line could be \"Your Sustainable Energy Journey Starts Here: Get the Inside Scoop\" or \"Stay Ahead of the Curve: Sustainable Energy News and Updates.\"\n* For a topic like \"career development,\" the subject line could be \"Elevate Your Career with Our Proven Strategies\" or \"Unlock Exclusive Insights: Your Career Development Update.\"\n\nBy tailoring these subject lines to fit specific topics and user interests, you can create more effective and engaging email campaigns that resonate with your audience.",
+    "scores": {
+      "keywordScore": 0,
+      "lengthScore": 2,
+      "manualScore": 4.2,
+      "totalScore": 6.2
+    },
+    "timestamp": "2026-04-13T06:17:19.577Z"
+  },
+  {
+    "id": "1776061040104odg",
+    "promptId": "demo-1776061037083",
+    "promptVersion": "v3",
+    "suiteId": "suite-1776061037083",
+    "input": "You are an expert copywriter. Generate 5 catchy and professional email subject lines based on the user's topic.",
+    "output": "To generate five catchy and professional email subject lines, I'll need a topic. Since you haven't provided one, I'll use a general topic: \"Boosting Productivity.\" Here are five options:\n\n1. **Unlock Your Full Potential: Productivity Secrets Inside**\n2. **Get More Done in Less Time: Expert Productivity Tips**\n3. **Transform Your Workday: Proven Strategies for Success**\n4. **From Overwhelmed to Organized: Your Path to Peak Productivity**\n5. **Maximize Your Time, Amplify Your Results: The Ultimate Productivity Guide**\n\nIf you provide a specific topic, I can generate subject lines tailored to your needs.",
+    "scores": {
+      "keywordScore": 0,
+      "lengthScore": 5,
+      "manualScore": 5,
+      "totalScore": 10
+    },
+    "timestamp": "2026-04-13T06:17:20.104Z"
+  },
+  {
+    "id": "1776061304129fjd",
+    "promptId": "demo-1776061302720",
+    "promptVersion": "v1",
+    "suiteId": "suite-1776061302720",
+    "input": "syntax for the mail",
+    "output": "The syntax for an email typically includes the following elements:\n\n1. **To**: The recipient's email address.\n2. **From**: The sender's email address.\n3. **Subject**: A brief summary of the email's content.\n4. **Body**: The main content of the email.\n5. **CC** (optional): Carbon copy recipients' email addresses.\n6. **BCC** (optional): Blind carbon copy recipients' email addresses.\n7. **Attachments** (optional): Files attached to the email.\n\nHere's an example of a basic email syntax:\n\n```\nTo: recipient@example.com\nFrom: sender@example.com\nSubject: Example Email\n\nDear Recipient,\n\nThis is an example email.\n\nBest regards,\nSender\n\nCC: cc_recipient@example.com\nBCC: bcc_recipient@example.com\nAttachments: example_file.pdf\n```\n\nIn a more formal or business setting, the email syntax might include additional elements, such as:\n\n* **Salutation**: A formal greeting, such as \"Dear Mr./Ms./Mrs./Dr. Last Name\"\n* **Introduction**: A brief introduction to the email's purpose\n* **Main content**: The main body of the email, which may include multiple paragraphs\n* **Call to action**: A request or instruction for the recipient\n* **Closing**: A formal closing, such as \"Best regards\" or \"Sincerely\"\n* **Signature**: The sender's name, title, and contact information\n\nHere's an example of a more formal email syntax:\n\n```\nTo: recipient@example.com\nFrom: sender@example.com\nSubject: Formal Email Example\n\nDear Mr. Recipient,\n\nI hope this email finds you well. I am writing to discuss the upcoming project meeting.\n\nThe meeting will take place on [Date] at [Time] at [Location]. I would appreciate it if you could confirm your attendance by [RSVP Deadline].\n\nPlease do not hesitate to contact me if you have any questions or concerns.\n\nBest regards,\nSender\nSender's Title\nSender's Company\nSender's Contact Information\n\nCC: cc_recipient@example.com\nBCC: bcc_recipient@example.com\nAttachments: example_file.pdf\n```",
+    "scores": {
+      "keywordScore": 0,
+      "lengthScore": 2,
+      "manualScore": 2.5,
+      "totalScore": 4.5
+    },
+    "timestamp": "2026-04-13T06:21:44.129Z"
+  },
+  {
+    "id": "1776061305387b73",
+    "promptId": "demo-1776061302720",
+    "promptVersion": "v2",
+    "suiteId": "suite-1776061302720",
+    "input": "syntax for the mail",
+    "output": "The syntax for sending an email typically involves the following components:\n\n1. **Recipient's Email Address**: The email address of the person or group you are sending the email to.\n2. **Subject Line**: A brief summary of the email's content, usually appearing in the inbox before the email is opened.\n3. **Salutation**: A greeting at the beginning of the email, such as \"Dear [Name]\" or \"Hello.\"\n4. **Body**: The main content of the email.\n5. **Signature**: Your name and contact information, often including your email address, phone number, and physical address.\n6. **Attachments**: Optional files or documents sent along with the email.\n\nHere's a basic syntax for a formal email:\n\n```\nSubject: [Subject Line]\n\nDear [Recipient's Name],\n\n[Email Body]\n\nBest regards,\n[Your Name]\n[Your Title]\n[Your Contact Information]\n[Your Email Address]\n```\n\nFor a more casual email, you might use:\n\n```\nSubject: [Subject Line]\n\nHi [Recipient's Name],\n\n[Email Body]\n\nBest,\n[Your Name]\n```\n\n**Email Header Syntax**:\n\nWhen sending an email programmatically (e.g., using a programming language), the syntax may include additional headers, such as:\n\n* `To`: The recipient's email address.\n* `From`: The sender's email address.\n* `Subject`: The email subject line.\n* `Content-Type`: The format of the email body (e.g., `text/plain` or `text/html`).\n* `MIME-Version`: The version of the MIME (Multipurpose Internet Mail Extensions) standard used.\n\nExample email header syntax:\n```\nTo: recipient@example.com\nFrom: sender@example.com\nSubject: Test Email\nContent-Type: text/plain; charset=UTF-8\nMIME-Version: 1.0\n\nEmail Body\n```\nNote: This syntax is typically used when sending emails using a programming language or a command-line interface.",
+    "scores": {
+      "keywordScore": 0,
+      "lengthScore": 2,
+      "manualScore": 4.2,
+      "totalScore": 6.2
+    },
+    "timestamp": "2026-04-13T06:21:45.387Z"
+  },
+  {
+    "id": "1776061306821bis",
+    "promptId": "demo-1776061302720",
+    "promptVersion": "v3",
+    "suiteId": "suite-1776061302720",
+    "input": "syntax for the mail",
+    "output": "**Email Syntax**\n\nWhen composing an email, it's essential to follow a standard syntax to ensure clarity and professionalism. Here's a general outline:\n\n1. **Header**: Includes the sender's and recipient's information.\n\t* **From**: Sender's email address.\n\t* **To**: Recipient's email address.\n\t* **CC** (Carbon Copy): Optional, for recipients who should receive a copy of the email.\n\t* **BCC** (Blind Carbon Copy): Optional, for recipients who should receive a copy of the email without their addresses being visible to others.\n2. **Subject Line**: A brief summary of the email's content.\n3. **Salutation**: A formal greeting, such as \"Dear [Recipient's Name]\" or \"Hello [Recipient's Name]\".\n4. **Body**: The main content of the email, which should be clear, concise, and well-structured.\n5. **Closing**: A professional sign-off, such as \"Best regards\" or \"Sincerely\".\n6. **Signature**: Optional, but recommended, including the sender's name, title, company, and contact information.\n\n**Example Email Syntax:**\n\nFrom: [sender's email address]\nTo: [recipient's email address]\nCC: [optional]\nBCC: [optional]\nSubject: [subject line]\n\nDear [Recipient's Name],\n\n[Body of the email]\n\nBest regards,\n[Sender's Name]\n[Sender's Title]\n[Sender's Company]\n[Sender's Contact Information]\n\n**Tips:**\n\n* Use a clear and concise subject line.\n* Use a formal salutation and closing.\n* Keep the body of the email well-structured and easy to read.\n* Use proper grammar, spelling, and punctuation.\n* Include a professional signature with your contact information.\n* Proofread your email before sending it.",
+    "scores": {
+      "keywordScore": 2.5,
+      "lengthScore": 2,
+      "manualScore": 5,
+      "totalScore": 9.5
+    },
+    "timestamp": "2026-04-13T06:21:46.821Z"
+  },
+  {
+    "id": "1776078106945kjd",
+    "promptId": "demo-1776060577546",
+    "promptVersion": "v1",
+    "suiteId": "suite-1776078105545",
+    "input": "solve two sum leet code problem",
+    "output": "**Two Sum LeetCode Problem**\n================================\n\nThe Two Sum problem is a classic problem on LeetCode, where you are given an array of integers and a target sum, and you need to find two elements in the array that add up to the target sum.\n\n**Problem Statement**\n--------------------\n\nGiven an array of integers `nums` and an integer `target`, return indices of the two numbers such that they add up to `target`. You may assume that each input would have exactly one solution, and you may not use the same element twice. You can return the answer in any order.\n\n**Example**\n-----------\n\n* Input: `nums = [2, 7, 11, 15], target = 9`\n* Output: `[0, 1]` (because `nums[0] + nums[1] == 2 + 7 == 9`)\n\n**Solution**\n------------\n\nHere is a Python solution using a dictionary to store the indices of the elements we have seen so far:\n```python\ndef two_sum(nums, target):\n    num_dict = {}\n    for i, num in enumerate(nums):\n        complement = target - num\n        if complement in num_dict:\n            return [num_dict[complement], i]\n        num_dict[num] = i\n    return []\n```\n**Explanation**\n---------------\n\n1. We create an empty dictionary `num_dict` to store the indices of the elements we have seen so far.\n2. We iterate through the `nums` array using `enumerate`, which gives us the index `i` and the value `num` at that index.\n3. For each `num`, we calculate its complement `complement` by subtracting `num` from the `target`.\n4. We check if `complement` is already in `num_dict`. If it is, it means we have found two numbers that add up to the `target`, so we return their indices.\n5. If `complement` is not in `num_dict`, we add `num` to `num_dict` with its index `i` as the value.\n6. If we reach the end of the array without finding a solution, we return an empty list.\n\n**Time Complexity**\n------------------\n\nThe time complexity of this solution is O(n), where n is the length of the `nums` array, because we make a single pass through the array.\n\n**Space Complexity**\n-------------------\n\nThe space complexity of this solution is O(n), because in the worst case, we need to store all elements of the `nums` array in `num_dict`.\n\n**Example Use Case**\n--------------------\n\n```python\nnums = [2, 7, 11, 15]\ntarget = 9\nprint(two_sum(nums, target))  # Output: [0, 1]\n```",
+    "scores": {
+      "keywordScore": 0,
+      "lengthScore": 2,
+      "manualScore": 2.5,
+      "totalScore": 4.5
+    },
+    "timestamp": "2026-04-13T11:01:46.945Z"
+  },
+  {
+    "id": "1776078108378lc7",
+    "promptId": "demo-1776060577546",
+    "promptVersion": "v2",
+    "suiteId": "suite-1776078105545",
+    "input": "solve two sum leet code problem",
+    "output": "**Two Sum LeetCode Problem Solution**\n\nThe Two Sum problem is a classic problem on LeetCode, where you're given an array of integers `nums` and an integer `target`. You need to find two elements in the array that add up to the `target` and return their indices.\n\n### Problem Statement\n\nGiven an array of integers `nums` and an integer `target`, return the indices of the two numbers such that they add up to `target`. You may assume that each input would have exactly one solution, and you may not use the same element twice. You can return the answer in any order.\n\n### Example\n\n* Input: `nums = [2, 7, 11, 15], target = 9`\n* Output: `[0, 1]`\n* Explanation: Because `nums[0] + nums[1] == 2 + 7 == 9`, we return `[0, 1]`.\n\n### Solution\n\nHere is a Python solution using a dictionary to store the indices of the elements we've seen so far:\n\n```python\ndef two_sum(nums, target):\n    \"\"\"\n    Returns the indices of the two numbers in the array that add up to the target.\n\n    Args:\n        nums (list): The input array of integers.\n        target (int): The target sum.\n\n    Returns:\n        list: The indices of the two numbers that add up to the target.\n    \"\"\"\n    num_dict = {}\n    for i, num in enumerate(nums):\n        complement = target - num\n        if complement in num_dict:\n            return [num_dict[complement], i]\n        num_dict[num] = i\n    return []\n```\n\n### Explanation\n\n1. We create an empty dictionary `num_dict` to store the indices of the elements we've seen so far.\n2. We iterate through the `nums` array using `enumerate`, which gives us both the index `i` and the value `num` of each element.\n3. For each element, we calculate its complement with respect to the `target` by subtracting the current element from the `target`.\n4. We check if the complement is already in the `num_dict`. If it is, it means we've found two elements that add up to the `target`, so we return their indices.\n5. If the complement is not in the `num_dict`, we add the current element to the dictionary with its index as the value.\n6. If we reach the end of the array without finding a solution, we return an empty list.\n\n### Example Usage\n\n```python\nnums = [2, 7, 11, 15]\ntarget = 9\nresult = two_sum(nums, target)\nprint(result)  # Output: [0, 1]\n```\n\n### Time and Space Complexity\n\n* Time complexity: O(n), where n is the length of the `nums` array, because we're doing a single pass through the array.\n* Space complexity: O(n), because in the worst case, we might need to store all elements in the `num_dict`.",
+    "scores": {
+      "keywordScore": 0,
+      "lengthScore": 2,
+      "manualScore": 4.2,
+      "totalScore": 6.2
+    },
+    "timestamp": "2026-04-13T11:01:48.378Z"
+  },
+  {
+    "id": "1776078110139mac",
+    "promptId": "demo-1776060577546",
+    "promptVersion": "v3",
+    "suiteId": "suite-1776078105545",
+    "input": "solve two sum leet code problem",
+    "output": "**Two Sum LeetCode Problem Solution**\n=====================================\n\nThe Two Sum problem is a classic problem on LeetCode, where you are given an array of integers and a target sum, and you need to find two elements in the array that add up to the target sum.\n\n**Problem Statement**\n--------------------\n\nGiven an array of integers `nums` and an integer `target`, return indices of the two numbers such that they add up to `target`. You may assume that each input would have exactly one solution, and you may not use the same element twice. You can return the answer in any order.\n\n**Example**\n-----------\n\n* Input: `nums = [2, 7, 11, 15], target = 9`\n* Output: `[0, 1]` (because `nums[0] + nums[1] == 2 + 7 == 9`)\n\n**Solution**\n------------\n\nHere is a solution using a hash table to store the elements of the array and their indices:\n```python\ndef two_sum(nums, target):\n    num_dict = {}\n    for i, num in enumerate(nums):\n        complement = target - num\n        if complement in num_dict:\n            return [num_dict[complement], i]\n        num_dict[num] = i\n    return []\n```\n**Explanation**\n---------------\n\n1. We create an empty hash table `num_dict` to store the elements of the array and their indices.\n2. We iterate through the array using `enumerate`, which gives us both the index `i` and the value `num` of each element.\n3. For each element, we calculate its complement `complement` with respect to the target sum.\n4. We check if the complement is already in the hash table. If it is, we return the indices of the complement and the current element, because they add up to the target sum.\n5. If the complement is not in the hash table, we add the current element and its index to the hash table.\n6. If we reach the end of the array without finding a pair of elements that add up to the target sum, we return an empty list.\n\n**Time Complexity**\n------------------\n\nThe time complexity of this solution is O(n), where n is the length of the array, because we make a single pass through the array.\n\n**Space Complexity**\n-------------------\n\nThe space complexity of this solution is O(n), because in the worst case, we need to store all elements of the array in the hash table.\n\n**Example Use Case**\n--------------------\n\nHere is an example use case:\n```python\nnums = [2, 7, 11, 15]\ntarget = 9\nresult = two_sum(nums, target)\nprint(result)  # Output: [0, 1]\n```",
+    "scores": {
+      "keywordScore": 0,
+      "lengthScore": 2,
+      "manualScore": 5,
+      "totalScore": 7
+    },
+    "timestamp": "2026-04-13T11:01:50.139Z"
+  },
+  {
+    "id": "177607812937635r",
+    "promptId": "demo-1776060577546",
+    "promptVersion": "v1",
+    "suiteId": "suite-1776078128033",
+    "input": "solve two sum leet code problem",
+    "output": "**Two Sum Problem Solution**\n================================\n\nThe Two Sum problem is a classic problem on LeetCode. The problem statement is:\n\nGiven an array of integers `nums` and an integer `target`, return indices of the two numbers such that they add up to `target`. You may assume that each input would have exactly one solution, and you may not use the same element twice.\n\n**Example**\n-----------\n\n* Input: `nums = [2, 7, 11, 15], target = 9`\n* Output: `[0, 1]` (because `nums[0] + nums[1] = 2 + 7 = 9`)\n\n**Solution**\n------------\n\nHere is a Python solution using a dictionary to store the indices of the numbers we have seen so far:\n\n```python\ndef two_sum(nums, target):\n    \"\"\"\n    Returns the indices of the two numbers in the array that add up to the target.\n\n    Args:\n        nums (list): A list of integers.\n        target (int): The target sum.\n\n    Returns:\n        list: A list of two indices.\n    \"\"\"\n    num_dict = {}  # Dictionary to store the indices of the numbers we have seen\n    for i, num in enumerate(nums):\n        # Calculate the complement of the current number\n        complement = target - num\n        # Check if the complement is in the dictionary\n        if complement in num_dict:\n            # If it is, return the indices of the current number and its complement\n            return [num_dict[complement], i]\n        # If not, add the current number and its index to the dictionary\n        num_dict[num] = i\n    # If we have not found a solution, return an empty list\n    return []\n\n# Example usage:\nnums = [2, 7, 11, 15]\ntarget = 9\nprint(two_sum(nums, target))  # Output: [0, 1]\n```\n\n**Explanation**\n---------------\n\n1. We create an empty dictionary `num_dict` to store the indices of the numbers we have seen so far.\n2. We iterate over the `nums` array using `enumerate`, which gives us both the index `i` and the value `num` of each element.\n3. For each number, we calculate its complement with respect to the `target`.\n4. We check if the complement is in the `num_dict`. If it is, it means we have found two numbers that add up to the `target`, so we return their indices.\n5. If the complement is not in the `num_dict`, we add the current number and its index to the dictionary.\n6. If we have iterated over the entire array and have not found a solution, we return an empty list.\n\n**Time Complexity**\n------------------\n\nThe time complexity of this solution is O(n), where n is the length of the `nums` array, because we are doing a constant amount of work for each element in the array.\n\n**Space Complexity**\n--------------------\n\nThe space complexity of this solution is also O(n), because in the worst case, we need to store all elements of the `nums` array in the `num_dict`.",
+    "scores": {
+      "keywordScore": 0,
+      "lengthScore": 2,
+      "manualScore": 2.5,
+      "totalScore": 4.5
+    },
+    "timestamp": "2026-04-13T11:02:09.376Z"
+  },
+  {
+    "id": "1776078130856g8n",
+    "promptId": "demo-1776060577546",
+    "promptVersion": "v2",
+    "suiteId": "suite-1776078128033",
+    "input": "solve two sum leet code problem",
+    "output": "**Two Sum LeetCode Problem Solution**\n\nThe Two Sum problem is a classic problem on LeetCode, where you're given an array of integers and a target sum, and you need to find two elements in the array that add up to the target sum.\n\n**Problem Statement:**\n\nGiven an array of integers `nums` and an integer `target`, return the indices of the two numbers such that they add up to `target`. You may assume that each input would have exactly one solution, and you may not use the same element twice. You can return the answer in any order.\n\n**Example:**\n\n* Input: `nums = [2, 7, 11, 15], target = 9`\n* Output: `[0, 1]` (because `nums[0] + nums[1] == 2 + 7 == 9`)\n\n**Solution:**\n\nHere's a Python solution using a hash table to store the numbers we've seen so far and their indices:\n\n```python\ndef two_sum(nums, target):\n    \"\"\"\n    Returns the indices of the two numbers in the array that add up to the target sum.\n\n    Args:\n        nums (list): A list of integers.\n        target (int): The target sum.\n\n    Returns:\n        list: A list of two indices.\n    \"\"\"\n    num_to_index = {}  # Hash table to store numbers and their indices\n\n    for i, num in enumerate(nums):\n        # Calculate the complement of the current number\n        complement = target - num\n\n        # Check if the complement is in the hash table\n        if complement in num_to_index:\n            # Return the indices of the complement and the current number\n            return [num_to_index[complement], i]\n\n        # Add the current number and its index to the hash table\n        num_to_index[num] = i\n\n    # If no solution is found, return an empty list\n    return []\n```\n\n**Explanation:**\n\n1. We create a hash table `num_to_index` to store the numbers we've seen so far and their indices.\n2. We iterate through the `nums` array using the `enumerate` function, which gives us the index `i` and the value `num` of each element.\n3. For each number, we calculate its complement `complement` by subtracting it from the `target` sum.\n4. We check if the complement is in the `num_to_index` hash table. If it is, it means we've found two numbers that add up to the target sum, so we return their indices.\n5. If the complement is not in the hash table, we add the current number and its index to the hash table.\n6. If we reach the end of the array without finding a solution, we return an empty list.\n\n**Time Complexity:**\n\nThe time complexity of this solution is O(n), where n is the length of the `nums` array, because we're doing a constant amount of work for each element in the array.\n\n**Space Complexity:**\n\nThe space complexity of this solution is also O(n), because in the worst case, we might need to store every element in the `num_to_index` hash table.",
+    "scores": {
+      "keywordScore": 0,
+      "lengthScore": 2,
+      "manualScore": 4.2,
+      "totalScore": 6.2
+    },
+    "timestamp": "2026-04-13T11:02:10.856Z"
+  },
+  {
+    "id": "17760781323414rl",
+    "promptId": "demo-1776060577546",
+    "promptVersion": "v3",
+    "suiteId": "suite-1776078128033",
+    "input": "solve two sum leet code problem",
+    "output": "**Two Sum Problem Solution**\n=====================================\n\nThe Two Sum problem is a classic problem on LeetCode, where you're given an array of integers and a target sum, and you need to find two elements in the array that add up to the target sum.\n\n**Problem Statement**\n--------------------\n\nGiven an array of integers `nums` and an integer `target`, return indices of the two numbers such that they add up to `target`. You may assume that each input would have exactly one solution, and you may not use the same element twice. You can return the answer in any order.\n\n**Example**\n-----------\n\n* Input: `nums = [2, 7, 11, 15], target = 9`\n* Output: `[0, 1]` (because `nums[0] + nums[1] == 2 + 7 == 9`)\n\n**Solution**\n------------\n\nHere's a Python solution using a hash table to store the elements we've seen so far and their indices:\n```python\ndef two_sum(nums, target):\n    \"\"\"\n    Returns the indices of the two numbers in the array that add up to the target sum.\n\n    Args:\n        nums (list[int]): The input array of integers.\n        target (int): The target sum.\n\n    Returns:\n        list[int]: The indices of the two numbers that add up to the target sum.\n    \"\"\"\n    num_to_index = {}  # Hash table to store elements and their indices\n\n    for i, num in enumerate(nums):\n        # Calculate the complement of the current number\n        complement = target - num\n\n        # Check if we've seen the complement before\n        if complement in num_to_index:\n            # Return the indices of the current number and its complement\n            return [num_to_index[complement], i]\n\n        # Store the current number and its index in the hash table\n        num_to_index[num] = i\n\n    # If we reach this point, it means we haven't found a solution\n    raise ValueError(\"No solution found\")\n\n# Example usage\nnums = [2, 7, 11, 15]\ntarget = 9\nresult = two_sum(nums, target)\nprint(result)  # Output: [0, 1]\n```\n**Explanation**\n---------------\n\nThe solution works as follows:\n\n1. We create a hash table `num_to_index` to store the elements we've seen so far and their indices.\n2. We iterate through the input array `nums`, and for each element `num`, we calculate its complement `complement` with respect to the target sum `target`.\n3. We check if we've seen the complement before by checking if it's in the hash table `num_to_index`. If we have, it means we've found two numbers that add up to the target sum, and we return their indices.\n4. If we haven't seen the complement before, we store the current number `num` and its index `i` in the hash table `num_to_index`.\n5. If we reach the end of the iteration without finding a solution, we raise a `ValueError` exception.\n\n**Time Complexity**\n------------------\n\nThe time complexity of this solution is O(n), where n is the length of the input array `nums`, because we only iterate through the array once.\n\n**Space Complexity**\n-------------------\n\nThe space complexity of this solution is O(n), where n is the length of the input array `nums`, because we use a hash table to store the elements and their indices.",
+    "scores": {
+      "keywordScore": 0,
+      "lengthScore": 2,
+      "manualScore": 5,
+      "totalScore": 7
+    },
+    "timestamp": "2026-04-13T11:02:12.341Z"
+  },
+  {
+    "id": "1776078173535xcg",
+    "promptId": "demo-1776060577546",
+    "promptVersion": "v1",
+    "suiteId": "suite-1776078173476",
+    "input": "solve two sum leet code problem",
+    "output": "[API Error] The model `mixtral-8x7b-32768` has been decommissioned and is no longer supported. Please refer to https://console.groq.com/docs/deprecations for a recommendation on which model to use instead.",
+    "scores": {
+      "keywordScore": 0,
+      "lengthScore": 5,
+      "manualScore": 2.5,
+      "totalScore": 7.5
+    },
+    "timestamp": "2026-04-13T11:02:53.535Z"
+  },
+  {
+    "id": "1776078173557rhj",
+    "promptId": "demo-1776060577546",
+    "promptVersion": "v2",
+    "suiteId": "suite-1776078173476",
+    "input": "solve two sum leet code problem",
+    "output": "[API Error] The model `mixtral-8x7b-32768` has been decommissioned and is no longer supported. Please refer to https://console.groq.com/docs/deprecations for a recommendation on which model to use instead.",
+    "scores": {
+      "keywordScore": 0,
+      "lengthScore": 5,
+      "manualScore": 4.2,
+      "totalScore": 9.2
+    },
+    "timestamp": "2026-04-13T11:02:53.557Z"
+  },
+  {
+    "id": "17760781735753jr",
+    "promptId": "demo-1776060577546",
+    "promptVersion": "v3",
+    "suiteId": "suite-1776078173476",
+    "input": "solve two sum leet code problem",
+    "output": "[API Error] The model `mixtral-8x7b-32768` has been decommissioned and is no longer supported. Please refer to https://console.groq.com/docs/deprecations for a recommendation on which model to use instead.",
+    "scores": {
+      "keywordScore": 0,
+      "lengthScore": 5,
+      "manualScore": 5,
+      "totalScore": 10
+    },
+    "timestamp": "2026-04-13T11:02:53.575Z"
+  },
+  {
+    "id": "1776078182212dfj",
+    "promptId": "demo-1776060577546",
+    "promptVersion": "v1",
+    "suiteId": "suite-1776078181382",
+    "input": "solve two sum leet code problem",
+    "output": "**Two Sum LeetCode Problem**\n\n**Problem Statement:**\n\nGiven an array of integers `nums` and an integer `target`, return the indices of the two numbers such that they add up to `target`. You may assume that each input would have exactly one solution, and you may not use the same element twice.\n\n**Example:**\n\n* Input: `nums = [2, 7, 11, 15], target = 9`\n* Output: `[0, 1]`\n* Explanation: Because `nums[0] + nums[1] = 2 + 7 = 9`.\n\n**Solution:**\n\n```python\ndef two_sum(nums, target):\n    \"\"\"\n    Returns the indices of the two numbers in the array that add up to the target.\n\n    Args:\n        nums (list): A list of integers.\n        target (int): The target sum.\n\n    Returns:\n        list: A list containing the indices of the two numbers.\n    \"\"\"\n    # Create a dictionary to store the numbers we've seen so far and their indices\n    num_dict = {}\n\n    # Iterate over the array of numbers\n    for i, num in enumerate(nums):\n        # Calculate the complement of the current number\n        complement = target - num\n\n        # Check if we've seen the complement before\n        if complement in num_dict:\n            # If we have, return the indices of the current number and its complement\n            return [num_dict[complement], i]\n\n        # If not, add the current number and its index to the dictionary\n        num_dict[num] = i\n\n    # If we've iterated over the entire array and haven't found a solution, return None\n    return None\n\n# Example usage:\nnums = [2, 7, 11, 15]\ntarget = 9\nprint(two_sum(nums, target))  # Output: [0, 1]\n```\n\n**Explanation:**\n\nThis solution uses a dictionary to store the numbers we've seen so far and their indices. We iterate over the array of numbers, and for each number, we calculate its complement (i.e., the number we need to add to it to get the target sum). We then check if we've seen the complement before by looking it up in the dictionary. If we have, we return the indices of the current number and its complement. If not, we add the current number and its index to the dictionary. This process continues until we've iterated over the entire array and found a solution, or until we've iterated over the entire array and haven't found a solution.\n\n**Time Complexity:**\n\nThe time complexity of this solution is O(n), where n is the length of the input array, because we're making a single pass over the array.\n\n**Space Complexity:**\n\nThe space complexity of this solution is O(n), where n is the length of the input array, because we're storing the numbers and their indices in a dictionary.",
+    "scores": {
+      "keywordScore": 0,
+      "lengthScore": 2,
+      "manualScore": 2.5,
+      "totalScore": 4.5
+    },
+    "timestamp": "2026-04-13T11:03:02.212Z"
+  },
+  {
+    "id": "1776078183287za6",
+    "promptId": "demo-1776060577546",
+    "promptVersion": "v2",
+    "suiteId": "suite-1776078181382",
+    "input": "solve two sum leet code problem",
+    "output": "**Two Sum LeetCode Problem**\n\nThe Two Sum problem is a classic LeetCode problem that involves finding two numbers in an array that add up to a given target sum. Here's the problem statement:\n\n**Problem Statement:**\n\nGiven an array of integers `nums` and an integer `target`, return the indices of the two numbers such that they add up to `target`. You may assume that each input would have exactly one solution, and you may not use the same element twice.\n\n**Example:**\n\nInput: `nums = [2, 7, 11, 15], target = 9`\nOutput: `[0, 1]`\nExplanation: `nums[0] + nums[1] = 2 + 7 = 9`\n\n**Solution:**\n\nHere's a Python solution using a hash table (dictionary) to store the numbers and their indices:\n```python\ndef two_sum(nums, target):\n    \"\"\"\n    Returns the indices of the two numbers that add up to the target sum.\n\n    Args:\n        nums (list): A list of integers.\n        target (int): The target sum.\n\n    Returns:\n        list: A list containing the indices of the two numbers.\n    \"\"\"\n    num_dict = {}\n    for i, num in enumerate(nums):\n        complement = target - num\n        if complement in num_dict:\n            return [num_dict[complement], i]\n        num_dict[num] = i\n    return None\n```\n**Explanation:**\n\n1. We create an empty dictionary `num_dict` to store the numbers and their indices.\n2. We iterate through the `nums` list using `enumerate`, which gives us both the index `i` and the value `num` at each iteration.\n3. For each `num`, we calculate its complement `complement` by subtracting `num` from the `target`.\n4. We check if `complement` is already in `num_dict`. If it is, it means we've found a pair of numbers that add up to the `target`, so we return their indices.\n5. If `complement` is not in `num_dict`, we add `num` to `num_dict` with its index `i`.\n6. If we reach the end of the `nums` list without finding a pair, we return `None`.\n\n**Example Use Case:**\n```python\nnums = [2, 7, 11, 15]\ntarget = 9\nprint(two_sum(nums, target))  # Output: [0, 1]\n```\nThis solution has a time complexity of O(n) and a space complexity of O(n), where n is the length of the `nums` list.",
+    "scores": {
+      "keywordScore": 0,
+      "lengthScore": 2,
+      "manualScore": 4.2,
+      "totalScore": 6.2
+    },
+    "timestamp": "2026-04-13T11:03:03.287Z"
+  },
+  {
+    "id": "1776078184268tj9",
+    "promptId": "demo-1776060577546",
+    "promptVersion": "v3",
+    "suiteId": "suite-1776078181382",
+    "input": "solve two sum leet code problem",
+    "output": "**Two Sum LeetCode Problem Solution**\n\n**Problem Statement:**\n\nGiven an array of integers `nums` and an integer `target`, return indices of the two numbers such that they add up to `target`. You may assume that each input would have exactly one solution, and you may not use the same element twice.\n\n**Example:**\n\n* Input: `nums = [2,7,11,15], target = 9`\n* Output: `[0,1]`\n* Explanation: Because `nums[0] + nums[1] == 2 + 7 == 9` and `0 < 1`.\n\n**Solution:**\n\nWe can solve this problem using a simple hash table approach. The idea is to store the elements we've seen so far along with their indices in a hash table. Then, for each element we encounter, we can check if the difference between the target and the current element exists in the hash table.\n\n```python\ndef two_sum(nums, target):\n    \"\"\"\n    Returns the indices of the two numbers in the array that add up to the target.\n\n    Args:\n        nums (list): A list of integers.\n        target (int): The target sum.\n\n    Returns:\n        list: A list of two indices.\n    \"\"\"\n    # Create a hash table to store the elements we've seen so far\n    num_to_index = {}\n    \n    # Iterate over the array\n    for i, num in enumerate(nums):\n        # Calculate the complement of the current number\n        complement = target - num\n        \n        # Check if the complement exists in the hash table\n        if complement in num_to_index:\n            # If it does, return the indices of the current number and its complement\n            return [num_to_index[complement], i]\n        \n        # If not, add the current number to the hash table\n        num_to_index[num] = i\n    \n    # If we've iterated over the entire array and haven't found a solution, return an empty list\n    return []\n```\n\n**Example Usage:**\n\n```python\nnums = [2, 7, 11, 15]\ntarget = 9\nprint(two_sum(nums, target))  # Output: [0, 1]\n```\n\n**Time Complexity:** O(n), where n is the length of the input array.\n\n**Space Complexity:** O(n), where n is the length of the input array.\n\n**Advantages:**\n\n* The solution has a linear time complexity, making it efficient for large input arrays.\n* The solution uses a constant amount of extra space, making it memory-efficient.\n\n**Disadvantages:**\n\n* The solution assumes that each input array has exactly one solution. If there are multiple solutions, this solution will only return one of them.",
+    "scores": {
+      "keywordScore": 0,
+      "lengthScore": 2,
+      "manualScore": 5,
+      "totalScore": 7
+    },
+    "timestamp": "2026-04-13T11:03:04.268Z"
+  },
+  {
+    "id": "1776078950943rcc",
+    "promptId": "demo-1776078948646",
+    "promptVersion": "v1",
+    "suiteId": "suite-1776078948646",
+    "input": "Explain how 'Decorators' work in Python. Use a high-school analogy.",
+    "output": "**Introduction to Decorators in Python**\n=====================================\n\nImagine you're a high school student, and you have a homework assignment that requires you to complete a series of tasks. Each task has a specific set of instructions that you need to follow. Now, let's say your teacher wants you to add a cover page to your assignment with your name, class, and date. You could manually add the cover page to each assignment, but that would be tedious and time-consuming.\n\n**Enter the Decorator**\n--------------------\n\nA decorator in Python is like a machine that automatically adds the cover page to your assignment. You can think of it as a wrapper that surrounds your original assignment (or function) and adds some extra functionality to it.\n\nHere's a step-by-step breakdown of how decorators work:\n\n1. **Original Function**: You have a function that does something specific, like completing a math problem.\n2. **Decorator Function**: You create a decorator function that takes the original function as an argument and returns a new function that \"wraps\" the original function.\n3. **Wrapper Function**: The wrapper function is the new function that the decorator returns. It calls the original function and adds some extra functionality to it, like adding the cover page.\n4. **Calling the Decorated Function**: When you call the decorated function, you're actually calling the wrapper function, which then calls the original function and adds the extra functionality.\n\n**Example Code**\n---------------\n\nHere's an example of a decorator in Python:\n```python\ndef add_cover_page(func):\n    def wrapper():\n        print(\"Adding cover page...\")\n        func()\n        print(\"Cover page added!\")\n    return wrapper\n\n@add_cover_page\ndef do_homework():\n    print(\"Completing homework...\")\n\ndo_homework()\n```\nIn this example, the `add_cover_page` function is the decorator. It takes the `do_homework` function as an argument and returns a new function (`wrapper`) that adds the cover page functionality. The `@add_cover_page` syntax before the `do_homework` function is just a shortcut for `do_homework = add_cover_page(do_homework)`.\n\nWhen you call `do_homework()`, you're actually calling the `wrapper` function, which adds the cover page and then calls the original `do_homework` function.\n\n**Output**\n----------\n\nThe output of the example code would be:\n```\nAdding cover page...\nCompleting homework...\nCover page added!\n```\nAs you can see, the decorator added the cover page functionality to the original `do_homework` function without modifying the original code. This is the power of decorators in Python!",
+    "scores": {
+      "keywordScore": 0,
+      "lengthScore": 2,
+      "manualScore": 2.5,
+      "totalScore": 4.5
+    },
+    "timestamp": "2026-04-13T11:15:50.943Z"
+  },
+  {
+    "id": "1776078952599pzu",
+    "promptId": "demo-1776078948646",
+    "promptVersion": "v2",
+    "suiteId": "suite-1776078948646",
+    "input": "Explain how 'Decorators' work in Python. Use a high-school analogy.",
+    "output": "**Introduction to Decorators**\n================================\n\nIn Python, decorators are a powerful tool that allows programmers to modify the behavior of a function without changing its implementation. To understand how decorators work, let's use a high-school analogy.\n\n**The School Locker Analogy**\n---------------------------\n\nImagine you have a locker at school where you store your books and other personal items. The locker is like a function in Python, and the items you store in it are like the function's behavior.\n\nNow, imagine your school has a rule that every student must wear a specific badge on their locker to indicate their grade level. The badge is like a decorator in Python. When you put the badge on your locker, it doesn't change what's inside the locker (the function's behavior), but it adds some extra information about the locker (the function).\n\n**How Decorators Work**\n----------------------\n\nHere's how decorators work in Python:\n\n1. **Defining a Decorator**: You define a decorator function that takes another function as an argument. This decorator function returns a new function that \"wraps\" the original function.\n2. **Applying a Decorator**: You apply the decorator to a function using the `@` symbol. This is like putting the badge on your locker.\n3. **The Decorator Takes Over**: When you call the decorated function, the decorator function is called instead. The decorator function then calls the original function, but it can also add some extra behavior before or after calling the original function.\n\n**Example Code**\n---------------\n\nHere's an example of a simple decorator in Python:\n```python\ndef my_decorator(func):\n    def wrapper():\n        print(\"Something is happening before the function is called.\")\n        func()\n        print(\"Something is happening after the function is called.\")\n    return wrapper\n\n@my_decorator\ndef say_hello():\n    print(\"Hello!\")\n\nsay_hello()\n```\nIn this example, the `my_decorator` function takes the `say_hello` function as an argument and returns a new function called `wrapper`. The `wrapper` function calls the `say_hello` function, but it also adds some extra behavior before and after calling `say_hello`.\n\nWhen you run this code, you'll see the following output:\n```\nSomething is happening before the function is called.\nHello!\nSomething is happening after the function is called.\n```\nAs you can see, the decorator has added some extra behavior to the `say_hello` function without changing its implementation.\n\n**Conclusion**\n----------\n\nIn conclusion, decorators in Python are like badges on a school locker. They add extra information or behavior to a function without changing its implementation. By using decorators, you can modify the behavior of a function without changing its code, making your code more flexible and reusable.",
+    "scores": {
+      "keywordScore": 0,
+      "lengthScore": 2,
+      "manualScore": 4.2,
+      "totalScore": 6.2
+    },
+    "timestamp": "2026-04-13T11:15:52.599Z"
+  },
+  {
+    "id": "1776078954215uop",
+    "promptId": "demo-1776078948646",
+    "promptVersion": "v3",
+    "suiteId": "suite-1776078948646",
+    "input": "Explain how 'Decorators' work in Python. Use a high-school analogy.",
+    "output": "**Introduction to Decorators in Python**\n=====================================\n\nImagine you're a high school student, and you have a homework assignment to complete. The assignment is like a function in Python, which takes some input, performs some operations, and returns a result.\n\n**The Homework Assignment (Function)**\n------------------------------------\n\nLet's say your homework assignment is to write an essay. You would:\n\n1. Start with a blank sheet of paper (input)\n2. Write the essay (perform operations)\n3. Submit the completed essay (return result)\n\n**The Teacher's Review (Decorator)**\n----------------------------------\n\nNow, imagine your teacher wants to review your essay before you submit it. The teacher's review is like a decorator in Python. The decorator:\n\n1. Takes the original essay (function) as input\n2. Adds some additional comments or feedback (performs some operations)\n3. Returns the modified essay (returns the result)\n\nIn Python, a decorator is a small function that takes another function as an argument and extends its behavior without permanently modifying it.\n\n**Python Code Example**\n---------------------\n\nHere's an example of a decorator in Python:\n```python\ndef teacher_review(func):\n    def wrapper(*args, **kwargs):\n        print(\"Teacher's review:\")\n        result = func(*args, **kwargs)\n        print(\"Review complete.\")\n        return result\n    return wrapper\n\n@teacher_review\ndef write_essay(topic):\n    print(\"Writing essay on\", topic)\n    return \"Essay completed.\"\n\nprint(write_essay(\"History\"))\n```\nIn this example, the `teacher_review` decorator takes the `write_essay` function as an argument and adds some additional comments before and after the function is executed. The `@teacher_review` syntax is just a shortcut for `write_essay = teacher_review(write_essay)`.\n\n**Output**\n----------\n\nWhen you run the code, you'll see the following output:\n```\nTeacher's review:\nWriting essay on History\nReview complete.\nEssay completed.\n```\nThe decorator has extended the behavior of the `write_essay` function without modifying its original code.\n\n**Conclusion**\n----------\n\nIn summary, decorators in Python are like teachers reviewing your homework assignments. They take the original function as input, add some additional behavior, and return the modified result. Decorators are a powerful tool for extending the behavior of functions without permanently modifying them.",
+    "scores": {
+      "keywordScore": 0,
+      "lengthScore": 2,
+      "manualScore": 5,
+      "totalScore": 7
+    },
+    "timestamp": "2026-04-13T11:15:54.215Z"
+  },
+  {
+    "id": "17760795643268qq",
+    "promptId": "demo-1776060574068",
+    "promptVersion": "v1",
+    "suiteId": "suite-1776079561955",
+    "input": "Explain how 'Decorators' work in Python. Use a high-school analogy.",
+    "output": "**Introduction to Decorators in Python**\n======================================\n\nImagine you're a high school student, and you have a homework assignment that you need to turn in to your teacher. The assignment is like a function in Python, and the teacher's feedback is like the output of that function.\n\n**The Basic Concept**\n--------------------\n\nIn Python, a decorator is like a special kind of tutor who helps you improve your homework assignment before you turn it in. The tutor doesn't change the assignment itself, but they add some extra comments or suggestions that make it better.\n\n**How Decorators Work**\n----------------------\n\nHere's a step-by-step explanation of how decorators work:\n\n1. **The Original Function**: You write a function, like a homework assignment, that takes some input and returns some output.\n2. **The Decorator**: You create a decorator, like a tutor, that takes the original function as input and returns a new function.\n3. **The New Function**: The new function returned by the decorator is like the improved homework assignment. It has all the original functionality, plus some extra features added by the decorator.\n4. **The Decorated Function**: When you call the decorated function, it's like turning in the improved homework assignment. The decorator's extra features are executed before the original function is called.\n\n**An Example**\n--------------\n\nHere's an example of a simple decorator in Python:\n```python\ndef my_decorator(func):\n    def wrapper():\n        print(\"Before the function is called.\")\n        func()\n        print(\"After the function is called.\")\n    return wrapper\n\n@my_decorator\ndef say_hello():\n    print(\"Hello!\")\n\nsay_hello()\n```\nIn this example, the `my_decorator` function is like the tutor who adds extra comments to the homework assignment. The `say_hello` function is like the original homework assignment. When we call `say_hello()`, it's like turning in the improved assignment, and the decorator's extra features are executed before the original function is called.\n\n**Output**\n----------\n```\nBefore the function is called.\nHello!\nAfter the function is called.\n```\nAs you can see, the decorator added some extra output before and after the original function was called.\n\n**Conclusion**\n----------\n\nDecorators are a powerful tool in Python that allow you to modify or extend the behavior of functions without changing the original code. They're like special tutors who help you improve your homework assignments, and they can be used to add logging, authentication, or other features to your functions.",
+    "scores": {
+      "keywordScore": 0,
+      "lengthScore": 2,
+      "manualScore": 2.5,
+      "totalScore": 4.5
+    },
+    "timestamp": "2026-04-13T11:26:04.326Z"
+  },
+  {
+    "id": "17760795668021eq",
+    "promptId": "demo-1776060574068",
+    "promptVersion": "v2",
+    "suiteId": "suite-1776079561955",
+    "input": "Explain how 'Decorators' work in Python. Use a high-school analogy.",
+    "output": "**Introduction to Decorators in Python**\n=====================================\n\nImagine you're the editor of your high school yearbook. You have a team of writers who write articles, and you want to add a standard header and footer to each article without having to modify the original article. This is similar to how decorators work in Python.\n\n**The Basic Concept**\n-------------------\n\nA decorator is a small function that takes another function as an argument and extends its behavior without modifying the original function. Think of it like a wrapper that adds extra functionality to the original article (function) without changing its content.\n\n**The Analogy**\n--------------\n\nIn the yearbook example:\n\n* The original article is like the function you want to decorate.\n* The header and footer are like the extra functionality you want to add.\n* The decorator is like a template that adds the header and footer to the article.\n\nHere's a step-by-step breakdown:\n\n1. **Original Article (Function)**: The writer submits their article, which is like the original function.\n2. **Decorator (Template)**: You create a template that adds a standard header and footer to the article.\n3. **Decorated Article (Function)**: You apply the template to the original article, which adds the header and footer without modifying the original content.\n4. **Final Output**: The decorated article is now complete with the added header and footer.\n\n**Python Decorator Example**\n---------------------------\n\nHere's a simple example of a decorator in Python:\n```python\ndef my_decorator(func):\n    def wrapper():\n        print(\"Header\")\n        func()\n        print(\"Footer\")\n    return wrapper\n\n@my_decorator\ndef say_hello():\n    print(\"Hello, World!\")\n\nsay_hello()\n```\nIn this example:\n\n* `my_decorator` is the decorator function that takes `func` as an argument.\n* `wrapper` is the function that adds the extra functionality (header and footer) to the original function.\n* `@my_decorator` is the syntax to apply the decorator to the `say_hello` function.\n* When you call `say_hello()`, it prints the header, the original message, and the footer.\n\nOutput:\n```\nHeader\nHello, World!\nFooter\n```\nBy using a decorator, you can add extra functionality to a function without modifying its original code. This makes your code more modular, reusable, and easier to maintain.",
+    "scores": {
+      "keywordScore": 0,
+      "lengthScore": 2,
+      "manualScore": 4.2,
+      "totalScore": 6.2
+    },
+    "timestamp": "2026-04-13T11:26:06.802Z"
+  },
+  {
+    "id": "1776079568321tsf",
+    "promptId": "demo-1776060574068",
+    "promptVersion": "v3",
+    "suiteId": "suite-1776079561955",
+    "input": "Explain how 'Decorators' work in Python. Use a high-school analogy.",
+    "output": "**Introduction to Decorators in Python**\n=============================================\n\nImagine you're a student in a high school, and you have a locker where you store your books and other personal items. One day, the school administration decides to add an extra layer of security to all lockers by installing a combination lock. However, instead of replacing the existing lockers, they provide a special cover that can be wrapped around each locker, adding the combination lock feature.\n\n**The Decorator Analogy**\n------------------------\n\nIn this scenario, the locker represents a function in Python, and the special cover represents a decorator. Just as the cover adds a new feature (combination lock) to the existing locker without modifying it, a decorator in Python adds new functionality to an existing function without changing its original code.\n\n**How Decorators Work**\n----------------------\n\nHere's a step-by-step explanation of how decorators work in Python:\n\n1. **Definition**: A decorator is a small function that takes another function as an argument and returns a new function that \"wraps\" the original function.\n2. **Application**: When you apply a decorator to a function, you're essentially replacing the original function with the new function returned by the decorator.\n3. **Execution**: When you call the decorated function, you're actually calling the new function returned by the decorator, which then calls the original function.\n\n**Example Code**\n```python\n# Define a decorator function\ndef add_security(func):\n    def wrapper():\n        print(\"Combination lock added\")\n        func()\n        print(\"Combination lock removed\")\n    return wrapper\n\n# Define a function to decorate\ndef open_locker():\n    print(\"Locker opened\")\n\n# Apply the decorator to the function\n@add_security\ndef secure_open_locker():\n    open_locker()\n\n# Call the decorated function\nsecure_open_locker()\n```\nIn this example, the `add_security` decorator adds a new feature (printing \"Combination lock added\" and \"Combination lock removed\") to the `open_locker` function without modifying its original code. The `secure_open_locker` function is the decorated version of `open_locker`, which is created by applying the `add_security` decorator.\n\n**Output**\n```\nCombination lock added\nLocker opened\nCombination lock removed\n```\nAs you can see, the decorator has added a new layer of functionality to the original function without changing its code. This is the power of decorators in Python!",
+    "scores": {
+      "keywordScore": 0,
+      "lengthScore": 2,
+      "manualScore": 5,
+      "totalScore": 7
+    },
+    "timestamp": "2026-04-13T11:26:08.321Z"
+  },
+  {
+    "id": "1776079814605o5a",
+    "promptId": "demo-1776060574068",
+    "promptVersion": "v1",
+    "suiteId": "suite-1776079812485",
+    "input": "Explain how 'Decorators' work in Python. Use a high-school analogy.",
+    "output": "**Introduction to Decorators in Python**\n=====================================\n\nImagine you're the principal of a high school, and you want to add a new feature to the school's attendance system. You want to send a notification to parents whenever their child is late to class. However, you don't want to modify the existing attendance system code. This is where decorators come in.\n\n**The Concept of Decorators**\n---------------------------\n\nA decorator is like a special wrapper that you can put around a function (or a class) to add new functionality without modifying the original code. Think of it like a sticker that you can put on a student's attendance card. The sticker doesn't change the card itself, but it adds a new piece of information (the notification to parents).\n\n**How Decorators Work**\n---------------------\n\nHere's a step-by-step explanation of how decorators work:\n\n1. **Define a decorator function**: This is like creating a sticker template. You define a function that takes another function as an argument and returns a new function that \"wraps\" the original function.\n2. **Apply the decorator to a function**: This is like sticking the sticker on a student's attendance card. You use the `@` symbol to apply the decorator to a function.\n3. **The decorator function is called**: When you call the decorated function, the decorator function is called first. It then calls the original function and adds the new functionality (like sending a notification to parents).\n\n**Example Code**\n---------------\n\nHere's an example of a simple decorator that prints a message before and after a function is called:\n```python\ndef my_decorator(func):\n    def wrapper():\n        print(\"Before the function is called\")\n        func()\n        print(\"After the function is called\")\n    return wrapper\n\n@my_decorator\ndef say_hello():\n    print(\"Hello!\")\n\nsay_hello()\n```\nIn this example, the `my_decorator` function is like the sticker template. It takes the `say_hello` function as an argument and returns a new function (`wrapper`) that adds the new functionality (printing messages before and after the function is called). The `@my_decorator` line applies the decorator to the `say_hello` function.\n\nWhen you run the `say_hello()` function, you'll see the following output:\n```\nBefore the function is called\nHello!\nAfter the function is called\n```\n**Conclusion**\n----------\n\nDecorators are a powerful tool in Python that allow you to add new functionality to existing code without modifying it. They're like stickers that you can put on functions (or classes) to add new features without changing the underlying code. By using decorators, you can keep your code organized, reusable, and easy to maintain.",
+    "scores": {
+      "keywordScore": 0,
+      "lengthScore": 2,
+      "manualScore": 2.5,
+      "totalScore": 4.5
+    },
+    "timestamp": "2026-04-13T11:30:14.605Z"
+  },
+  {
+    "id": "1776079816443x15",
+    "promptId": "demo-1776060574068",
+    "promptVersion": "v2",
+    "suiteId": "suite-1776079812485",
+    "input": "Explain how 'Decorators' work in Python. Use a high-school analogy.",
+    "output": "**Introduction to Decorators in Python**\n======================================\n\nImagine you're the principal of a high school, and you want to add a new feature to the school's student registration process. You want to send a welcome email to each new student after they register. However, you don't want to modify the existing registration code because it's already working well.\n\n**The Problem**\n---------------\n\nYou have a function called `register_student` that handles the registration process. It takes in a student's name and grade level, and then adds them to the school's database.\n\n```python\ndef register_student(name, grade):\n    # Add student to database\n    print(f\"Registered {name} in grade {grade}\")\n```\n\n**The Solution: Decorators**\n---------------------------\n\nA decorator is like a special wrapper that you can put around a function to add new behavior without modifying the original function. In this case, you can create a decorator called `send_welcome_email` that will send an email to the student after they're registered.\n\n```python\ndef send_welcome_email(func):\n    def wrapper(name, grade):\n        # Call the original function\n        func(name, grade)\n        # Send a welcome email\n        print(f\"Sent welcome email to {name}\")\n    return wrapper\n```\n\n**Using the Decorator**\n----------------------\n\nTo use the decorator, you can add the `@send_welcome_email` syntax above the `register_student` function. This will wrap the `register_student` function with the `send_welcome_email` decorator.\n\n```python\n@send_welcome_email\ndef register_student(name, grade):\n    # Add student to database\n    print(f\"Registered {name} in grade {grade}\")\n```\n\nNow, when you call the `register_student` function, it will not only register the student but also send a welcome email.\n\n```python\nregister_student(\"John Doe\", 9)\n# Output:\n# Registered John Doe in grade 9\n# Sent welcome email to John Doe\n```\n\n**How Decorators Work**\n----------------------\n\nHere's a step-by-step explanation of how decorators work:\n\n1. The decorator function (`send_welcome_email`) takes in the original function (`register_student`) as an argument.\n2. The decorator function returns a new function (`wrapper`) that wraps the original function.\n3. The `wrapper` function calls the original function and then adds new behavior (sending a welcome email).\n4. The `@send_welcome_email` syntax replaces the original function with the `wrapper` function.\n5. When you call the decorated function (`register_student`), you're actually calling the `wrapper` function, which calls the original function and adds the new behavior.\n\n**Conclusion**\n----------\n\nDecorators are a powerful tool in Python that allow you to add new behavior to existing functions without modifying the original code. They're like a special wrapper that you can put around a function to add new features, and they're commonly used in web development, logging, and authentication.",
+    "scores": {
+      "keywordScore": 0,
+      "lengthScore": 2,
+      "manualScore": 4.2,
+      "totalScore": 6.2
+    },
+    "timestamp": "2026-04-13T11:30:16.443Z"
+  },
+  {
+    "id": "1776079818392s4i",
+    "promptId": "demo-1776060574068",
+    "promptVersion": "v3",
+    "suiteId": "suite-1776079812485",
+    "input": "Explain how 'Decorators' work in Python. Use a high-school analogy.",
+    "output": "**Introduction to Decorators**\n================================\n\nIn Python, decorators are a powerful tool that allows programmers to modify the behavior of a function without changing its source code. To understand how decorators work, let's use a high-school analogy.\n\n**The School Locker Analogy**\n---------------------------\n\nImagine you have a school locker where you store your books and other personal items. The locker is like a function, and the items you store in it are like the function's parameters and return values.\n\nNow, suppose you want to add a combination lock to your locker to protect your belongings. You can't modify the locker itself, but you can hire a locksmith to add the combination lock to the locker. The locksmith is like a decorator, and the combination lock is like the additional functionality the decorator adds to the function.\n\n**How Decorators Work**\n----------------------\n\nHere's a step-by-step explanation of how decorators work:\n\n1. **The Locksmith (Decorator) is Defined**: The locksmith (decorator) is defined as a function that takes another function as an argument.\n2. **The Locksmith Adds the Combination Lock**: The locksmith (decorator) adds the combination lock (additional functionality) to the locker (function).\n3. **The Locker is Wrapped with the Combination Lock**: The locker (function) is wrapped with the combination lock (decorator), creating a new locker (function) with the added functionality.\n4. **The New Locker is Returned**: The new locker (function) with the combination lock (decorator) is returned, replacing the original locker (function).\n\n**Example Code**\n---------------\n\nHere's an example code snippet that demonstrates how decorators work:\n```python\n# Define the locksmith (decorator)\ndef add_combination_lock(func):\n    def wrapper():\n        print(\"Enter combination to unlock\")\n        func()\n        print(\"Locker unlocked\")\n    return wrapper\n\n# Define the locker (function)\ndef store_books():\n    print(\"Storing books in the locker\")\n\n# Wrap the locker with the combination lock (decorator)\nstore_books = add_combination_lock(store_books)\n\n# Use the new locker (function) with the combination lock (decorator)\nstore_books()\n```\nOutput:\n```\nEnter combination to unlock\nStoring books in the locker\nLocker unlocked\n```\nIn this example, the `add_combination_lock` decorator adds the combination lock functionality to the `store_books` function, creating a new function with the added functionality.\n\n**Conclusion**\n----------\n\nIn conclusion, decorators in Python work like a locksmith who adds a combination lock to a school locker. The decorator is a function that takes another function as an argument, adds additional functionality to it, and returns a new function with the added functionality. This allows programmers to modify the behavior of a function without changing its source code.",
+    "scores": {
+      "keywordScore": 0,
+      "lengthScore": 2,
+      "manualScore": 5,
+      "totalScore": 7
+    },
+    "timestamp": "2026-04-13T11:30:18.392Z"
   }
 ]

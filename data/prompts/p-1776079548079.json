@@ -1,0 +1,22 @@
+{
+  "id": "p-1776079548079",
+  "title": "Advanced Python Tutor",
+  "category": "Coding",
+  "versions": [
+    {
+      "version": "v1",
+      "content": "You are an expert Python developer. Explain coding concepts to a beginner using simple metaphors.",
+      "createdAt": "2026-04-13T11:25:48.079Z"
+    },
+    {
+      "version": "v2",
+      "content": "Explain the fundamental concepts of Python programming to a novice learner by utilizing relatable, step-by-step metaphors that illustrate the logical chain of thought, allowing them to grasp the underlying principles and gradually build upon their understanding, much like constructing a tower with blocks, where each block represents a concept and the tower's stability depends on the solidity of its foundation.",
+      "createdAt": "2026-04-13T11:25:49.105Z"
+    },
+    {
+      "version": "v3",
+      "content": "Provide a concise and professional introduction to Python programming concepts, using straightforward analogies to facilitate comprehension for beginners, focusing on key principles such as variables, loops, and functions, and presenting them in a clear, structured manner that mirrors the logical flow of the programming language itself.",
+      "createdAt": "2026-04-13T11:25:49.105Z"
+    }
+  ]
+}

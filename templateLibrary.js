@@ -12,7 +12,7 @@ class TemplateLibrary {
         }
     }
 
-    saveTemplate(promptId, versionId, averageScore) {
+    saveTemplate(promptId, versionId, averageScore, bestResponse = "N/A") {
         const templates = readData(TEMPLATES_FILE);
         const promptData = promptManager.getPrompt(promptId);
         if (!promptData) throw new Error("Prompt not found");
@@ -25,6 +25,7 @@ class TemplateLibrary {
             title: promptData.title,
             versionId,
             content: versionData.content,
+            bestResponse, // Captured winning AI output
             averageScore,
             savedAt: new Date().toISOString()
         };

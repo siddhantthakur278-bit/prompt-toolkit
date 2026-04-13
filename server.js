@@ -1,6 +1,9 @@
 const express = require('express');
 const { exec } = require('child_process');
 const path = require('path');
+const promptManager = require('./promptManager');
+const testSuiteManager = require('./testSuiteManager');
+const templateLibrary = require('./templateLibrary');
 
 const app = express();
 const PORT = 3000;
@@ -12,27 +15,27 @@ function parseToHTML(stdout) {
     const executions = [];
     const parts = stdout.split('Executing Output for Version:');
     
-    // Extract Task metadata from the start of stdout
     const taskNameMatch = stdout.match(/\[Task Info\] Task Name: (.*)/);
-    const taskName = taskNameMatch ? taskNameMatch[1].trim() : 'Unknown Task';
+    const taskName = taskNameMatch ? taskNameMatch[1].trim() : 'Elite Pipeline';
     
     const textMatch = stdout.match(/\[Task Info\] Input Text: "([\s\S]*?)"/);
-    const inputText = textMatch ? textMatch[1].trim() : 'No input text provided.';
+    const inputText = textMatch ? textMatch[1].trim() : 'No input text';
 
-    // Parse Outputs
+    const globalModelMatch = stdout.match(/\[Task Info\] Global Model: (.*)/);
+    const globalModel = globalModelMatch ? globalModelMatch[1].trim() : 'Unknown Model';
+
     for (let i = 1; i < parts.length; i++) {
         const block = parts[i];
-        
         const verMatch = block.match(/\[(v\d+)\]/);
         const version = verMatch ? verMatch[1] : 'v?';
-        
         const promptMatch = block.match(/\| Prompt: (.*)/);
-        const promptContent = promptMatch ? promptMatch[1].trim() : 'Missing prompt content';
+        const promptContent = promptMatch ? promptMatch[1].trim() : 'Missing prompt';
         
-        const outMatch = block.match(/> Raw Output:\s*"([\s\S]*?)"/);
+        // Fixed parsing using new delimiters [[...]]
+        const outMatch = block.match(/> Raw Output: \[\[([\s\S]*?)\]\]/);
         const outputText = outMatch ? outMatch[1].trim() : 'No output captured';
         
-        let man='0', key='0', len='0', tot='0', matches=[];
+        let man='0', key='0', len='0', tot='0';
         const scoresMatch = block.match(/> Derived Scores:\s*(\{.*?\})/);
         if (scoresMatch) {
             try {
@@ -41,178 +44,256 @@ function parseToHTML(stdout) {
                 key = (s.keywordScore || 0).toFixed(1);
                 len = (s.lengthScore || 0).toFixed(1);
                 tot = (s.totalScore || 0).toFixed(1);
-                matches = s.keywordMatches || [];
             } catch(e) { }
         }
-        
-        executions.push({ version, promptContent, outputText, man, key, len, tot, matches });
+
+        let meta = { latency: '0', tokens: '0', cost: '0.00', model: globalModel };
+        const metaMatch = block.match(/> Elite Metadata:\s*(\{.*?\})/);
+        if (metaMatch) {
+            try { meta = JSON.parse(metaMatch[1]); } catch(e) {}
+        }
+
+        executions.push({ version, promptContent, outputText, man, key, len, tot, meta });
     }
     
-    let html = '';
     const bestMatch = stdout.match(/🏆 Best Version found:\s*(v\d+)\s*\(Average Score:\s*([\d.]+)/);
     const bestVer = bestMatch ? bestMatch[1] : null;
-    const bestExecution = executions.find(e => e.version === bestVer);
     
-    // 1. Task Section + Best Result Section
-    html += `
-    <div class="row align-start" style="animation: fadeIn 0.5s ease-out;">
-        <div class="col card" style="flex: 1.2; border-top: 4px solid var(--accent-color);">
-            <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 20px;">
-                <div>
-                    <h2 style="margin:0;">Task Configuration</h2>
-                    <p style="color: var(--text-muted); font-size: 0.9rem; margin-top: 4px;">Dynamic evaluation parameters</p>
-                </div>
-                <span class="badge highlight-badge" style="padding: 6px 12px; font-size: 11px;">ACTIVE SESSION</span>
+    let html = `
+    <div class="grid-2">
+        <div class="glass-card">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px;">
+                <h3 class="section-title" style="margin:0;">Pipeline Intel</h3>
+                <span class="badge badge-accent" style="background: var(--gradient-1);">${globalModel}</span>
             </div>
-
-            <div style="margin-bottom: 25px; background: rgba(59, 130, 246, 0.03); padding: 20px; border-radius: 12px; border: 1px solid rgba(59, 130, 246, 0.1);">
-                <div style="margin-bottom: 10px; display: flex; align-items: center; gap: 8px;">
-                    <div style="width: 8px; height: 8px; background: var(--accent-color); border-radius: 50%;"></div>
-                    <span style="font-size: 0.75rem; font-weight: 800; color: var(--accent-color); text-transform: uppercase; letter-spacing: 1px;">Input Topic</span>
-                </div>
-                <div style="font-size: 1.2rem; font-weight: 600; color: #fff; line-height: 1.4;">
-                    "${inputText}"
+            
+            <div style="margin-bottom: 32px;">
+                <p style="color: var(--text-muted); font-size: 0.7rem; text-transform: uppercase; margin-bottom: 8px; letter-spacing: 0.1em; font-weight: 700;">ACTIVE INPUT VECTOR</p>
+                <div style="background: rgba(0,0,0,0.4); padding: 20px; border-radius: 16px; border: 1px solid var(--glass-border); line-height: 1.6; color: var(--text-main); box-shadow: inset 0 2px 10px rgba(0,0,0,0.2);">
+                    <span style="color: var(--accent-primary); font-weight: 800; margin-right: 8px;">&ldquo;</span>${inputText}<span style="color: var(--accent-primary); font-weight: 800; margin-left: 8px;">&rdquo;</span>
                 </div>
             </div>
 
-            <h3>Generated Prompt Versions</h3>
-            <div style="display: flex; flex-direction: column; gap: 12px; margin-top: 20px;">
+            <h3 class="section-title" style="font-size: 0.9rem; letter-spacing: 0.05em;">AGENT ARCHITECTURES</h3>
+            <div style="display: flex; flex-direction: column; gap: 12px;">
                 ${executions.map(e => `
-                <div style="background: #1a1a1a; padding: 16px; border-radius: 10px; border: 1px solid #333; transition: transform 0.2s;">
-                    <div style="display: flex; align-items: center; gap: 12px;">
-                        <span class="badge ${bestVer === e.version ? 'highlight-badge' : 'badge-dark'}" style="min-width: 30px; text-align: center;">${e.version}</span>
-                        <span style="color: #e2e8f0; font-size: 0.95rem; font-weight: 500;">${e.promptContent}</span>
+                <div style="background: ${bestVer === e.version ? 'rgba(99, 102, 241, 0.05)' : 'rgba(255,255,255,0.02)'}; padding: 14px 18px; border-radius: 14px; border: 1px solid ${bestVer === e.version ? 'var(--accent-primary)' : 'var(--glass-border)'}; display: flex; align-items: center; justify-content: space-between;">
+                    <div style="display: flex; align-items: center; gap: 14px;">
+                        <span class="badge ${bestVer === e.version ? 'badge-success' : 'badge-outline'}" style="min-width: 45px; text-align: center;">${e.version}</span>
+                        <span style="font-size: 0.9rem; font-weight: 500; color: var(--text-main); opacity: 0.9;">${e.promptContent}</span>
                     </div>
+                    ${bestVer === e.version ? '<span style="color: var(--success); font-size: 1.2rem;">⚡</span>' : ''}
                 </div>
                 `).join('')}
             </div>
         </div>
         
-        <div class="col card best-section" style="border-top: 4px solid var(--highlight);">
+        <div class="glass-card" style="background: radial-gradient(circle at top right, rgba(168, 85, 247, 0.15), transparent); position: relative; overflow: hidden;">
+            <div style="position: absolute; top: -20px; right: -20px; width: 100px; height: 100px; background: var(--accent-secondary); filter: blur(60px); opacity: 0.2;"></div>
     `;
     
-    if (bestMatch && bestExecution) {
-        const reason = `${bestVer} is the most effective version because it successfully integrated ${bestExecution.matches.length} key evaluation keywords and produced a ${bestExecution.outputText.length > 350 ? 'highly comprehensive' : 'well-structured'} response.`;
-        
+    if (bestMatch) {
         html += `
-            <div class="best-header" style="border-bottom: 1px solid rgba(16, 185, 129, 0.1); padding-bottom: 25px;">
+            <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 28px;">
                 <div>
-                    <h2 style="margin:0; color:white; font-size: 1.5rem;">🏆 Selection: ${bestVer}</h2>
-                    <p style="color: var(--highlight); font-size: 0.9rem; margin-top: 4px; font-weight: 600;">OPTIMIZED PERFORMANCE</p>
+                    <h3 class="section-title" style="margin-bottom: 6px; color: white;">Elite Recommendation</h3>
+                    <div style="display: flex; align-items: center; gap: 8px;">
+                        <span class="badge badge-success" style="background: var(--success); color: #000;">VERSION ${bestMatch[1]}</span>
+                        <span style="color: var(--text-muted); font-size: 0.8rem; font-weight: 600;">RANK #1</span>
+                    </div>
                 </div>
                 <div style="text-align: right;">
-                    <div class="best-score" style="color: var(--highlight); font-size: 2.5rem;">${bestMatch[2]}</div>
-                    <div style="font-size: 10px; color: #10b981; opacity: 0.6; font-weight: 800; letter-spacing: 1px;">TOTAL POINTS</div>
+                    <div class="score-pill" style="font-size: 3rem; line-height: 1;">${bestMatch[2]}<span class="score-total" style="font-size: 1.2rem;">/15</span></div>
                 </div>
             </div>
             
-            <div style="margin-top:25px; background: rgba(16, 185, 129, 0.05); padding: 20px; border-radius: 12px; border: 1px solid rgba(16, 185, 129, 0.2); box-shadow: 0 4px 20px rgba(0,0,0,0.1);">
-                <p style="margin: 0; font-weight:500; font-size: 1rem; color: #e2e8f0; line-height: 1.6;">
-                    ${reason}
+            <div style="background: rgba(255,255,255,0.03); padding: 20px; border-radius: 16px; border-left: 4px solid var(--success); margin-bottom: 24px;">
+                <p style="color: var(--text-main); font-size: 0.95rem; line-height: 1.6; opacity: 0.9;">
+                    System analysis confirms <strong style="color: var(--success);">Variant ${bestMatch[1]}</strong> as the elite choice. It achieved peak structural coherence and semantic precision relative to the target vector.
                 </p>
             </div>
             
-            <h3 style="margin-top:30px; font-size:14px; text-transform: uppercase; letter-spacing: 1px; color: var(--text-muted);">Why this version won:</h3>
-            <ul class="reason-list" style="margin-top: 15px;">
-                <li><strong>Semantic Density:</strong> Found matches for: <span style="color: var(--highlight); font-weight: 600;">${bestExecution.matches.join(', ') || 'None'}</span>.</li>
-                <li><strong>Constraint Mapping:</strong> Perfectly aligned with the complexity required for "${inputText}".</li>
-                <li><strong>Engagement Score:</strong> Scored highest on structural clarity and information hierarchy.</li>
-            </ul>
+            <div class="grid" style="grid-template-columns: 1fr 1fr; gap: 16px;">
+                <div style="background: rgba(0,0,0,0.2); padding: 16px; border-radius: 12px; border: 1px solid var(--glass-border);">
+                    <p style="color: var(--text-muted); font-size: 0.65rem; text-transform: uppercase; font-weight: 800; margin-bottom: 4px;">LATENCY</p>
+                    <p style="font-size: 1.2rem; font-weight: 700; color: var(--accent-primary);">${executions.find(e => e.version === bestVer).meta.latency}ms</p>
+                </div>
+                <div style="background: rgba(0,0,0,0.2); padding: 16px; border-radius: 12px; border: 1px solid var(--glass-border);">
+                    <p style="color: var(--text-muted); font-size: 0.65rem; text-transform: uppercase; font-weight: 800; margin-bottom: 4px;">EST. COST</p>
+                    <p style="font-size: 1.2rem; font-weight: 700; color: var(--success);">$${executions.find(e => e.version === bestVer).meta.cost}</p>
+                </div>
+            </div>
         `;
-    } else {
-         html += `<h2>Best Version</h2><p>Analysis incomplete.</p>`;
     }
-    html += `</div></div>`;
-
-    // 2. Scores Table Section
+    
     html += `
-    <div class="card full-width" style="margin-top: 10px; border-radius: 16px; overflow: hidden; padding: 0;">
-        <div style="padding: 25px; border-bottom: 1px solid var(--border-color); background: #1a1a1a;">
-            <h2 style="margin:0; font-size: 1.3rem;">Evaluation Matrix</h2>
         </div>
-        <div class="table-container">
-            <table class="dashboard-table">
-                <thead>
+    </div>
+
+    <div class="glass-card" style="padding: 0; overflow: hidden;">
+        <div style="padding: 32px 32px 0;">
+            <h3 class="section-title">Performance Benchmark</h3>
+        </div>
+        <div style="overflow-x: auto;">
+            <table class="table-custom">
+                <thead style="background: rgba(255,255,255,0.02);">
                     <tr>
-                        <th>Version ID</th>
+                        <th style="padding-left: 32px;">Architecture</th>
                         <th>Manual Grade</th>
                         <th>Keyword Match</th>
-                        <th>Length Weight</th>
-                        <th>Calculated Score</th>
+                        <th>Length Compliance</th>
+                        <th style="padding-right: 32px; text-align: right;">Total Efficiency</th>
                     </tr>
                 </thead>
                 <tbody>
                     ${executions.map(e => `
-                    <tr class="${bestVer === e.version ? 'row-winner' : ''}" style="${bestVer === e.version ? 'background: rgba(16, 185, 129, 0.04);' : ''}">
-                        <td><span class="badge ${bestVer === e.version ? 'highlight-badge' : 'badge-dark'}" style="font-family: monospace;">${e.version}</span></td>
-                        <td style="color: #94a3b8;">${e.man} <span style="font-size: 10px;">/ 5.0</span></td>
-                        <td style="color: #94a3b8;">${e.key} <span style="font-size: 10px;">/ 5.0</span></td>
-                        <td style="color: #94a3b8;">${e.len} <span style="font-size: 10px;">/ 5.0</span></td>
-                        <td class="total-col" style="color: ${bestVer === e.version ? 'var(--highlight)' : '#fff'}; font-size: 1.2rem;">${e.tot}</td>
+                    <tr ${bestVer === e.version ? 'style="background: rgba(16, 185, 129, 0.04);"' : ''}>
+                        <td style="padding-left: 32px;"><span class="badge ${bestVer === e.version ? 'badge-success' : 'badge-outline'}">${e.version}</span></td>
+                        <td>
+                            <div style="display: flex; align-items: center; gap: 8px;">
+                                <div style="width: 60px; height: 6px; background: rgba(255,255,255,0.1); border-radius: 3px; overflow: hidden;">
+                                    <div style="width: ${e.man * 20}%; height: 100%; background: var(--accent-primary);"></div>
+                                </div>
+                                <span>${e.man}</span>
+                            </div>
+                        </td>
+                        <td>${e.key} / 5</td>
+                        <td>${e.len} / 5</td>
+                        <td style="padding-right: 32px; text-align: right; font-weight: 800; font-size: 1.1rem; color: ${bestVer === e.version ? 'var(--success)' : 'white'};">${e.tot}</td>
                     </tr>
                     `).join('')}
                 </tbody>
             </table>
         </div>
     </div>
-    `;
 
-    // 3. Execution Logs
-    html += `
-    <div style="margin-top: 50px; display: flex; align-items: center; gap: 15px; margin-bottom: 25px;">
-        <h2 style="margin:0;">Dynamic Execution Logs</h2>
-        <div style="flex: 1; height: 1px; background: #262626;"></div>
-    </div>
-    <div class="execution-grid">`;
-    executions.forEach(e => {
-        const isWinner = bestVer === e.version;
-        html += `
-        <div class="card execution-card ${isWinner ? 'winner-card' : ''}" style="border-radius: 16px; transition: transform 0.3s; ${isWinner ? 'box-shadow: 0 10px 30px rgba(16, 185, 129, 0.05);' : ''}">
-            <div class="card-header">
+    <h3 class="section-title" style="margin-top: 48px; margin-left: 12px; letter-spacing: 0.1em;">SYSTEM EXECUTION LOGS</h3>
+    <div class="grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(360px, 1fr)); gap: 24px;">
+        ${executions.map(e => `
+        <div class="glass-card" style="margin-bottom: 0; display: flex; flex-direction: column; border-top: 2px solid ${bestVer === e.version ? 'var(--success)' : 'var(--glass-border)'};">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
                 <div style="display: flex; align-items: center; gap: 10px;">
-                    <span class="badge ${isWinner ? 'highlight-badge' : 'badge-dark'}">${e.version}</span>
-                    <span style="font-size: 0.7rem; color: #64748b; text-transform: uppercase; font-weight: 800; letter-spacing: 0.5px;">Prompt Response</span>
+                    <span class="badge ${bestVer === e.version ? 'badge-success' : 'badge-outline'}">${e.version}</span>
+                    <span style="font-size: 0.65rem; font-weight: 800; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.05em;">${e.meta.model}</span>
                 </div>
-                ${isWinner ? '<span class="winner-star" style="background: rgba(16, 185, 129, 0.1); padding: 4px 8px; border-radius: 4px;">🏆 TOP PICK</span>' : ''}
+                <div style="text-align: right;">
+                    <p style="font-size: 0.65rem; color: var(--text-muted); font-weight: 700; margin-bottom: 2px;">TOKENS</p>
+                    <p style="font-size: 0.8rem; font-weight: 800; color: var(--text-main);">${e.meta.tokens}</p>
+                </div>
             </div>
             
-            <div style="background: #0a0a0a; padding: 14px; border-radius: 8px; border: 1px solid #222; margin-bottom: 20px;">
-                <p style="margin:0; font-size: 0.8rem; color: #666; font-family: 'JetBrains Mono', 'Fira Code', monospace; line-height: 1.4;">
-                    <span style="color: var(--accent-color); opacity: 0.7;">PROMPT:</span> ${e.promptContent}
-                </p>
+            <div style="background: rgba(0,0,0,0.2); padding: 12px 14px; border-radius: 8px; border: 1px solid var(--glass-border); margin-bottom: 16px;">
+                <p style="font-family: 'JetBrains Mono', monospace; font-size: 0.8rem; color: var(--accent-primary); font-weight: 600;">λ prompt: <span style="color: var(--text-muted); font-weight: 400;">${e.promptContent}</span></p>
             </div>
-
-            <div class="output-box" style="flex-grow: 1;">
-                <blockquote style="background: rgba(255,255,255,0.02); border-left: 2px solid ${isWinner ? 'var(--highlight)' : 'var(--accent-color)'}; padding: 20px; color: #cbd5e1; font-size: 0.95rem; line-height: 1.6;">
-                    ${e.outputText.replace(/\n/g, '<br>')}
-                </blockquote>
+            
+            <div class="output-quote" style="flex-grow: 1; border-left-color: ${bestVer === e.version ? 'var(--success)' : 'var(--accent-primary)'};">
+                ${e.outputText.replace(/\n/g, '<br>')}
+            </div>
+            
+            <div style="margin-top: 20px; display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--glass-border); padding-top: 16px;">
+                <span style="font-size: 0.75rem; color: var(--text-muted);">Latency: <strong>${e.meta.latency}ms</strong></span>
+                <span style="font-size: 0.75rem; color: var(--text-muted);">Cost: <strong style="color: var(--success);">$${e.meta.cost}</strong></span>
             </div>
         </div>
-        `;
-    });
-    html += `</div>
-    <style>
-        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
-        .execution-card:hover { transform: translateY(-5px); }
-    </style>
+        `).join('')}
+    </div>
     `;
     
     return html;
 }
 
-// Migrate to POST endpoint so we can receive dynamic JSON values safely
+// Create new prompt
+app.post('/api/prompts', (req, res) => {
+    const { title, content } = req.body;
+    const id = 'p-' + Date.now();
+    try {
+        const prompt = promptManager.createPrompt(id, title, content);
+        res.json(prompt);
+    } catch (e) {
+        res.status(400).json({ error: e.message });
+    }
+});
+
+// Create new test suite
+app.post('/api/suites', (req, res) => {
+    const { title } = req.body;
+    const id = 's-' + Date.now();
+    try {
+        const suite = testSuiteManager.createSuite(id, title);
+        res.json(suite);
+    } catch (e) {
+        res.status(400).json({ error: e.message });
+    }
+});
+
+// List all prompts
+app.get('/api/prompts', (req, res) => {
+    res.json(promptManager.listPrompts());
+});
+
+// Get specific prompt details
+app.get('/api/prompts/:id', (req, res) => {
+    const prompt = promptManager.getPrompt(req.params.id);
+    if (!prompt) return res.status(404).json({ error: 'Prompt not found' });
+    res.json(prompt);
+});
+
+// Add new version
+app.post('/api/prompts/:id/version', (req, res) => {
+    const { content } = req.body;
+    try {
+        const prompt = promptManager.addVersion(req.params.id, content);
+        res.json(prompt);
+    } catch (e) {
+        res.status(400).json({ error: e.message });
+    }
+});
+
+// Rollback version
+app.post('/api/prompts/:id/rollback', (req, res) => {
+    const { versionId } = req.body;
+    try {
+        const prompt = promptManager.rollbackVersion(req.params.id, versionId);
+        res.json(prompt);
+    } catch (e) {
+        res.status(400).json({ error: e.message });
+    }
+});
+
+// List suites
+app.get('/api/suites', (req, res) => {
+    res.json(testSuiteManager.listSuites());
+});
+
+// Save to template library
+app.post('/api/templates', (req, res) => {
+    const { promptId, versionId, averageScore } = req.body;
+    try {
+        const template = templateLibrary.saveTemplate(promptId, versionId, averageScore);
+        res.json(template);
+    } catch (e) {
+        res.status(400).json({ error: e.message });
+    }
+});
+
+// List templates
+app.get('/api/templates', (req, res) => {
+    res.json(templateLibrary.listTemplates());
+});
+
 app.post('/run', (req, res) => {
-    // Escape standard outer quotes by defaulting any missing variables safely
     const rawInput = req.body.input || "Explain Quantum Computing";
+    const model = req.body.model || "GPT-4o";
+    const promptId = req.body.promptId || "";
+    const versionId = req.body.versionId || "";
     const safeInput = rawInput.replace(/"/g, '\\"');
     
-    // Command line inject the safe variable
-    exec(`node app.js "${safeInput}"`, (error, stdout, stderr) => {
-        if (error) return res.status(500).send(`<div class="card"><p style="color: #ef4444;">Error: ${error.message}</p></div>`);
+    exec(`node app.js "${safeInput}" "${model}" "${promptId}" "${versionId}"`, (error, stdout, stderr) => {
+        if (error) return res.status(500).send(`<div class="glass-card"><p style="color: #ef4444;">Error: ${error.message}</p></div>`);
         try {
             res.send(parseToHTML(stdout));
         } catch (err) {
-            res.send(`<div class="card"><pre>${err.toString()}\\n${stdout}</pre></div>`);
+            res.send(`<div class="glass-card"><pre>${err.toString()}\\n${stdout}</pre></div>`);
         }
     });
 });

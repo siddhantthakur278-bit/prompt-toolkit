@@ -1,0 +1,19 @@
+{
+  "id": "suite-1776060720757",
+  "title": "Production Validation Suite",
+  "tests": [
+    {
+      "input": "You are an expert copywriter. Generate 5 catchy and professional email subject lines based on the user's topic.",
+      "criteria": {
+        "keywords": [
+          "clarity",
+          "comprehensive",
+          "efficiency",
+          "structure"
+        ],
+        "min_length": 50,
+        "max_length": 800
+      }
+    }
+  ]
+}

@@ -1,33 +1,89 @@
+import https from 'https';
+import fs from 'fs';
+import path from 'path';
+
 class ExecutionEngine {
-    /**
-     * Dynamically generates output based on the input topic and the requested prompt type.
-     */
-    async runPrompt(promptContent, input) {
-        // Simulate processing time
-        await new Promise(resolve => setTimeout(resolve, 600));
-        
-        const content = promptContent.toLowerCase();
-        let output = "";
-        
-        if (content.includes("brief")) {
-            // v1: short output
-            output = `Definition: ${input} is a fundamental concept in its field. It focuses on core principles and provides a basic understanding of the topic without complex overhauls.`;
-        } else if (content.includes("examples")) {
-            // v2: longer output with examples
-            output = `Definition: ${input} refers to a comprehensive system or concept that requires deep exploration. \n\nFor example, when applying ${input} in a practical scenario, we see how its components interact. Another example would be its integration in modern workflows where it enhances efficiency. In detail, ${input} operates by balancing various factors to achieve a specific goal.`;
-        } else if (content.includes("key points") || content.includes("applications")) {
-            // v3: structured output with bullet points
-            output = `Overview: ${input} is a versatile topic with numerous real-world applications. Here is a breakdown of key points:\n\n` +
-                     `• Definition: The core essence of ${input} involves systematic application of principles.\n` +
-                     `• Applications: Widely used in technology, science, and business to optimize processes.\n` +
-                     `• Real-world Example: ${input} is used in urban planning to create smarter cities.\n` +
-                     `• Efficiency: It reduces overhead and improves response times in complex systems.\n\n` +
-                     `In conclusion, ${input} is essential for modern development.`;
-        } else {
-            output = `The topic of ${input} is very interesting and deserves thorough research.`;
+    constructor() {
+        this.loadEnv();
+    }
+
+    loadEnv() {
+        const envPath = path.join(process.cwd(), '.env');
+        if (fs.existsSync(envPath)) {
+            const envContent = fs.readFileSync(envPath, 'utf-8');
+            envContent.split('\n').forEach(line => {
+                const parts = line.split('=');
+                if (parts.length >= 2) {
+                    const key = parts[0].trim();
+                    const value = parts.slice(1).join('=').trim();
+                    process.env[key] = value;
+                }
+            });
         }
-        
-        return output;
+    }
+
+    async runPrompt(promptContent, input, model = 'llama-3.3-70b-versatile') {
+        const apiKey = process.env.GROQ_API_KEY;
+        if (!apiKey) {
+            return `[Error] Groq API Key not found in .env. Ensure GROQ_API_KEY is set.`;
+        }
+
+        // Mapping model IDs
+        let modelId = model;
+        if (model === 'GPT-4o') modelId = 'llama-3.3-70b-versatile'; 
+        if (model === 'Claude 3.5' || model === 'Claude-3') modelId = 'mixtral-8x7b-32768';
+        if (model === 'Gemini 1.5') modelId = 'gemma2-9b-it';
+
+        const data = JSON.stringify({
+            messages: [
+                { role: 'system', content: promptContent },
+                { role: 'user', content: input }
+            ],
+            model: modelId,
+            temperature: 0.7,
+            max_tokens: 1024
+        });
+
+        const options = {
+            hostname: 'api.groq.com',
+            path: '/openai/v1/chat/completions',
+            method: 'POST',
+            headers: {
+                'Authorization': `Bearer ${apiKey}`,
+                'Content-Type': 'application/json',
+                'Content-Length': Buffer.byteLength(data)
+            }
+        };
+
+        return new Promise((resolve, reject) => {
+            const req = https.request(options, (res) => {
+                let body = '';
+                res.on('data', (d) => body += d);
+                res.on('end', () => {
+                    try {
+                        const json = JSON.parse(body);
+                        if (json.choices && json.choices[0]) {
+                            resolve(json.choices[0].message.content);
+                        } else if (json.error) {
+                            resolve(`[API Error] ${json.error.message}`);
+                        } else {
+                            resolve(`[Unexpected Response] ${body}`);
+                        }
+                    } catch (e) {
+                        resolve(`[Parse Error] ${body}`);
+                    }
+                });
+            });
+
+            req.on('error', (e) => {
+                resolve(`[Network Error] ${e.message}`);
+            });
+
+            req.write(data);
+            req.end();
+        });
     }
 }
-module.exports = new ExecutionEngine();
+
+const instance = new ExecutionEngine();
+export default instance;

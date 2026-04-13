@@ -123,11 +123,11 @@
     ]
   },
   {
-    "id": "suite-1776019426886",
+    "id": "suite-1776054052420",
     "title": "Dynamic Validation Suite",
     "tests": [
       {
-        "input": "What are the core concepts of an API?",
+        "input": "cricket",
         "criteria": {
           "keywords": [
             "important",
@@ -141,80 +141,19 @@
     ]
   },
   {
-    "id": "suite-1776020026143",
-    "title": "Dynamic Validation Suite",
+    "id": "suite-1776054299184",
+    "title": "Production Validation Suite",
     "tests": [
       {
-        "input": "explain ai",
+        "input": "who is the pm of india",
         "criteria": {
           "keywords": [
-            "important",
-            "details",
+            "clarity",
+            "comprehensive",
+            "efficiency",
             "structure"
           ],
           "min_length": 50,
-          "max_length": 600
-        }
-      }
-    ]
-  },
-  {
-    "id": "suite-1776020141609",
-    "title": "Dynamic Validation Suite",
-    "tests": [
-      {
-        "input": "who is vaibhav singh",
-        "criteria": {
-          "keywords": [
-            "important",
-            "details",
-            "structure"
-          ],
-          "min_length": 50,
-          "max_length": 600
-        }
-      }
-    ]
-  },
-  {
-    "id": "suite-1776020160990",
-    "title": "Dynamic Validation Suite",
-    "tests": [
-      {
-        "input": "who is vaibhav singh",
-        "criteria": {
-          "keywords": [
-            "important",
-            "details",
-            "structure"
-          ],
-          "min_length": 50,
-          "max_length": 600
-        }
-      }
-    ]
-  },
-  {
-    "id": "suite-1776020950365",
-    "title": "Automated Prompt Evaluation",
-    "tests": [
-      {
-        "input": "What are the core concepts of an API?",
-        "criteria": {
-          "min_length": 100,
-          "max_length": 800
-        }
-      }
-    ]
-  },
-  {
-    "id": "suite-1776020967243",
-    "title": "Automated Prompt Evaluation",
-    "tests": [
-      {
-        "input": "how is vaibhav singh",
-        "criteria": {
-          "min_length": 100,
           "max_length": 800
         }
       }

@@ -157,128 +157,44 @@
     ]
   },
   {
-    "id": "prompt-1776019426886",
+    "id": "prompt-1776054052420",
     "title": "Dynamic Topic Context",
     "versions": [
       {
         "version": "v1",
         "content": "Answer basically",
-        "createdAt": "2026-04-12T18:43:46.887Z"
+        "createdAt": "2026-04-13T04:20:52.420Z"
       },
       {
         "version": "v2",
         "content": "Answer in detail",
-        "createdAt": "2026-04-12T18:43:46.888Z"
+        "createdAt": "2026-04-13T04:20:52.422Z"
       },
       {
         "version": "v3",
         "content": "Answer in a structured format with keywords",
-        "createdAt": "2026-04-12T18:43:46.888Z"
+        "createdAt": "2026-04-13T04:20:52.422Z"
       }
     ]
   },
   {
-    "id": "prompt-1776020026143",
-    "title": "Dynamic Topic Context",
+    "id": "prompt-1776054299184",
+    "title": "Strategic Logic Framework",
     "versions": [
       {
         "version": "v1",
-        "content": "Answer basically",
-        "createdAt": "2026-04-12T18:53:46.143Z"
+        "content": "Standard Response",
+        "createdAt": "2026-04-13T04:24:59.191Z"
       },
       {
         "version": "v2",
-        "content": "Answer in detail",
-        "createdAt": "2026-04-12T18:53:46.144Z"
+        "content": "Advanced Analytical Response",
+        "createdAt": "2026-04-13T04:24:59.192Z"
       },
       {
         "version": "v3",
-        "content": "Answer in a structured format with keywords",
-        "createdAt": "2026-04-12T18:53:46.144Z"
-      }
-    ]
-  },
-  {
-    "id": "prompt-1776020141609",
-    "title": "Dynamic Topic Context",
-    "versions": [
-      {
-        "version": "v1",
-        "content": "Answer basically",
-        "createdAt": "2026-04-12T18:55:41.609Z"
-      },
-      {
-        "version": "v2",
-        "content": "Answer in detail",
-        "createdAt": "2026-04-12T18:55:41.611Z"
-      },
-      {
-        "version": "v3",
-        "content": "Answer in a structured format with keywords",
-        "createdAt": "2026-04-12T18:55:41.611Z"
-      }
-    ]
-  },
-  {
-    "id": "prompt-1776020160990",
-    "title": "Dynamic Topic Context",
-    "versions": [
-      {
-        "version": "v1",
-        "content": "Answer basically",
-        "createdAt": "2026-04-12T18:56:00.990Z"
-      },
-      {
-        "version": "v2",
-        "content": "Answer in detail",
-        "createdAt": "2026-04-12T18:56:00.991Z"
-      },
-      {
-        "version": "v3",
-        "content": "Answer in a structured format with keywords",
-        "createdAt": "2026-04-12T18:56:00.992Z"
-      }
-    ]
-  },
-  {
-    "id": "prompt-1776020950365",
-    "title": "Dynamic Topic Analysis",
-    "versions": [
-      {
-        "version": "v1",
-        "content": "Explain \"What are the core concepts of an API?\" briefly",
-        "createdAt": "2026-04-12T19:09:10.365Z"
-      },
-      {
-        "version": "v2",
-        "content": "Explain \"What are the core concepts of an API?\" in detail with examples",
-        "createdAt": "2026-04-12T19:09:10.366Z"
-      },
-      {
-        "version": "v3",
-        "content": "Explain \"What are the core concepts of an API?\" with key points and real-world applications",
-        "createdAt": "2026-04-12T19:09:10.366Z"
-      }
-    ]
-  },
-  {
-    "id": "prompt-1776020967243",
-    "title": "Dynamic Topic Analysis",
-    "versions": [
-      {
-        "version": "v1",
-        "content": "Explain \"how is vaibhav singh\" briefly",
-        "createdAt": "2026-04-12T19:09:27.243Z"
-      },
-      {
-        "version": "v2",
-        "content": "Explain \"how is vaibhav singh\" in detail with examples",
-        "createdAt": "2026-04-12T19:09:27.245Z"
-      },
-      {
-        "version": "v3",
-        "content": "Explain \"how is vaibhav singh\" with key points and real-world applications",
-        "createdAt": "2026-04-12T19:09:27.245Z"
+        "content": "Highly Structured Professional Output",
+        "createdAt": "2026-04-13T04:24:59.192Z"
       }
     ]
   }

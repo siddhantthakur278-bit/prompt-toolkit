@@ -1,49 +1,47 @@
-const path = require('path');
-const { readData, writeData } = require('./utils');
+import path from 'path';
+import fs from 'fs';
+import { readData, writeData } from './utils.js';
 
-const SUITES_FILE = path.join(__dirname, 'data', 'test_suites', 'suites.json');
+const SUITES_DIR = path.join(process.cwd(), 'data', 'test_suites');
 
 class TestSuiteManager {
-    /**
-     * Creates a new test suite where test cases and inputs will reside.
-     * Prevents duplication on reruns by resetting if it exists.
-     */
-    createSuite(id, title) {
-         const suites = readData(SUITES_FILE);
-         
-         const existingIndex = suites.findIndex(s => s.id === id);
-         if (existingIndex !== -1) {
-             suites.splice(existingIndex, 1);
-         }
-         
-         const suite = { id, title, tests: [] };
-         
-         suites.push(suite);
-         writeData(SUITES_FILE, suites);
-         return suite;
+    constructor() {
+        if (!fs.existsSync(SUITES_DIR)) {
+            fs.mkdirSync(SUITES_DIR, { recursive: true });
+        }
     }
 
-    /**
-     * Adds a test (input and evaluation criteria) to a given suite.
-     */
-    addTest(suiteId, input, criteria) {
-        const suites = readData(SUITES_FILE);
-        const suite = suites.find(s => s.id === suiteId);
-        
-        if (!suite) {
-            throw new Error(`Test suite with id ${suiteId} not found`);
-        }
-        
-        suite.tests.push({ input, criteria });
-        
-        writeData(SUITES_FILE, suites);
-        return suite;
+    createSuite(id, title) {
+        const suiteFile = path.join(SUITES_DIR, `${id}.json`);
+        const data = { id, title, tests: [] };
+        writeData(suiteFile, data);
+        return data;
+    }
+
+    addTest(id, input, criteria) {
+        const suiteFile = path.join(SUITES_DIR, `${id}.json`);
+        if (!fs.existsSync(suiteFile)) return null;
+        const data = readData(suiteFile);
+        data.tests.push({ input, criteria });
+        writeData(suiteFile, data);
+        return data;
     }
 
     getSuite(id) {
-        const suites = readData(SUITES_FILE);
-        return suites.find(s => s.id === id);
+        const suiteFile = path.join(SUITES_DIR, `${id}.json`);
+        if (!fs.existsSync(suiteFile)) return null;
+        return readData(suiteFile);
+    }
+
+    listSuites() {
+        if (!fs.existsSync(SUITES_DIR)) return [];
+        const files = fs.readdirSync(SUITES_DIR).filter(f => f.endsWith('.json'));
+        return files.map(f => {
+            const data = readData(path.join(SUITES_DIR, f));
+            return { id: data.id, title: data.title, testCount: data.tests.length };
+        });
     }
 }
 
-module.exports = new TestSuiteManager();
+const instance = new TestSuiteManager();
+export default instance;

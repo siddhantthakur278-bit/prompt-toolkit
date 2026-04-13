@@ -1,0 +1,19 @@
+{
+  "id": "suite-1776060218546",
+  "title": "Production Validation Suite",
+  "tests": [
+    {
+      "input": "Explain Quantum Computing",
+      "criteria": {
+        "keywords": [
+          "clarity",
+          "comprehensive",
+          "efficiency",
+          "structure"
+        ],
+        "min_length": 50,
+        "max_length": 800
+      }
+    }
+  ]
+}

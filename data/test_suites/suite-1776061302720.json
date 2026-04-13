@@ -1,0 +1,19 @@
+{
+  "id": "suite-1776061302720",
+  "title": "Production Validation Suite",
+  "tests": [
+    {
+      "input": "syntax for the mail",
+      "criteria": {
+        "keywords": [
+          "clarity",
+          "comprehensive",
+          "efficiency",
+          "structure"
+        ],
+        "min_length": 50,
+        "max_length": 800
+      }
+    }
+  ]
+}

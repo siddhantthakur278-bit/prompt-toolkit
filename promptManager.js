@@ -1,68 +1,78 @@
-const path = require('path');
-const { readData, writeData } = require('./utils');
+import path from 'path';
+import fs from 'fs';
+import { readData, writeData } from './utils.js';
 
-const PROMPTS_FILE = path.join(__dirname, 'data', 'prompts', 'prompts.json');
+const PROMPTS_DIR = path.join(process.cwd(), 'data', 'prompts');
 
 class PromptManager {
-    /**
-     * Creates a new prompt with a title and initial version (v1).
-     * If a prompt with the ID already exists, it resets it to prevent duplicate accumulation.
-     */
-    createPrompt(id, title, content) {
-        const prompts = readData(PROMPTS_FILE);
-        
-        // Remove existing prompt to ensure clean runs
-        const existingIndex = prompts.findIndex(p => p.id === id);
-        if (existingIndex !== -1) {
-            prompts.splice(existingIndex, 1);
+    constructor() {
+        if (!fs.existsSync(PROMPTS_DIR)) {
+            fs.mkdirSync(PROMPTS_DIR, { recursive: true });
         }
-        
-        const newPrompt = {
-            id,
-            title,
-            versions: [
-                {
-                    version: 'v1',
-                    content: content,
-                    createdAt: new Date().toISOString()
-                }
-            ]
-        };
-        
-        prompts.push(newPrompt);
-        writeData(PROMPTS_FILE, prompts);
-        
-        return newPrompt;
     }
 
-    /**
-     * Adds a new version to an existing prompt.
-     */
-    addVersion(id, content) {
-        const prompts = readData(PROMPTS_FILE);
-        const promptIndex = prompts.findIndex(p => p.id === id);
-        
-        if (promptIndex === -1) {
-            throw new Error(`Prompt with id ${id} not found`);
-        }
-        
-        const currentVersionsCount = prompts[promptIndex].versions.length;
-        const nextVersion = `v${currentVersionsCount + 1}`;
-        
-        prompts[promptIndex].versions.push({
-            version: nextVersion,
-            content: content,
-            createdAt: new Date().toISOString()
-        });
-        
-        writeData(PROMPTS_FILE, prompts);
-        return prompts[promptIndex];
+    createPrompt(id, title, initialContent) {
+        const promptFile = path.join(PROMPTS_DIR, `${id}.json`);
+        const data = {
+            id,
+            title,
+            versions: [{
+                version: 'v1',
+                content: initialContent,
+                createdAt: new Date()
+            }]
+        };
+        writeData(promptFile, data);
+        return data;
     }
-    
+
+    addVersion(id, content) {
+        const promptFile = path.join(PROMPTS_DIR, `${id}.json`);
+        const data = this.getPrompt(id);
+        if (!data) throw new Error("Prompt not found");
+
+        const newVersion = `v${data.versions.length + 1}`;
+        data.versions.push({
+            version: newVersion,
+            content,
+            createdAt: new Date()
+        });
+        writeData(promptFile, data);
+        return data;
+    }
+
     getPrompt(id) {
-        const prompts = readData(PROMPTS_FILE);
-        return prompts.find(p => p.id === id);
+        const promptFile = path.join(PROMPTS_DIR, `${id}.json`);
+        if (!fs.existsSync(promptFile)) return null;
+        return readData(promptFile);
+    }
+
+    listPrompts() {
+        if (!fs.existsSync(PROMPTS_DIR)) return [];
+        const files = fs.readdirSync(PROMPTS_DIR).filter(f => f.endsWith('.json'));
+        return files.map(f => {
+            const data = readData(path.join(PROMPTS_DIR, f));
+            return {
+                id: data.id,
+                title: data.title,
+                versionCount: data.versions.length
+            };
+        });
+    }
+
+    rollbackVersion(id, targetVersion) {
+        const promptFile = path.join(PROMPTS_DIR, `${id}.json`);
+        const data = this.getPrompt(id);
+        if (!data) return null;
+
+        const versionIndex = data.versions.findIndex(v => v.version === targetVersion);
+        if (versionIndex === -1) return null;
+
+        data.versions = data.versions.slice(0, versionIndex + 1);
+        writeData(promptFile, data);
+        return data;
     }
 }
 
-module.exports = new PromptManager();
+const instance = new PromptManager();
+export default instance;

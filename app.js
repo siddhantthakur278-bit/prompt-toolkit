@@ -1,9 +1,9 @@
-const promptManager = require('./promptManager');
-const testSuiteManager = require('./testSuiteManager');
-const executionEngine = require('./executionEngine');
-const scoring = require('./scoring');
-const resultManager = require('./resultManager');
-const templateLibrary = require('./templateLibrary');
+import promptManager from './promptManager.js';
+import testSuiteManager from './testSuiteManager.js';
+import executionEngine from './executionEngine.js';
+import scoring from './scoring.js';
+import resultManager from './resultManager.js';
+import templateLibrary from './templateLibrary.js';
 
 // Reading dynamic parameters from Node's argv array.
 const dynamicInput = process.argv[2] || "Explain Quantum Computing";
@@ -21,7 +21,7 @@ async function main() {
     console.log(`[Task Info] Global Model: ${modelName}`);
 
     let promptData;
-    if (targetPromptId && targetPromptId !== "") {
+    if (targetPromptId && targetPromptId !== "" && targetPromptId !== "undefined") {
         promptData = promptManager.getPrompt(targetPromptId);
         if (!promptData) {
             console.log(`[Error] Prompt Cluster ${targetPromptId} not found. Falling back to demo.`);
@@ -48,7 +48,7 @@ async function main() {
     
     // If a specific version was requested, filter versions to only include that one
     let versionsToRun = promptData.versions;
-    if (targetVersionId && targetVersionId !== "") {
+    if (targetVersionId && targetVersionId !== "" && targetVersionId !== "undefined") {
         versionsToRun = promptData.versions.filter(v => v.version === targetVersionId);
         if (versionsToRun.length === 0) {
             console.log(`[Warning] Version ${targetVersionId} not found. Checking all versions.`);
@@ -101,3 +101,4 @@ async function main() {
 }
 
 main().catch(console.error);
+

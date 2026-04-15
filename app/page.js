@@ -14,6 +14,7 @@ export default function Home() {
 
   // High-Throughput System State
   const [prompts, setPrompts] = useState([]);
+  const [suites, setSuites] = useState([]);
   const [templates, setTemplates] = useState([]);
   const [analytics, setAnalytics] = useState(null);
   const [currentPrompt, setCurrentPrompt] = useState(null);
@@ -24,6 +25,7 @@ export default function Home() {
 
   // Input States (Hardened Scope)
   const [newPrompt, setNewPrompt] = useState({ title: '', content: '' });
+  const [newSuite, setNewSuite] = useState({ title: '' });
   const [nextVersionContent, setNextVersionContent] = useState('');
   const [execConfig, setExecConfig] = useState({ promptId: '', versionId: '', input: '', model: 'llama-3.3-70b-versatile' });
   const [logs, setLogs] = useState(["[CORE] QUANTUM OS INITIALIZED", "[SUB] MATRIX SYNCED", "[SEC] ADVERSARY DEFENSES ACTIVE"]);
@@ -38,15 +40,18 @@ export default function Home() {
   const fetchAllSystemData = async () => {
     setIsSyncing(true);
     try {
-      const [pRes, tRes, aRes] = await Promise.all([
+      const [pRes, sRes, tRes, aRes] = await Promise.all([
           fetch('/api/prompts'), 
+          fetch('/api/suites'),
           fetch('/api/templates'),
           fetch('/api/analytics')
       ]);
       const pData = await pRes.json();
+      const sData = await sRes.json();
       const tData = await tRes.json();
       const aData = await aRes.json();
       if (Array.isArray(pData)) setPrompts(pData);
+      if (Array.isArray(sData)) setSuites(sData);
       if (Array.isArray(tData)) setTemplates(tData);
       if (aData) setAnalytics(aData);
     } catch(e) {}
@@ -71,6 +76,18 @@ export default function Home() {
       body: JSON.stringify({ ...newPrompt, autoOptimize })
     });
     setNewPrompt({ title: '', content: '' });
+    await fetchAllSystemData();
+    setLoading(false);
+  };
+
+  const createSuite = async () => {
+    if (!newSuite.title) return;
+    setLoading(true);
+    await fetch('/api/suites', {
+      method: 'POST',
+      body: JSON.stringify(newSuite)
+    });
+    setNewSuite({ title: '' });
     await fetchAllSystemData();
     setLoading(false);
   };
@@ -133,6 +150,7 @@ export default function Home() {
         <nav style={{ flex: 1, padding: '0 20px' }}>
             {[
                 { id: 'prompts', label: 'Neural Forge', icon: '⚡' },
+                { id: 'suites', label: 'Suite Matrix', icon: '🧪' },
                 { id: 'execute', label: 'Laboratory', icon: '🛰️' },
                 { id: 'templates', label: 'Vault Registry', icon: '🛡️' },
                 { id: 'workflow', label: 'Workflow Pulse', icon: '🔄' },
@@ -215,21 +233,51 @@ export default function Home() {
                                 </div>
                                 <div className="glass-card" style={{ padding: '40px' }}>
                                     <label style={{ fontSize: '0.8rem', fontWeight: 950, opacity: 0.4, display: 'block', marginBottom: 30 }}>ACTIVE REPOSITORY</label>
-                                    {prompts.map(p => (
-                                        <div key={p.id} onClick={() => openPrompt(p.id)} style={{ padding: '24px', cursor: 'pointer', background: currentPrompt?.id === p.id ? 'rgba(129, 140, 248, 0.1)' : 'transparent', borderRadius: '25px', border: '1px solid var(--glass-border)', display: 'flex', justifyContent: 'space-between', marginBottom: 15 }}>
-                                            <div style={{ fontWeight: 900 }}>{p.title}</div>
-                                            <div className="badge badge-accent">{p.versionCount} ITER</div>
-                                        </div>
-                                    ))}
+                                    <div style={{ maxHeight: '600px', overflowY: 'auto', paddingRight: '10px' }}>
+                                        {prompts.map(p => (
+                                            <div key={p.id} onClick={() => openPrompt(p.id)} style={{ padding: '24px', cursor: 'pointer', background: currentPrompt?.id === p.id ? 'rgba(129, 140, 248, 0.1)' : 'transparent', borderRadius: '25px', border: '1px solid var(--glass-border)', display: 'flex', justifyContent: 'space-between', marginBottom: 15, transition: 'all 0.3s' }}>
+                                                <div style={{ fontWeight: 900 }}>{p.title}</div>
+                                                <div className="badge badge-accent">{p.versionCount} ITER</div>
+                                            </div>
+                                        ))}
+                                    </div>
                                 </div>
                             </div>
                             {currentPrompt && (
-                                <div className="glass-card" style={{ marginTop: 80, padding: '80px' }}>
+                                <div className="glass-card" style={{ marginTop: 80, padding: '80px', borderTop: '5px solid var(--accent-secondary)' }}>
                                     <h2 style={{ marginBottom: 40 }}>Nexus Iteration: {currentPrompt.title}</h2>
                                     <textarea value={nextVersionContent} onChange={e => setNextVersionContent(e.target.value)} rows="10" style={{ marginBottom: 40 }} />
                                     <button className="btn-primary" onClick={addVersion} disabled={loading}>COMMIT SIGNAL v{(currentPrompt?.versions?.length || 0) + 1}</button>
                                 </div>
                             )}
+                        </div>
+                    )}
+
+                    {tab === 'suites' && (
+                        <div style={{ animation: 'slideUp 0.7s ease' }}>
+                            <h2 className="shine-text" style={{ fontSize: '4.5rem', marginBottom: 20 }}>Suite Matrix</h2>
+                            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 60, marginTop: 50 }}>
+                                <div className="glass-card" style={{ padding: '70px', borderBottom: '10px solid var(--accent-secondary)' }}>
+                                     <h3 style={{ marginBottom: 40 }}>Initialize New Suite</h3>
+                                     <input value={newSuite.title} onChange={e => setNewSuite({title: e.target.value})} placeholder="SUITE IDENTITY (e.g. Code Quality)..." style={{ marginBottom: 40 }} />
+                                     <button className="btn-primary" style={{ width: '100%', background: 'var(--gradient-2)' }} onClick={createSuite} disabled={loading}>
+                                         {loading ? 'INITIALIZING...' : '🧪 CREATE VALIDATION SUITE'}
+                                     </button>
+                                </div>
+                                <div className="glass-card" style={{ padding: '40px' }}>
+                                    <label style={{ fontSize: '0.8rem', fontWeight: 950, opacity: 0.4, display: 'block', marginBottom: 30 }}>AVAILABLE SUITES</label>
+                                    {suites.length === 0 ? (
+                                        <div style={{ opacity: 0.4, textAlign: 'center', padding: '40px' }}>No suites detected in matrix.</div>
+                                    ) : (
+                                        suites.map(s => (
+                                            <div key={s.id} style={{ padding: '24px', borderRadius: '25px', border: '1px solid var(--glass-border)', display: 'flex', justifyContent: 'space-between', marginBottom: 15, background: 'rgba(255,255,255,0.02)' }}>
+                                                <div style={{ fontWeight: 900 }}>{s.title}</div>
+                                                <div className="badge badge-outline">{s.tests?.length || 0} TESTS</div>
+                                            </div>
+                                        ))
+                                    )}
+                                </div>
+                            </div>
                         </div>
                     )}
 

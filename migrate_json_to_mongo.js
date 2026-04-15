@@ -1,6 +1,6 @@
-const mongoose = require('mongoose');
-const fs = require('fs');
-const path = require('path');
+import mongoose from 'mongoose';
+import fs from 'fs';
+import path from 'path';
 
 // Models (Re-defined for the script since it's a standalone node process)
 const PromptSchema = new mongoose.Schema({

@@ -1,9 +1,13 @@
-const express = require('express');
-const { exec } = require('child_process');
-const path = require('path');
-const promptManager = require('./promptManager');
-const testSuiteManager = require('./testSuiteManager');
-const templateLibrary = require('./templateLibrary');
+import express from 'express';
+import { exec } from 'child_process';
+import path from 'path';
+import { fileURLToPath } from 'url';
+import promptManager from './promptManager.js';
+import testSuiteManager from './testSuiteManager.js';
+import templateLibrary from './templateLibrary.js';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 const app = express();
 const PORT = 3000;

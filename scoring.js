@@ -40,7 +40,11 @@ class Scoring {
         }));
 
         summaries.sort((a, b) => b.averageScore - a.averageScore);
-        return summaries[0] || { version: 'v1', averageScore: 0 };
+        const best = summaries[0] || { version: 'v1', averageScore: 0 };
+        return {
+            bestVersion: best.version || best.bestVersion || 'v1',
+            averageScore: best.averageScore
+        };
     }
 }
 

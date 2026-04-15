@@ -1588,5 +1588,95 @@
       "totalScore": 7
     },
     "timestamp": "2026-04-13T11:30:18.392Z"
+  },
+  {
+    "id": "1776260546646l4s",
+    "promptId": "demo-1776260546641",
+    "promptVersion": "v1",
+    "suiteId": "suite-1776260546641",
+    "input": "What is AI?",
+    "output": "[Error] Groq API Key not found in .env. Ensure GROQ_API_KEY is set.",
+    "scores": {
+      "keywordScore": 0,
+      "lengthScore": 5,
+      "manualScore": 2.5,
+      "totalScore": 7.5
+    },
+    "timestamp": "2026-04-15T13:42:26.646Z"
+  },
+  {
+    "id": "1776260546647g5g",
+    "promptId": "demo-1776260546641",
+    "promptVersion": "v2",
+    "suiteId": "suite-1776260546641",
+    "input": "What is AI?",
+    "output": "[Error] Groq API Key not found in .env. Ensure GROQ_API_KEY is set.",
+    "scores": {
+      "keywordScore": 0,
+      "lengthScore": 5,
+      "manualScore": 4.2,
+      "totalScore": 9.2
+    },
+    "timestamp": "2026-04-15T13:42:26.647Z"
+  },
+  {
+    "id": "17762605466492qq",
+    "promptId": "demo-1776260546641",
+    "promptVersion": "v3",
+    "suiteId": "suite-1776260546641",
+    "input": "What is AI?",
+    "output": "[Error] Groq API Key not found in .env. Ensure GROQ_API_KEY is set.",
+    "scores": {
+      "keywordScore": 0,
+      "lengthScore": 5,
+      "manualScore": 5,
+      "totalScore": 10
+    },
+    "timestamp": "2026-04-15T13:42:26.649Z"
+  },
+  {
+    "id": "1776260563801uob",
+    "promptId": "demo-1776260563796",
+    "promptVersion": "v1",
+    "suiteId": "suite-1776260563796",
+    "input": "What is AI?",
+    "output": "[Error] Groq API Key not found in .env. Ensure GROQ_API_KEY is set.",
+    "scores": {
+      "keywordScore": 0,
+      "lengthScore": 5,
+      "manualScore": 2.5,
+      "totalScore": 7.5
+    },
+    "timestamp": "2026-04-15T13:42:43.801Z"
+  },
+  {
+    "id": "1776260563802ika",
+    "promptId": "demo-1776260563796",
+    "promptVersion": "v2",
+    "suiteId": "suite-1776260563796",
+    "input": "What is AI?",
+    "output": "[Error] Groq API Key not found in .env. Ensure GROQ_API_KEY is set.",
+    "scores": {
+      "keywordScore": 0,
+      "lengthScore": 5,
+      "manualScore": 4.2,
+      "totalScore": 9.2
+    },
+    "timestamp": "2026-04-15T13:42:43.802Z"
+  },
+  {
+    "id": "1776260563802qp1",
+    "promptId": "demo-1776260563796",
+    "promptVersion": "v3",
+    "suiteId": "suite-1776260563796",
+    "input": "What is AI?",
+    "output": "[Error] Groq API Key not found in .env. Ensure GROQ_API_KEY is set.",
+    "scores": {
+      "keywordScore": 0,
+      "lengthScore": 5,
+      "manualScore": 5,
+      "totalScore": 10
+    },
+    "timestamp": "2026-04-15T13:42:43.802Z"
   }
 ]

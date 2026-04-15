@@ -135,6 +135,7 @@ export default function Home() {
                 { id: 'prompts', label: 'Neural Forge', icon: '⚡' },
                 { id: 'execute', label: 'Laboratory', icon: '🛰️' },
                 { id: 'templates', label: 'Vault Registry', icon: '🛡️' },
+                { id: 'workflow', label: 'Workflow Pulse', icon: '🔄' },
                 { id: 'sdk', label: 'SDK Nexus', icon: '🧬' },
                 { id: 'analytics', label: 'Intelligence hub', icon: '📊' }
             ].map(item => (
@@ -263,6 +264,52 @@ export default function Home() {
                                     ))}
                                 </div>
                             )}
+                        </div>
+                    )}
+
+                    {tab === 'workflow' && (
+                        <div style={{ animation: 'slideUp 0.7s ease' }}>
+                            <h2 className="shine-text" style={{ fontSize: '4.5rem' }}>Workflow Pulse</h2>
+                            <p style={{ opacity: 0.5, marginTop: 10, fontSize: '1.2rem' }}>Automated Signaling Pipeline: Local Node → n8n Webhook → Google Sheets</p>
+                            
+                            <div style={{ marginTop: 80, position: 'relative' }}>
+                                <div style={{ position: 'absolute', top: '50%', left: 0, right: 0, height: '4px', background: 'linear-gradient(90deg, var(--accent-primary), var(--success))', zIndex: 0, opacity: 0.3 }}></div>
+                                
+                                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(5, 1fr)', gap: 30, position: 'relative', zIndex: 1 }}>
+                                    {[
+                                        { step: "01", title: "DRAFT", desc: "Neural Forge Entry", icon: "⚡" },
+                                        { step: "02", title: "ITERATE", desc: "Cluster Versioning", icon: "🧬" },
+                                        { step: "03", title: "OPTIMIZE", desc: "AI Substrate Polish", icon: "🌀" },
+                                        { step: "04", title: "VALIDATE", desc: "Matrix Lab Simulation", icon: "🛰️" },
+                                        { step: "05", title: "SYNC", desc: "n8n → Google Sheets", icon: "📊" }
+                                    ].map((s, i) => (
+                                        <div key={i} className="glass-card" style={{ padding: '40px 20px', textAlign: 'center', border: '1px solid var(--glass-border)', background: 'rgba(0,0,0,0.8)' }}>
+                                            <div style={{ fontSize: '0.8rem', fontWeight: 950, color: 'var(--accent-primary)', marginBottom: 15 }}>STEP {s.step}</div>
+                                            <div style={{ fontSize: '2.5rem', marginBottom: 15 }}>{s.icon}</div>
+                                            <div style={{ fontWeight: 950, marginBottom: 10 }}>{s.title}</div>
+                                            <div style={{ fontSize: '0.7rem', opacity: 0.4 }}>{s.desc}</div>
+                                        </div>
+                                    ))}
+                                </div>
+                            </div>
+
+                            <div className="glass-card" style={{ marginTop: 60, padding: '60px', borderLeft: '10px solid var(--success)' }}>
+                                <h3 style={{ marginBottom: 30 }}>Live Automation Status</h3>
+                                <div style={{ display: 'flex', gap: 60 }}>
+                                    <div>
+                                        <div style={{ fontSize: '0.7rem', opacity: 0.5, marginBottom: 10 }}>WEBHOOK ENDPOINT</div>
+                                        <code style={{ fontSize: '0.9rem', color: 'var(--success)' }}>{process.env.NEXT_PUBLIC_N8N_URL || "https://n8n.workflow.internal/webhook/..."}</code>
+                                    </div>
+                                    <div>
+                                        <div style={{ fontSize: '0.7rem', opacity: 0.5, marginBottom: 10 }}>TARGET WAREHOUSE</div>
+                                        <div style={{ fontWeight: 900 }}>Google Sheets: "Optimized_Signals_V1"</div>
+                                    </div>
+                                    <div>
+                                        <div style={{ fontSize: '0.7rem', opacity: 0.5, marginBottom: 10 }}>LAST SYNC</div>
+                                        <div style={{ fontWeight: 900 }}>{new Date().toLocaleTimeString()}</div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     )}
 

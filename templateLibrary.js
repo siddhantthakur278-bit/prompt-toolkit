@@ -2,6 +2,7 @@ import fs from 'fs';
 import path from 'path';
 import { readData, writeData } from './utils.js';
 import promptManager from './promptManager.js';
+import { exportToN8N } from './lib/n8nClient.js';
 
 const TEMPLATES_FILE = path.join(process.cwd(), 'data', 'templates', 'library.json');
 
@@ -38,6 +39,10 @@ class TemplateLibrary {
         }
 
         writeData(TEMPLATES_FILE, templates);
+        
+        // Asynchronous n8n export (non-blocking)
+        exportToN8N(templateEntry).catch(e => console.error("N8N Background Export Failed:", e));
+
         return templateEntry;
     }
 

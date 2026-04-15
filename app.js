@@ -1,12 +1,13 @@
-import promptManager from './promptManager.js';
-import testSuiteManager from './testSuiteManager.js';
-import executionEngine from './executionEngine.js';
-import scoring from './scoring.js';
-import resultManager from './resultManager.js';
+const promptManager = require('./promptManager');
+const testSuiteManager = require('./testSuiteManager');
+const executionEngine = require('./executionEngine');
+const scoring = require('./scoring');
+const resultManager = require('./resultManager');
+const templateLibrary = require('./templateLibrary');
 
 // Reading dynamic parameters from Node's argv array.
 const dynamicInput = process.argv[2] || "Explain Quantum Computing";
-const modelName = process.argv[3] || "llama-3.3-70b-versatile"; 
+const modelName = process.argv[3] || "GPT-4o"; 
 const targetPromptId = process.argv[4];
 const targetVersionId = process.argv[5];
 
@@ -20,7 +21,7 @@ async function main() {
     console.log(`[Task Info] Global Model: ${modelName}`);
 
     let promptData;
-    if (targetPromptId) {
+    if (targetPromptId && targetPromptId !== "") {
         promptData = promptManager.getPrompt(targetPromptId);
         if (!promptData) {
             console.log(`[Error] Prompt Cluster ${targetPromptId} not found. Falling back to demo.`);
@@ -45,16 +46,15 @@ async function main() {
     testSuiteManager.addTest(suiteId, dynamicInput, criteria);
     const suiteData = testSuiteManager.getSuite(suiteId);
     
+    // If a specific version was requested, filter versions to only include that one
     let versionsToRun = promptData.versions;
-    if (targetVersionId) {
+    if (targetVersionId && targetVersionId !== "") {
         versionsToRun = promptData.versions.filter(v => v.version === targetVersionId);
         if (versionsToRun.length === 0) {
             console.log(`[Warning] Version ${targetVersionId} not found. Checking all versions.`);
             versionsToRun = promptData.versions;
         }
     }
-
-    const currentRunResults = [];
 
     for (const test of suiteData.tests) {
         for (const version of versionsToRun) {
@@ -65,6 +65,7 @@ async function main() {
             const endTime = Date.now();
             const realLatency = endTime - startTime;
             
+            // Calculate simulated elite metrics on real output
             const tokens = Math.ceil(output.length / 4) + 12;
             const cost = (tokens * 0.00001).toFixed(5);
             
@@ -80,24 +81,23 @@ async function main() {
             console.log(`  > Derived Scores: ` + JSON.stringify(scores));
             console.log(`  > Elite Metadata: ` + JSON.stringify(metadata));
             
-            const savedResult = resultManager.saveResult(promptId, version.version, suiteId, test.input, output, scores);
-            currentRunResults.push(savedResult);
+            resultManager.saveResult(promptId, version.version, suiteId, test.input, output, scores);
         }
     }
     
-    if (currentRunResults.length === 0) return;
+    const allResults = resultManager.getResultsByPrompt(promptId);
+    if (!allResults || allResults.length === 0) return;
     
-    const comparison = scoring.compareVersions(currentRunResults);
-    const bestResult = currentRunResults.find(r => r.promptVersion === comparison.version);
-
-    console.log(`🏆 Best Version found: ${comparison.version} (Average Score: ${comparison.averageScore.toFixed(2)} / 15)`);
+    const comparison = scoring.compareVersions(allResults);
+    console.log(`🏆 Best Version found: ${comparison.bestVersion} (Average Score: ${comparison.averageScore.toFixed(2)} / 15)`);
     
-    resultManager.saveTemplate(
-        promptData, 
-        comparison.version, 
-        comparison.averageScore, 
-        bestResult ? bestResult.output : "N/A"
-    );
+    // Save to template library using the unified library
+    try {
+        templateLibrary.saveTemplate(promptId, comparison.bestVersion, comparison.averageScore.toFixed(2));
+        console.log(`[System] Automatically promoted ${comparison.bestVersion} to Template Library.`);
+    } catch (e) {
+        console.log(`[Error] Failed to save template: ${e.message}`);
+    }
 }
 
 main().catch(console.error);

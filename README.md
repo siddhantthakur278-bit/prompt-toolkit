@@ -1,58 +1,72 @@
-# 🛰️ Quantum.Prompt v12.0: The Enterprise Manifest
-### *The Gold Standard for Modern Prompt Engineering & Neural Orchestration*
+# 🛰️ Prompt Engineering Toolkit
 
-**Quantum.Prompt** is a production-grade, commercial-ready SaaS platform designed for high-performance AI research. Built with a premium "Command OS" aesthetic, it bridges the gap between raw LLM experimentation and production-scale prompt stability.
-
----
-
-## 💎 High-Value Features (The $5,000 Edge)
-
-### 🌀 1. Neural Forge & Autonomous Optimizer
-Architect signals with surgical precision. The **Turbo-Optimize** engine leverages the Groq-substrate (Llama-3.3-70B) to autonomously generate high-fidelity prompt variants based on Chain-of-Thought reasoning and professional framing protocols.
-
-### 🛰️ 2. Matrix Benchmark Lab
-The industry's first side-by-side simulation core. Run your prompts across the intelligence matrix simultaneously. Quantum provides:
-- **Relative Accuracy Scoring**: 1-15 scale based on linguistic clarity and criteria matching.
-- **Latency Telemetry**: Real-time millisecond-level execution tracking.
-- **Best-in-Class Archival**: Automatically promotes the highest-performing signal to the "Golden Template" vault.
-
-### 🛡️ 3. Neural Red Team (Adversary Core)
-A world-class security suite. Deploy an autonomous **AI Adversary** that stress-tests your prompts against:
-- **Context Injection**
-- **Logical Conflicts**
-- **Inland Jailbreaks**
-*Standard features in seven-figure enterprise security suites.*
-
-### 📥 4. Vault Registry & SDK Nexus
-- **Golden Templates**: Persistent storage of your highest-performing prompt architectures.
-- **Python/Node.js SDKs**: Instantly deployable code snippets with pre-configured headers and model logic.
-- **Bundle Export**: Export your entire signal repository as a production-ready JSON bundle.
+A simple but powerful tool for managing and optimizing your AI prompts. This toolkit helps you move from trial-and-error to a systematic way of developing prompts.
 
 ---
 
-## 🛠️ Technical Architecture (The Stack)
+## ✨ Features
 
-- **Frontend**: Next.js 14 (App Router) + Hardware-accelerated CSS-in-JS.
-- **Logic**: Node.js + Groq-Inference Substrate (`llama-3.3-70b-versatile`).
-- **Persistence**: Symmetrical MongoDB & JSON Fallback (Zero-Downtime Design).
-- **Security**: Environment-level API protection + Adversarial Red-Teaming.
+### 1. Prompt Manager
+*   **Version Control**: Save different versions of your prompts and track how they change.
+*   **AI Optimizer**: Use AI to automatically create better versions of your initial prompt.
 
----
+### 2. Testing Laboratory
+*   **Compare Outputs**: Run multiple prompt versions side-by-side with the same input.
+*   **Scoring**: Automatically score responses based on keywords, length, and your own quality grades.
+*   **Metrics**: Track how long each prompt takes to run and estimated costs.
 
-## 📈 Commercial Readiness
-Quantum is architected as a **Sellable SaaS Micro-Platform**. It includes:
-- **Enterprise Hub**: Mocked pricing tiers and team collaboration UI.
-- **System Telemetry**: Real-time log-stream and performance metrics.
-- **Zero-Bug Integrity**: Defensive optional-chaining and robust error-handling across all neural nodes.
+### 3. Template Library
+*   **Save the Best**: Keep your top-performing prompts in a central library.
+*   **Ready for Production**: Copy useable code snippets (Python/Node.js) to plug your prompts directly into your own applications.
 
----
-
-## 🚀 Deployment Guide
-1. **Provision Environment**: Populate `.env` with `GROQ_API_KEY`.
-2. **Initialize Substrate**: `npm install`
-3. **Launch Core**: `npm run dev`
-4. **Enter Command OS**: Navigate to `http://localhost:3000`
+### 4. Workflow Pulse
+*   **Automation**: Visualize your prompt development process and see a list of recent activities.
 
 ---
 
-*© 2026 Quantum Prompt Intelligence Suite. Built for the $500B AI Economy.*
+## 🛠️ Technology Stack
+
+*   **Frontend**: Next.js (React)
+*   **Backend**: Node.js / Express
+*   **Database**: MongoDB (with local JSON file fallback)
+*   **AI Engine**: Groq API (using Llama 3 models)
+
+---
+
+## 🚀 How to Get Started
+
+### 1. Prerequisites
+You will need a **Groq API Key**. You can get one for free at [console.groq.com](https://console.groq.com).
+
+### 2. Setup
+1.  **Clone the project** to your computer.
+2.  **Install dependencies**:
+    ```bash
+    npm install
+    ```
+3.  **Configure environment**: Create a `.env` file in the root folder and add your key:
+    ```env
+    GROQ_API_KEY=your_api_key_here
+    MONGODB_URI=mongodb://localhost:27017/prompttoolkit (Optional)
+    ```
+
+### 3. Run the App
+Start the development server:
+```bash
+npm run dev
+```
+Open your browser and go to [http://localhost:3000](http://localhost:3000).
+
+---
+
+## 📂 Project Structure
+
+*   `/app`: The Next.js website and API routes.
+*   `/data`: Local storage for prompts and results (used if MongoDB is not connected).
+*   `/lib`: Core logic for AI optimization and database connections.
+*   `app.js`: A command-line tool to run prompt tests.
+*   `server.js`: An alternative Express-based server.
+
+---
+
+*This project was created to make prompt engineering more structured and efficient.*

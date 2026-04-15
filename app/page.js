@@ -54,7 +54,10 @@ export default function Home() {
       if (Array.isArray(sData)) setSuites(sData);
       if (Array.isArray(tData)) setTemplates(tData);
       if (aData) setAnalytics(aData);
-    } catch(e) {}
+    } catch(e) {
+      console.error("System Sync Failure:", e);
+      setDbStatus('SYNC ERROR');
+    }
     setIsSyncing(false);
   };
 
@@ -369,7 +372,7 @@ export default function Home() {
                                     <div key={idx} className="glass-card" style={{ padding: '60px', borderTop: '8px solid var(--success)' }}>
                                         <div style={{ fontSize: '2.2rem', fontWeight: 950, marginBottom: 30 }}>{t.title} 🏆 {t.versionId}</div>
                                         <div className="output-quote">{t.content}</div>
-                                        <div style={{ marginTop: 30, color: 'var(--success)', fontWeight: 950 }}>EFFICIENCY: {(t.score/15*100).toFixed(0)}%</div>
+                                        <div style={{ marginTop: 30, color: 'var(--success)', fontWeight: 950 }}>EFFICIENCY: {(((t.averageScore || 0) / 15) * 100).toFixed(0)}%</div>
                                     </div>
                                 ))}
                             </div>

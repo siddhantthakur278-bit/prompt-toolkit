@@ -7,3 +7,4 @@ data/results
 data/prompts/demo-*
 data/test_suites/suite-demo-*
 migrate_json_to_mongo.js
+.vercel

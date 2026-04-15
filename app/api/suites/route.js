@@ -1,6 +1,8 @@
 import { NextResponse } from 'next/server';
 import connectDB from '@/lib/db';
 import mongoose from 'mongoose';
+import fs from 'fs';
+import path from 'path';
 
 const TestSuiteSchema = new mongoose.Schema({
   id: { type: String, required: true, unique: true },
@@ -19,7 +21,20 @@ export async function GET() {
         const suites = await TestSuite.find({});
         return NextResponse.json(suites);
     } catch (e) {
-        return NextResponse.json({ error: e.message }, { status: 500 });
+        const SUITES_DIR = path.join(process.cwd(), 'data', 'test_suites');
+        if (fs.existsSync(SUITES_DIR)) {
+            const files = fs.readdirSync(SUITES_DIR).filter(f => f.endsWith('.json'));
+            const list = files.map(f => {
+                const data = JSON.parse(fs.readFileSync(path.join(SUITES_DIR, f), 'utf8'));
+                return {
+                    id: data.id,
+                    title: data.title,
+                    tests: data.tests || []
+                };
+            });
+            return NextResponse.json(list);
+        }
+        return NextResponse.json([]);
     }
 }
 

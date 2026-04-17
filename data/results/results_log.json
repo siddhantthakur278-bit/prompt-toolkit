@@ -1590,93 +1590,123 @@
     "timestamp": "2026-04-13T11:30:18.392Z"
   },
   {
-    "id": "1776260546646l4s",
-    "promptId": "demo-1776260546641",
+    "id": "1776430499638dr0",
+    "promptId": "demo-1776430498037",
     "promptVersion": "v1",
-    "suiteId": "suite-1776260546641",
-    "input": "What is AI?",
-    "output": "[Error] Groq API Key not found in .env. Ensure GROQ_API_KEY is set.",
+    "suiteId": "suite-1776430498037",
+    "input": "Explain Quantum Computing",
+    "output": "**Introduction to Quantum Computing**\n=====================================\n\nQuantum computing is a revolutionary technology that uses the principles of quantum mechanics to perform calculations and operations on data. It has the potential to solve complex problems that are currently unsolvable or require an unfeasible amount of time to solve using classical computers.\n\n**Classical vs. Quantum Computing**\n---------------------------------\n\nClassical computers use bits to store and process information. These bits can have a value of either 0 or 1, and they are used to perform calculations using logical operations. However, as the number of bits increases, the amount of time it takes to perform calculations grows exponentially.\n\nQuantum computers, on the other hand, use quantum bits or qubits. Qubits are unique because they can exist in multiple states simultaneously, known as a superposition. This means that a qubit can represent not just 0 or 1, but also any combination of 0 and 1, such as 0.5 or 0.75. This property allows quantum computers to process a vast number of possibilities simultaneously, making them much faster than classical computers for certain types of calculations.\n\n**Key Concepts in Quantum Computing**\n--------------------------------------\n\n1. **Superposition**: The ability of a qubit to exist in multiple states simultaneously.\n2. **Entanglement**: The connection between two or more qubits, which allows them to affect each other even when separated by large distances.\n3. **Quantum gates**: The operations that are applied to qubits to perform calculations.\n4. **Quantum algorithms**: The programs that are run on quantum computers to solve specific problems.\n\n**Quantum Computing Applications**\n---------------------------------\n\n1. **Cryptography**: Quantum computers can be used to break certain types of encryption, but they can also be used to create unbreakable encryption methods.\n2. **Optimization**: Quantum computers can be used to optimize complex systems, such as logistics or financial portfolios.\n3. **Simulation**: Quantum computers can be used to simulate complex systems, such as molecules or materials.\n4. **Machine learning**: Quantum computers can be used to speed up certain types of machine learning algorithms.\n\n**Challenges and Limitations**\n-----------------------------\n\n1. **Error correction**: Quantum computers are prone to errors due to the fragile nature of qubits.\n2. **Scalability**: Currently, quantum computers are small-scale and need to be scaled up to be useful for practical applications.\n3. **Noise**: Quantum computers are sensitive to noise, which can cause errors and reduce their performance.\n\n**Current State of Quantum Computing**\n--------------------------------------\n\nQuantum computing is still in its early stages, and significant research and development are needed to overcome the challenges and limitations. However, many companies and organizations, such as Google, IBM, and Microsoft, are actively working on developing quantum computing technology.\n\n**Conclusion**\n----------\n\nQuantum computing has the potential to revolutionize many fields, from cryptography to machine learning. While there are still significant challenges to overcome, the potential benefits of quantum computing make it an exciting and rapidly evolving field. As research and development continue, we can expect to see significant advancements in the coming years.",
+    "scores": {
+      "keywordScore": 0,
+      "lengthScore": 2,
+      "manualScore": 2.5,
+      "totalScore": 4.5
+    },
+    "timestamp": "2026-04-17T12:54:59.638Z"
+  },
+  {
+    "id": "1776430501415fzt",
+    "promptId": "demo-1776430498037",
+    "promptVersion": "v2",
+    "suiteId": "suite-1776430498037",
+    "input": "Explain Quantum Computing",
+    "output": "**Introduction to Quantum Computing**\n\nQuantum computing is a revolutionary technology that uses the principles of quantum mechanics to perform calculations and operations on data. It has the potential to solve complex problems that are currently unsolvable or require an unfeasible amount of time to solve using classical computers.\n\n**Key Principles of Quantum Computing**\n\n1. **Superposition**: Quantum computers use quantum bits or qubits, which can exist in multiple states (0, 1, or both) simultaneously, allowing for parallel processing of vast amounts of data.\n2. **Entanglement**: Qubits can become \"entangled,\" meaning the state of one qubit is dependent on the state of the other, enabling the creation of complex quantum circuits.\n3. **Quantum interference**: Quantum computers can manipulate qubits to create interference patterns, which can be used to perform calculations and operations.\n4. **Quantum measurement**: When a qubit is measured, its state is collapsed to a single value (0 or 1), allowing the result of a calculation to be determined.\n\n**How Quantum Computers Work**\n\n1. **Quantum Circuit Model**: Quantum computers are programmed using quantum circuits, which are composed of quantum gates that perform operations on qubits.\n2. **Quantum Algorithms**: Quantum algorithms, such as Shor's algorithm and Grover's algorithm, are designed to take advantage of quantum parallelism and solve specific problems.\n3. **Quantum Error Correction**: Quantum computers are prone to errors due to the fragile nature of qubits. Quantum error correction techniques, such as quantum error correction codes, are used to mitigate these errors.\n\n**Types of Quantum Computers**\n\n1. **Gate-based Quantum Computers**: These computers use a sequence of quantum gates to perform operations on qubits.\n2. **Analog Quantum Computers**: These computers use continuous-variable quantum systems, such as quantum oscillators, to perform calculations.\n3. **Topological Quantum Computers**: These computers use exotic materials called topological insulators to create robust qubits.\n\n**Applications of Quantum Computing**\n\n1. **Cryptography**: Quantum computers can break certain classical encryption algorithms, but they can also be used to create unbreakable quantum encryption methods.\n2. **Optimization**: Quantum computers can be used to optimize complex systems, such as logistics and supply chains.\n3. **Machine Learning**: Quantum computers can be used to speed up machine learning algorithms and improve their performance.\n4. **Materials Science**: Quantum computers can be used to simulate the behavior of materials at the atomic level, leading to breakthroughs in fields like energy storage and conversion.\n\n**Challenges and Limitations**\n\n1. **Noise and Error Correction**: Quantum computers are prone to errors due to the fragile nature of qubits.\n2. **Scalability**: Currently, quantum computers are small-scale and need to be scaled up to perform complex calculations.\n3. **Quantum Control**: Maintaining control over qubits and quantum circuits is essential for reliable operation.\n\n**Current State and Future Prospects**\n\nQuantum computing is still an emerging field, and significant advances are being made in the development of quantum hardware and software. Companies like Google, IBM, and Microsoft are investing heavily in quantum computing research, and governments are also providing funding for quantum computing initiatives. As the field continues to evolve, we can expect to see significant breakthroughs in areas like cryptography, optimization, and machine learning.",
+    "scores": {
+      "keywordScore": 0,
+      "lengthScore": 2,
+      "manualScore": 4.2,
+      "totalScore": 6.2
+    },
+    "timestamp": "2026-04-17T12:55:01.415Z"
+  },
+  {
+    "id": "17764305037175g5",
+    "promptId": "demo-1776430498037",
+    "promptVersion": "v3",
+    "suiteId": "suite-1776430498037",
+    "input": "Explain Quantum Computing",
+    "output": "**Introduction to Quantum Computing**\n=====================================\n\nQuantum computing is a revolutionary technology that uses the principles of quantum mechanics to perform calculations and operations on data. It has the potential to solve complex problems that are currently unsolvable or require an unfeasible amount of time to solve using traditional computers.\n\n**Key Principles of Quantum Computing**\n--------------------------------------\n\n1. **Superposition**: Quantum computers use quantum bits or qubits, which can exist in multiple states (0, 1, or both) simultaneously.\n2. **Entanglement**: Qubits can be connected in a way that the state of one qubit is dependent on the state of the other, even if they are separated by large distances.\n3. **Quantum parallelism**: Quantum computers can perform many calculations simultaneously, thanks to the principles of superposition and entanglement.\n4. **Quantum measurement**: When a qubit is measured, its state is collapsed to one of the possible outcomes (0 or 1).\n\n**How Quantum Computing Works**\n-------------------------------\n\n1. **Qubits**: The basic unit of quantum information is the qubit, which can exist in multiple states.\n2. **Quantum gates**: Quantum gates are the quantum equivalent of logic gates in classical computing. They perform operations on qubits, such as adding or multiplying.\n3. **Quantum circuits**: Quantum circuits are the quantum equivalent of digital circuits in classical computing. They consist of a series of quantum gates that perform a specific calculation.\n4. **Quantum algorithms**: Quantum algorithms are programs that use quantum gates and circuits to solve specific problems.\n\n**Types of Quantum Computing**\n-----------------------------\n\n1. **Gate-based quantum computing**: This is the most common type of quantum computing, where quantum gates are used to perform calculations.\n2. **Analog quantum computing**: This type of quantum computing uses continuous variables, such as voltages or currents, to perform calculations.\n3. **Topological quantum computing**: This type of quantum computing uses exotic materials called topological insulators to perform calculations.\n4. **Adiabatic quantum computing**: This type of quantum computing uses a slow and continuous process to perform calculations.\n\n**Applications of Quantum Computing**\n--------------------------------------\n\n1. **Cryptography**: Quantum computers can break many encryption algorithms currently in use, but they can also be used to create new, quantum-resistant encryption algorithms.\n2. **Optimization**: Quantum computers can be used to solve complex optimization problems, such as the traveling salesman problem.\n3. **Simulation**: Quantum computers can be used to simulate complex systems, such as molecules and chemical reactions.\n4. **Machine learning**: Quantum computers can be used to speed up machine learning algorithms and improve their accuracy.\n\n**Challenges and Limitations**\n-----------------------------\n\n1. **Error correction**: Quantum computers are prone to errors due to the noisy nature of quantum systems.\n2. **Scalability**: Currently, quantum computers are small-scale and need to be scaled up to perform complex calculations.\n3. **Quantum control**: Maintaining control over the quantum states of qubits is essential for reliable operation.\n4. **Standards and interoperability**: There is a need for standards and interoperability between different quantum computing systems.\n\n**Conclusion**\n==============\n\nQuantum computing is a rapidly evolving field with the potential to revolutionize many areas of science and technology. While there are challenges and limitations to overcome, the potential benefits of quantum computing make it an exciting and worthwhile area of research and development. As the technology continues to advance, we can expect to see new breakthroughs and innovations that will transform the way we live and work.",
+    "scores": {
+      "keywordScore": 0,
+      "lengthScore": 2,
+      "manualScore": 5,
+      "totalScore": 7
+    },
+    "timestamp": "2026-04-17T12:55:03.717Z"
+  },
+  {
+    "id": "1776431679159ixe",
+    "promptId": "p-1776431107879",
+    "promptVersion": "v1",
+    "suiteId": "suite-1776431678354",
+    "input": "Basic explanation",
+    "output": "Photosynthesis is the process by which plants, algae, and some bacteria make their own food from sunlight, water, and air. Here's a simplified explanation:\n\n1. **Plants absorb water** from the soil through their roots.\n2. **They absorb carbon dioxide** from the air through tiny holes on their leaves.\n3. **They use energy from sunlight** to convert the water and carbon dioxide into a type of sugar, called glucose.\n4. **They release oxygen** into the air as a byproduct of this process.\n5. **The glucose is used by the plant** as energy and building blocks for growth.\n\nIn summary, photosynthesis is like a recipe:\n\nSunlight + Water + Carbon Dioxide = Glucose (food for plants) + Oxygen\n\nThis process is essential for life on Earth, as it provides energy and oxygen for many living organisms.",
     "scores": {
       "keywordScore": 0,
       "lengthScore": 5,
       "manualScore": 2.5,
       "totalScore": 7.5
     },
-    "timestamp": "2026-04-15T13:42:26.646Z"
+    "timestamp": "2026-04-17T13:14:39.159Z"
   },
   {
-    "id": "1776260546647g5g",
-    "promptId": "demo-1776260546641",
+    "id": "1776431679650m9n",
+    "promptId": "p-1776431107879",
     "promptVersion": "v2",
-    "suiteId": "suite-1776260546641",
-    "input": "What is AI?",
-    "output": "[Error] Groq API Key not found in .env. Ensure GROQ_API_KEY is set.",
+    "suiteId": "suite-1776431678354",
+    "input": "Basic explanation",
+    "output": "Photosynthesis is the process by which plants, algae, and some bacteria convert sunlight, water, and carbon dioxide into glucose (food) and oxygen. The basic steps are:\n\n1. Plants absorb water and carbon dioxide.\n2. They use sunlight as energy.\n3. They convert water and carbon dioxide into glucose and oxygen.\n4. They release oxygen into the air and use glucose as food to grow.\n\nThis process is essential for life on Earth, as it provides oxygen for animals to breathe and food for plants to grow.",
     "scores": {
       "keywordScore": 0,
       "lengthScore": 5,
       "manualScore": 4.2,
       "totalScore": 9.2
     },
-    "timestamp": "2026-04-15T13:42:26.647Z"
+    "timestamp": "2026-04-17T13:14:39.650Z"
   },
   {
-    "id": "17762605466492qq",
-    "promptId": "demo-1776260546641",
+    "id": "1776431680172bw2",
+    "promptId": "p-1776431107879",
     "promptVersion": "v3",
-    "suiteId": "suite-1776260546641",
-    "input": "What is AI?",
-    "output": "[Error] Groq API Key not found in .env. Ensure GROQ_API_KEY is set.",
+    "suiteId": "suite-1776431678354",
+    "input": "Basic explanation",
+    "output": "Photosynthesis is how plants, algae, and some bacteria make food from sunlight, water, and air. They use energy from the sun to turn water and carbon dioxide into glucose (a type of sugar) and oxygen. This process is important because it gives plants the energy they need to grow and also produces oxygen for animals to breathe.",
     "scores": {
       "keywordScore": 0,
       "lengthScore": 5,
       "manualScore": 5,
       "totalScore": 10
     },
-    "timestamp": "2026-04-15T13:42:26.649Z"
+    "timestamp": "2026-04-17T13:14:40.172Z"
   },
   {
-    "id": "1776260563801uob",
-    "promptId": "demo-1776260563796",
+    "id": "1776432624604x3z",
+    "promptId": "p-1776432615754",
     "promptVersion": "v1",
-    "suiteId": "suite-1776260563796",
-    "input": "What is AI?",
-    "output": "[Error] Groq API Key not found in .env. Ensure GROQ_API_KEY is set.",
+    "suiteId": "suite-1776432624333",
+    "input": "Make it funny",
+    "output": "Why did the robot go on a diet? \n\nBecause it wanted to lose some bytes.",
     "scores": {
       "keywordScore": 0,
       "lengthScore": 5,
       "manualScore": 2.5,
       "totalScore": 7.5
     },
-    "timestamp": "2026-04-15T13:42:43.801Z"
+    "timestamp": "2026-04-17T13:30:24.604Z"
   },
   {
-    "id": "1776260563802ika",
-    "promptId": "demo-1776260563796",
-    "promptVersion": "v2",
-    "suiteId": "suite-1776260563796",
-    "input": "What is AI?",
-    "output": "[Error] Groq API Key not found in .env. Ensure GROQ_API_KEY is set.",
+    "id": "1776432651299e5o",
+    "promptId": "p-1776432615754",
+    "promptVersion": "v1",
+    "suiteId": "suite-1776432650964",
+    "input": "Make it funny",
+    "output": "Why did the robot go on a diet? Because it wanted to lose some bytes.",
     "scores": {
       "keywordScore": 0,
       "lengthScore": 5,
-      "manualScore": 4.2,
-      "totalScore": 9.2
+      "manualScore": 2.5,
+      "totalScore": 7.5
     },
-    "timestamp": "2026-04-15T13:42:43.802Z"
-  },
-  {
-    "id": "1776260563802qp1",
-    "promptId": "demo-1776260563796",
-    "promptVersion": "v3",
-    "suiteId": "suite-1776260563796",
-    "input": "What is AI?",
-    "output": "[Error] Groq API Key not found in .env. Ensure GROQ_API_KEY is set.",
-    "scores": {
-      "keywordScore": 0,
-      "lengthScore": 5,
-      "manualScore": 5,
-      "totalScore": 10
-    },
-    "timestamp": "2026-04-15T13:42:43.802Z"
+    "timestamp": "2026-04-17T13:30:51.299Z"
   }
 ]

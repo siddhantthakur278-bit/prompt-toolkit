@@ -1,104 +1,13 @@
-import promptManager from './promptManager.js';
-import testSuiteManager from './testSuiteManager.js';
-import executionEngine from './executionEngine.js';
-import scoring from './scoring.js';
-import resultManager from './resultManager.js';
-import templateLibrary from './templateLibrary.js';
+import { runOptimizationPipeline } from './lib/pipelineRunner.js';
 
 // Reading dynamic parameters from Node's argv array.
-const dynamicInput = process.argv[2] || "Explain Quantum Computing";
-const modelName = process.argv[3] || "GPT-4o"; 
+const dynamicInput = process.argv[2];
+const modelName = process.argv[3]; 
 const targetPromptId = process.argv[4];
 const targetVersionId = process.argv[5];
 
 async function main() {
-    const runTimestamp = Date.now();
-    let promptId = targetPromptId || `prompt-${runTimestamp}`;
-    let suiteId = `suite-${runTimestamp}`;
-    
-    console.log(`[Task Info] Task Name: Elite Optimization Pipeline`);
-    console.log(`[Task Info] Input Text: "${dynamicInput}"`);
-    console.log(`[Task Info] Global Model: ${modelName}`);
-
-    let promptData;
-    if (targetPromptId && targetPromptId !== "" && targetPromptId !== "undefined") {
-        promptData = promptManager.getPrompt(targetPromptId);
-        if (!promptData) {
-            console.log(`[Error] Prompt Cluster ${targetPromptId} not found. Falling back to demo.`);
-            promptId = `demo-${runTimestamp}`;
-            promptManager.createPrompt(promptId, "Demo Cluster", "Standard Response");
-            promptManager.addVersion(promptId, "Advanced Analytical Response");
-            promptData = promptManager.addVersion(promptId, "Highly Structured Professional Output");
-        }
-    } else {
-        promptId = `demo-${runTimestamp}`;
-        promptManager.createPrompt(promptId, "Strategic Logic Framework", "Standard Response");
-        promptManager.addVersion(promptId, "Advanced Analytical Response");
-        promptData = promptManager.addVersion(promptId, "Highly Structured Professional Output");
-    }
-    
-    testSuiteManager.createSuite(suiteId, "Production Validation Suite");
-    const criteria = {
-        keywords: ['clarity', 'comprehensive', 'efficiency', 'structure'],
-        min_length: 50,
-        max_length: 800
-    };
-    testSuiteManager.addTest(suiteId, dynamicInput, criteria);
-    const suiteData = testSuiteManager.getSuite(suiteId);
-    
-    // If a specific version was requested, filter versions to only include that one
-    let versionsToRun = promptData.versions;
-    if (targetVersionId && targetVersionId !== "" && targetVersionId !== "undefined") {
-        versionsToRun = promptData.versions.filter(v => v.version === targetVersionId);
-        if (versionsToRun.length === 0) {
-            console.log(`[Warning] Version ${targetVersionId} not found. Checking all versions.`);
-            versionsToRun = promptData.versions;
-        }
-    }
-
-    for (const test of suiteData.tests) {
-        for (const version of versionsToRun) {
-            console.log(`Executing Output for Version: [${version.version}] | Prompt: ${version.content}`);
-            
-            const startTime = Date.now();
-            const output = await executionEngine.runPrompt(version.content, test.input, modelName);
-            const endTime = Date.now();
-            const realLatency = endTime - startTime;
-            
-            // Calculate simulated elite metrics on real output
-            const tokens = Math.ceil(output.length / 4) + 12;
-            const cost = (tokens * 0.00001).toFixed(5);
-            
-            console.log(`  > Raw Output: [[${output}]]`);
-            
-            let manualScore = 3;
-            if (version.version === 'v1') manualScore = 2.5;
-            if (version.version === 'v2') manualScore = 4.2;
-            if (version.version === 'v3') manualScore = 5.0;
-            
-            const scores = scoring.calculateScore(output, test.criteria, manualScore);
-            const metadata = { latency: realLatency.toString(), tokens, cost, model: modelName };
-            console.log(`  > Derived Scores: ` + JSON.stringify(scores));
-            console.log(`  > Elite Metadata: ` + JSON.stringify(metadata));
-            
-            resultManager.saveResult(promptId, version.version, suiteId, test.input, output, scores);
-        }
-    }
-    
-    const allResults = resultManager.getResultsByPrompt(promptId);
-    if (!allResults || allResults.length === 0) return;
-    
-    const comparison = scoring.compareVersions(allResults);
-    console.log(`🏆 Best Version found: ${comparison.bestVersion} (Average Score: ${comparison.averageScore.toFixed(2)} / 15)`);
-    
-    // Save to template library using the unified library
-    try {
-        templateLibrary.saveTemplate(promptId, comparison.bestVersion, comparison.averageScore.toFixed(2));
-        console.log(`[System] Automatically promoted ${comparison.bestVersion} to Template Library.`);
-    } catch (e) {
-        console.log(`[Error] Failed to save template: ${e.message}`);
-    }
+    await runOptimizationPipeline(dynamicInput, modelName, targetPromptId, targetVersionId);
 }
 
 main().catch(console.error);
-

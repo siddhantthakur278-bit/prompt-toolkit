@@ -1,0 +1,22 @@
+{
+  "id": "p-1776432615754",
+  "title": "Validation Prompt",
+  "category": "Creative Writing",
+  "versions": [
+    {
+      "version": "v1",
+      "content": "Tell me a joke about robots",
+      "createdAt": "2026-04-17T13:30:15.754Z"
+    },
+    {
+      "version": "v2",
+      "content": "I'd like to hear a joke that involves robots, so please provide a step-by-step breakdown of the joke, starting from the setup, followed by the escalation of the situation, and finally the punchline, ensuring that the humor is derived from the robots' actions or characteristics, and the joke is structured in a way that it has a clear beginning, middle, and end, with a logical flow of events.",
+      "createdAt": "2026-04-17T13:30:16.783Z"
+    },
+    {
+      "version": "v3",
+      "content": "Provide a concise and professional robot-themed joke, focusing on clarity and efficiency in the delivery, avoiding unnecessary details, and ensuring the humor is appropriate and respectful.",
+      "createdAt": "2026-04-17T13:30:16.783Z"
+    }
+  ]
+}

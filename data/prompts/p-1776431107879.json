@@ -1,0 +1,22 @@
+{
+  "id": "p-1776431107879",
+  "title": "Test Prompt",
+  "category": "Technical Documentation",
+  "versions": [
+    {
+      "version": "v1",
+      "content": "Explain photosynthesis",
+      "createdAt": "2026-04-17T13:05:07.879Z"
+    },
+    {
+      "version": "v2",
+      "content": "To understand the process of photosynthesis, let's break it down into its key components and follow the chain of events: first, plants absorb water from the soil through their roots, then they absorb carbon dioxide from the atmosphere through their leaves, next, they use energy from sunlight to convert these ingredients into glucose and oxygen through a series of chemical reactions, and finally, they release oxygen into the atmosphere as a byproduct while using the glucose as energy to fuel their growth. By examining each step in this process, we can gain a deeper understanding of how photosynthesis works and its significance in supporting life on Earth.",
+      "createdAt": "2026-04-17T13:05:08.946Z"
+    },
+    {
+      "version": "v3",
+      "content": "Photosynthesis is the biochemical process by which plants, algae, and some bacteria convert light energy, usually from the sun, into chemical energy stored in glucose. This process requires water and carbon dioxide and releases oxygen as a byproduct. It is a critical component of the Earth's ecosystem, providing the primary source of energy for nearly all organisms, either directly or indirectly, and playing a central role in the carbon cycle.",
+      "createdAt": "2026-04-17T13:05:08.946Z"
+    }
+  ]
+}

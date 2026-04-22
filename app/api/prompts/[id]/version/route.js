@@ -2,7 +2,7 @@ import { NextResponse } from 'next/server';
 import promptManager from '@/promptManager';
 
 export async function POST(request, { params }) {
-    const { id } = params;
+    const { id } = await params;
     try {
         const { content } = await request.json();
         const data = await promptManager.addVersion(id, content);

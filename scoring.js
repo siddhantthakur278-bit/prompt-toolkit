@@ -42,7 +42,7 @@ class Scoring {
         summaries.sort((a, b) => b.averageScore - a.averageScore);
         const best = summaries[0] || { version: 'v1', averageScore: 0 };
         return {
-            bestVersion: best.version || best.bestVersion || 'v1',
+            version: best.version || 'v1',
             averageScore: best.averageScore
         };
     }

@@ -1,1 +1,7 @@
-[]
+[
+  {
+    "id": "in-1776853933513",
+    "content": "Quantum computing leverages the principles of superposition and entanglement to perform  calculations at speeds impossible for classical computers. By using qubits instead of  binary bits, it can solve complex cryptography and material science problems in seconds.  However, error correction and decoherence remain significant hurdles to mainstream adoption.",
+    "timestamp": "2026-04-22T10:32:13.513Z"
+  }
+]

@@ -24,5 +24,14 @@
     "bestResponse": "N/A",
     "averageScore": "7.50",
     "savedAt": "2026-04-17T13:30:51.304Z"
+  },
+  {
+    "id": "p-1776853902803",
+    "title": "Technical Blog Post Summarizer",
+    "versionId": "v3",
+    "content": "As a technical editor, summarize the provided text into three bullet points, focusing on the technical architecture, the problem solved, and the final outcome, ensuring a professional and concise tone that effectively conveys the essential information and key takeaways.",
+    "bestResponse": "N/A",
+    "averageScore": "10.00",
+    "savedAt": "2026-04-22T10:32:15.618Z"
   }
 ]

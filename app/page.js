@@ -17,7 +17,10 @@ export default function Home() {
   const [prompts, setPrompts] = useState([]);
   const [suites, setSuites] = useState([]);
   const [templates, setTemplates] = useState([]);
-  const [analytics, setAnalytics] = useState(null);
+  const [analytics, setAnalytics] = useState({
+    stats: { totalRuns: 0, avgScore: "0.00", avgLatency: 0 },
+    history: [],
+  });
   const [currentPrompt, setCurrentPrompt] = useState(null);
   const [executionResult, setExecutionResult] = useState(null);
   const [loading, setLoading] = useState(false);
@@ -2236,7 +2239,7 @@ export default function Home() {
                       TOTAL SIMULATIONS
                     </div>
                     <div className="stat-value">
-                      {analytics.stats.totalRuns}
+                      {analytics?.stats?.totalRuns || 0}
                     </div>
                   </div>
                   <div
@@ -2273,7 +2276,7 @@ export default function Home() {
                       className="stat-value"
                       style={{ color: "var(--success)" }}
                     >
-                      {analytics.stats.avgScore}
+                      {analytics?.stats?.avgScore || "0.00"}
                     </div>
                   </div>
                   <div
@@ -2302,7 +2305,7 @@ export default function Home() {
                       NEURAL LATENCY
                     </div>
                     <div className="stat-value">
-                      {analytics.stats.avgLatency}
+                      {analytics?.stats?.avgLatency || 0}
                       <span style={{ fontSize: "2rem", opacity: 0.4 }}>ms</span>
                     </div>
                   </div>
@@ -2341,7 +2344,7 @@ export default function Home() {
                       height: 200,
                     }}
                   >
-                    {analytics.history.map((h, i) => (
+                    {(analytics?.history || []).map((h, i) => (
                       <div
                         key={i}
                         style={{

@@ -1,0 +1,19 @@
+{
+  "id": "suite-1776853933513",
+  "title": "Production Validation Suite",
+  "tests": [
+    {
+      "input": "Quantum computing leverages the principles of superposition and entanglement to perform  calculations at speeds impossible for classical computers. By using qubits instead of  binary bits, it can solve complex cryptography and material science problems in seconds.  However, error correction and decoherence remain significant hurdles to mainstream adoption.",
+      "criteria": {
+        "keywords": [
+          "clarity",
+          "comprehensive",
+          "efficiency",
+          "structure"
+        ],
+        "min_length": 50,
+        "max_length": 800
+      }
+    }
+  ]
+}

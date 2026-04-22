@@ -1,0 +1,21 @@
+{
+  "id": "p-1776853902803",
+  "title": "Technical Blog Post Summarizer",
+  "versions": [
+    {
+      "version": "v1",
+      "content": "Act as an expert technical editor. Summarize the provided text into three bullet points. \nFocus on the technical architecture, the problem solved, and the final outcome. \nMaintain a professional and concise tone.\n",
+      "createdAt": "2026-04-22T10:31:42.807Z"
+    },
+    {
+      "version": "v2",
+      "content": "To provide a comprehensive understanding, let's break down the technical text through a chain-of-thought reasoning process, identifying key aspects such as the technical architecture, the specific problem it solves, and the final outcome achieved, and summarize these points in three concise bullet points.",
+      "createdAt": "2026-04-22T10:31:43.606Z"
+    },
+    {
+      "version": "v3",
+      "content": "As a technical editor, summarize the provided text into three bullet points, focusing on the technical architecture, the problem solved, and the final outcome, ensuring a professional and concise tone that effectively conveys the essential information and key takeaways.",
+      "createdAt": "2026-04-22T10:31:43.607Z"
+    }
+  ]
+}

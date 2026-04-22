@@ -23,6 +23,26 @@ export default function Home() {
   const [loading, setLoading] = useState(false);
   const [isSyncing, setIsSyncing] = useState(false);
   const [dbStatus, setDbStatus] = useState("LINK: ACTIVE");
+  const [terminalLogs, setTerminalLogs] = useState([]);
+  const [showRadar, setShowRadar] = useState(false);
+  const [compareMode, setCompareMode] = useState(false);
+  const [compareVersion, setCompareVersion] = useState("");
+  const [deployingId, setDeployingId] = useState(null);
+  const [copiedId, setCopiedId] = useState(null);
+
+  const copyToClipboard = (text, id) => {
+    navigator.clipboard.writeText(text);
+    setCopiedId(id);
+    setTimeout(() => setCopiedId(null), 2000);
+  };
+
+  const mockDeploy = (id) => {
+    setDeployingId(id);
+    setTimeout(() => {
+      setDeployingId(null);
+      alert("SIGNAL DEPLOYED TO EDGE NODES SUCCESSFULLY.");
+    }, 3000);
+  };
 
   // Input States (Hardened Scope)
   const [newPrompt, setNewPrompt] = useState({ title: "", content: "" });
@@ -166,6 +186,12 @@ export default function Home() {
     if (!execConfig.input || !execConfig.promptId) return;
     setLoading(true);
     setExecutionResult(null);
+    setTerminalLogs([
+      `[SYSTEM] INITIATING MATRIX RUN: PROMPT=${execConfig.promptId}`,
+      `[MODEL] LOADING SUBSTRATE: ${execConfig.model}`,
+      `[SECURITY] ISOLATING EXECUTION ENVIRONMENT...`,
+    ]);
+
     try {
       const res = await fetch("/api/run", {
         method: "POST",
@@ -173,20 +199,153 @@ export default function Home() {
         body: JSON.stringify(execConfig),
       });
       const data = await res.json();
+
       if (data.error) {
-        console.error("Pipeline Run API Error:", data.error);
+        setTerminalLogs((prev) => [...prev, `[ERROR] ${data.error}`]);
         setExecutionResult(`[Error] ${data.error}`);
       } else {
-        setExecutionResult(parseStdout(data.raw));
+        const parsed = parseStdout(data.raw);
+        setTerminalLogs((prev) => [
+          ...prev,
+          `[SYSTEM] SIGNAL CAPTURED`,
+          `[METRICS] LATENCY: ${parsed.executions[0]?.meta.latency}ms`,
+          `[METRICS] TOKENS: ${parsed.executions[0]?.meta.tokens}`,
+          `[SUCCESS] OPTIMAL VERSION: ${parsed.bestVer}`,
+        ]);
+        setExecutionResult(parsed);
       }
       await fetchAllSystemData();
     } catch (e) {
-      console.error("Pipeline Run Network Error:", e);
+      setTerminalLogs((prev) => [...prev, `[FATAL] NETWORK INTERRUPT`]);
       setExecutionResult(
         `[Network Error] Failed to reach the execution engine.`,
       );
     }
     setLoading(false);
+  };
+
+  const RadarChart = ({ data }) => {
+    if (!data || !data.executions) return null;
+    const size = 300;
+    const center = size / 2;
+    const radius = size * 0.4;
+    const metrics = [
+      "accuracy",
+      "efficiency",
+      "coherence",
+      "structure",
+      "conciseness",
+    ];
+
+    const getPoint = (metricIndex, value, totalMetrics) => {
+      const angle = (Math.PI * 2 * metricIndex) / totalMetrics - Math.PI / 2;
+      const dist = (value / 5) * radius; // assuming score out of 5 for each metric
+      return {
+        x: center + dist * Math.cos(angle),
+        y: center + dist * Math.sin(angle),
+      };
+    };
+
+    return (
+      <div
+        className="glass-card"
+        style={{ padding: "40px", textAlign: "center" }}
+      >
+        <h4
+          style={{
+            fontSize: "1rem",
+            fontWeight: 900,
+            marginBottom: 30,
+            opacity: 0.6,
+          }}
+        >
+          NEURAL PERFORMANCE RADAR
+        </h4>
+        <svg width={size} height={size}>
+          {/* Background circles */}
+          {[1, 2, 3, 4, 5].map((i) => (
+            <circle
+              key={i}
+              cx={center}
+              cy={center}
+              r={(i / 5) * radius}
+              fill="none"
+              stroke="rgba(255,255,255,0.05)"
+              strokeWidth="1"
+            />
+          ))}
+          {/* Axis lines */}
+          {metrics.map((m, i) => {
+            const p = getPoint(i, 5, metrics.length);
+            return (
+              <line
+                key={m}
+                x1={center}
+                y1={center}
+                x2={p.x}
+                y2={p.y}
+                stroke="rgba(255,255,255,0.1)"
+                strokeWidth="1"
+              />
+            );
+          })}
+          {/* Version polygons */}
+          {data.executions.map((e, idx) => {
+            const points = metrics
+              .map((_, i) => {
+                const val = (e.scores.totalScore / 15) * 5; // Normalize total score for radar
+                const p = getPoint(i, val, metrics.length);
+                return `${p.x},${p.y}`;
+              })
+              .join(" ");
+            const color =
+              idx === 0 ? "var(--accent-primary)" : "var(--accent-secondary)";
+            return (
+              <polygon
+                key={idx}
+                points={points}
+                fill={`${color}33`}
+                stroke={color}
+                strokeWidth="2"
+              />
+            );
+          })}
+        </svg>
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            gap: 20,
+            marginTop: 20,
+          }}
+        >
+          {data.executions.map((e, idx) => (
+            <div
+              key={idx}
+              style={{
+                display: "flex",
+                alignItems: "center",
+                gap: 8,
+                fontSize: "0.7rem",
+              }}
+            >
+              <div
+                style={{
+                  width: 10,
+                  height: 10,
+                  borderRadius: "50%",
+                  background:
+                    idx === 0
+                      ? "var(--accent-primary)"
+                      : "var(--accent-secondary)",
+                }}
+              ></div>
+              {e.version}
+            </div>
+          ))}
+        </div>
+      </div>
+    );
   };
 
   const getSDKCode = (lang) => {
@@ -878,16 +1037,86 @@ export default function Home() {
                     <h2 style={{ marginBottom: 40, fontSize: "2.5rem" }}>
                       Nexus Iteration: {currentPrompt.title}
                     </h2>
-                    <textarea
-                      value={nextVersionContent}
-                      onChange={(e) => setNextVersionContent(e.target.value)}
-                      rows="10"
-                      style={{ marginBottom: 40 }}
-                    />
+
+                    <div style={{ display: "flex", gap: 30, marginBottom: 40 }}>
+                      <div style={{ flex: 1 }}>
+                        <div
+                          style={{
+                            fontSize: "0.7rem",
+                            fontWeight: 900,
+                            opacity: 0.5,
+                            marginBottom: 15,
+                          }}
+                        >
+                          ACTIVE SIGNAL (EDITABLE)
+                        </div>
+                        <textarea
+                          value={nextVersionContent}
+                          onChange={(e) =>
+                            setNextVersionContent(e.target.value)
+                          }
+                          rows="15"
+                        />
+                      </div>
+                      {compareMode && (
+                        <div style={{ flex: 1, animation: "fadeIn 0.5s ease" }}>
+                          <div
+                            style={{
+                              display: "flex",
+                              justifyContent: "space-between",
+                              alignItems: "center",
+                              marginBottom: 15,
+                            }}
+                          >
+                            <div
+                              style={{
+                                fontSize: "0.7rem",
+                                fontWeight: 900,
+                                color: "var(--accent-secondary)",
+                              }}
+                            >
+                              COMPARISON SIGNAL (READ-ONLY)
+                            </div>
+                            <select
+                              value={compareVersion}
+                              onChange={(e) =>
+                                setCompareVersion(e.target.value)
+                              }
+                              style={{
+                                width: "auto",
+                                padding: "8px 15px",
+                                fontSize: "0.7rem",
+                                borderRadius: "10px",
+                              }}
+                            >
+                              {currentPrompt.versions.map((v) => (
+                                <option key={v.version} value={v.version}>
+                                  {v.version}
+                                </option>
+                              ))}
+                            </select>
+                          </div>
+                          <textarea
+                            value={
+                              currentPrompt.versions.find(
+                                (v) => v.version === compareVersion,
+                              )?.content || ""
+                            }
+                            readOnly
+                            rows="15"
+                            style={{
+                              background: "rgba(0,0,0,0.3)",
+                              opacity: 0.7,
+                            }}
+                          />
+                        </div>
+                      )}
+                    </div>
+
                     <div style={{ display: "flex", gap: 20 }}>
                       <button
                         className="btn-primary"
-                        style={{ flex: 1 }}
+                        style={{ flex: 2 }}
                         onClick={addVersion}
                         disabled={loading}
                       >
@@ -896,7 +1125,31 @@ export default function Home() {
                       </button>
                       <button
                         className="btn-outline"
-                        onClick={() => setCurrentPrompt(null)}
+                        style={{ flex: 1 }}
+                        onClick={() => {
+                          setCompareMode(!compareMode);
+                          if (
+                            !compareVersion &&
+                            currentPrompt.versions.length > 0
+                          ) {
+                            setCompareVersion(
+                              currentPrompt.versions[
+                                currentPrompt.versions.length - 1
+                              ].version,
+                            );
+                          }
+                        }}
+                      >
+                        {compareMode
+                          ? "🧬 HIDE COMPARISON"
+                          : "🧬 COMPARE SIGNAL"}
+                      </button>
+                      <button
+                        className="btn-outline"
+                        onClick={() => {
+                          setCurrentPrompt(null);
+                          setCompareMode(false);
+                        }}
                       >
                         DISCARD CHANGES
                       </button>
@@ -1207,6 +1460,62 @@ export default function Home() {
                   </button>
                 </div>
 
+                {loading && (
+                  <div
+                    className="glass-card"
+                    style={{
+                      marginTop: 40,
+                      padding: "30px",
+                      background: "rgba(0,0,0,0.9)",
+                      border: "1px solid var(--accent-primary)",
+                    }}
+                  >
+                    <div
+                      style={{
+                        display: "flex",
+                        justifyContent: "space-between",
+                        marginBottom: 15,
+                      }}
+                    >
+                      <span
+                        style={{
+                          fontSize: "0.6rem",
+                          fontWeight: 900,
+                          color: "var(--accent-primary)",
+                        }}
+                      >
+                        LIVE_SIGNAL_STREAM
+                      </span>
+                      <span
+                        style={{
+                          fontSize: "0.6rem",
+                          fontWeight: 900,
+                          color: "var(--accent-primary)",
+                          animation: "pulse 1s infinite",
+                        }}
+                      >
+                        EXECUTING...
+                      </span>
+                    </div>
+                    <div
+                      style={{
+                        fontFamily: "var(--font-mono)",
+                        fontSize: "0.75rem",
+                        color: "var(--accent-primary)",
+                        opacity: 0.8,
+                      }}
+                    >
+                      {terminalLogs.map((log, i) => (
+                        <div
+                          key={i}
+                          style={{ marginBottom: 5 }}
+                        >{`> ${log}`}</div>
+                      ))}
+                      <div style={{ animation: "blink 1s infinite" }}>_</div>
+                    </div>
+                  </div>
+                )}
+
                 {executionResult && (
                   <div style={{ marginTop: 80 }}>
                     <div
@@ -1230,120 +1539,138 @@ export default function Home() {
                             ? "🔳 GRID VIEW"
                             : "📝 LIST VIEW"}
                         </button>
+                        <button
+                          className="btn-outline"
+                          style={{ padding: "10px 20px", fontSize: "0.7rem" }}
+                          onClick={() => setShowRadar(!showRadar)}
+                        >
+                          {showRadar ? "📉 HIDE RADAR" : "📊 SHOW RADAR"}
+                        </button>
                       </div>
                     </div>
+
                     <div
                       style={{
                         display: "grid",
-                        gridTemplateColumns:
-                          viewMode === "list"
-                            ? "1fr"
-                            : "repeat(auto-fit, minmax(500px, 1fr))",
+                        gridTemplateColumns: showRadar ? "1fr 350px" : "1fr",
                         gap: 40,
+                        alignItems: "start",
                       }}
                     >
-                      {executionResult.executions.map((e, idx) => (
-                        <div
-                          key={idx}
-                          className="glass-card"
-                          style={{
-                            padding: "60px",
-                            borderLeft:
-                              executionResult.bestVer === e.version
-                                ? "15px solid var(--success)"
-                                : "10px solid var(--accent-primary)",
-                          }}
-                        >
+                      <div
+                        style={{
+                          display: "grid",
+                          gridTemplateColumns:
+                            viewMode === "list"
+                              ? "1fr"
+                              : "repeat(auto-fit, minmax(500px, 1fr))",
+                          gap: 40,
+                        }}
+                      >
+                        {executionResult.executions.map((e, idx) => (
                           <div
+                            key={idx}
+                            className="glass-card"
                             style={{
-                              display: "flex",
-                              justifyContent: "space-between",
-                              marginBottom: 30,
+                              padding: "60px",
+                              borderLeft:
+                                executionResult.bestVer === e.version
+                                  ? "15px solid var(--success)"
+                                  : "10px solid var(--accent-primary)",
                             }}
                           >
                             <div
                               style={{
                                 display: "flex",
-                                alignItems: "center",
-                                gap: 15,
+                                justifyContent: "space-between",
+                                marginBottom: 30,
                               }}
                             >
-                              <span
-                                className={`badge ${
-                                  executionResult.bestVer === e.version
-                                    ? "badge-success"
-                                    : "badge-accent"
-                                }`}
+                              <div
+                                style={{
+                                  display: "flex",
+                                  alignItems: "center",
+                                  gap: 15,
+                                }}
                               >
-                                {e.version}
-                              </span>
-                              {executionResult.bestVer === e.version && (
                                 <span
-                                  style={{
-                                    fontSize: "0.7rem",
-                                    fontWeight: 900,
-                                    color: "var(--success)",
-                                  }}
+                                  className={`badge ${
+                                    executionResult.bestVer === e.version
+                                      ? "badge-success"
+                                      : "badge-accent"
+                                  }`}
                                 >
-                                  OPTIMAL SIGNAL
+                                  {e.version}
                                 </span>
-                              )}
+                                {executionResult.bestVer === e.version && (
+                                  <span
+                                    style={{
+                                      fontSize: "0.7rem",
+                                      fontWeight: 900,
+                                      color: "var(--success)",
+                                    }}
+                                  >
+                                    OPTIMAL SIGNAL
+                                  </span>
+                                )}
+                              </div>
+                              <span
+                                style={{
+                                  fontWeight: 950,
+                                  fontSize: "2.5rem",
+                                  color:
+                                    executionResult.bestVer === e.version
+                                      ? "var(--success)"
+                                      : "white",
+                                }}
+                              >
+                                {e.scores.totalScore}
+                              </span>
                             </div>
-                            <span
-                              style={{
-                                fontWeight: 950,
-                                fontSize: "2.5rem",
-                                color:
-                                  executionResult.bestVer === e.version
-                                    ? "var(--success)"
-                                    : "white",
-                              }}
-                            >
-                              {e.scores.totalScore}
-                            </span>
-                          </div>
-                          <div
-                            className="output-quote"
-                            style={{
-                              background: "rgba(0,0,0,0.5)",
-                              padding: "30px",
-                              borderRadius: "20px",
-                              border: "1px solid var(--glass-border)",
-                              fontSize: "0.9rem",
-                            }}
-                          >
-                            {e.outputText}
-                          </div>
-                          <div
-                            style={{
-                              marginTop: 30,
-                              display: "flex",
-                              justifyContent: "space-between",
-                              alignItems: "center",
-                            }}
-                          >
                             <div
+                              className="output-quote"
                               style={{
-                                fontSize: "0.7rem",
-                                opacity: 0.5,
-                                fontWeight: 900,
+                                background: "rgba(0,0,0,0.5)",
+                                padding: "30px",
+                                borderRadius: "20px",
+                                border: "1px solid var(--glass-border)",
+                                fontSize: "0.9rem",
                               }}
                             >
-                              LATENCY: {e.meta.latency}ms | TOKENS:{" "}
-                              {e.meta.tokens}
+                              {e.outputText}
                             </div>
                             <div
                               style={{
-                                fontSize: "0.7rem",
-                                fontWeight: 900,
-                                color: "var(--accent-primary)",
+                                marginTop: 30,
+                                display: "flex",
+                                justifyContent: "space-between",
+                                alignItems: "center",
                               }}
                             >
-                              MODEL: {e.meta.model || "Groq-Llama-3"}
+                              <div
+                                style={{
+                                  fontSize: "0.7rem",
+                                  opacity: 0.5,
+                                  fontWeight: 900,
+                                }}
+                              >
+                                LATENCY: {e.meta.latency}ms | TOKENS:{" "}
+                                {e.meta.tokens}
+                              </div>
+                              <div
+                                style={{
+                                  fontSize: "0.7rem",
+                                  fontWeight: 900,
+                                  color: "var(--accent-primary)",
+                                }}
+                              >
+                                MODEL: {e.meta.model || "Groq-Llama-3"}
+                              </div>
                             </div>
                           </div>
-                        </div>
-                      ))}
+                        ))}
+                      </div>
+                      {showRadar && <RadarChart data={executionResult} />}
                     </div>
                   </div>
                 )}
@@ -1627,8 +1954,33 @@ export default function Home() {
                           SIGNAL EFFICIENCY:{" "}
                           {(((t.averageScore || 0) / 15) * 100).toFixed(0)}%
                         </div>
-                        <div style={{ fontSize: "0.7rem", opacity: 0.4 }}>
-                          SAVED: {new Date(t.savedAt).toLocaleDateString()}
+                        <div style={{ display: "flex", gap: 15 }}>
+                          <button
+                            className="btn-outline"
+                            style={{
+                              padding: "10px 20px",
+                              fontSize: "0.65rem",
+                              borderRadius: "12px",
+                            }}
+                            onClick={() => copyToClipboard(t.content, t.id)}
+                          >
+                            {copiedId === t.id ? "✅ COPIED" : "📋 COPY SIGNAL"}
+                          </button>
+                          <button
+                            className="btn-primary"
+                            style={{
+                              padding: "10px 20px",
+                              fontSize: "0.65rem",
+                              borderRadius: "12px",
+                              background: "var(--success)",
+                            }}
+                            onClick={() => mockDeploy(t.id)}
+                            disabled={deployingId === t.id}
+                          >
+                            {deployingId === t.id
+                              ? "🚀 DEPLOYING..."
+                              : "🚀 DEPLOY TO EDGE"}
+                          </button>
                         </div>
                       </div>
                     </div>

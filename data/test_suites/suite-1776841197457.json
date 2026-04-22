@@ -1,0 +1,19 @@
+{
+  "id": "suite-1776841197457",
+  "title": "Production Validation Suite",
+  "tests": [
+    {
+      "input": "{    \"user_id\": \"uuid\",    \"status\": \"string (active, inactive)\",    \"last_login\": \"iso8601_timestamp\",    \"preferences\": {      \"dark_mode\": \"boolean\",      \"notifications\": \"boolean\"    }  }",
+      "criteria": {
+        "keywords": [
+          "clarity",
+          "comprehensive",
+          "efficiency",
+          "structure"
+        ],
+        "min_length": 50,
+        "max_length": 800
+      }
+    }
+  ]
+}

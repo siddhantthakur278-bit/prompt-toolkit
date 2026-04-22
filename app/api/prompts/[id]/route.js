@@ -1,26 +1,13 @@
 import { NextResponse } from 'next/server';
-import connectDB from '@/lib/db';
-import Prompt from '@/models/Prompt';
-import fs from 'fs';
-import path from 'path';
-
-const PROMPTS_DIR = path.join(process.cwd(), 'data', 'prompts');
+import promptManager from '@/promptManager';
 
 export async function GET(request, { params }) {
     const { id } = params;
     try {
-        await connectDB();
-        const prompt = await Prompt.findOne({ id });
-        if (prompt) return NextResponse.json(prompt);
+        const data = await promptManager.getPrompt(id);
+        if (data) return NextResponse.json(data);
+        return NextResponse.json({ error: 'Not found' }, { status: 404 });
     } catch (e) {
-        // Fallback to JSON
+        return NextResponse.json({ error: e.message }, { status: 500 });
     }
-    
-    const filePath = path.join(PROMPTS_DIR, `${id}.json`);
-    if (fs.existsSync(filePath)) {
-        const data = JSON.parse(fs.readFileSync(filePath, 'utf8'));
-        return NextResponse.json(data);
-    }
-    
-    return NextResponse.json({ error: 'Not found' }, { status: 404 });
 }

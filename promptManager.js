@@ -1,6 +1,8 @@
 import path from 'path';
 import fs from 'fs';
 import { readData, writeData } from './utils.js';
+import connectDB from './lib/db.js';
+import Prompt from './models/Prompt.js';
 
 const PROMPTS_DIR = path.join(process.cwd(), 'data', 'prompts');
 
@@ -11,8 +13,7 @@ class PromptManager {
         }
     }
 
-    createPrompt(id, title, initialContent) {
-        const promptFile = path.join(PROMPTS_DIR, `${id}.json`);
+    async createPrompt(id, title, initialContent) {
         const data = {
             id,
             title,
@@ -22,13 +23,20 @@ class PromptManager {
                 createdAt: new Date()
             }]
         };
-        writeData(promptFile, data);
+
+        try {
+            await connectDB();
+            const prompt = new Prompt(data);
+            await prompt.save();
+        } catch (e) {
+            const promptFile = path.join(PROMPTS_DIR, `${id}.json`);
+            writeData(promptFile, data);
+        }
         return data;
     }
 
-    addVersion(id, content) {
-        const promptFile = path.join(PROMPTS_DIR, `${id}.json`);
-        const data = this.getPrompt(id);
+    async addVersion(id, content) {
+        let data = await this.getPrompt(id);
         if (!data) throw new Error("Prompt not found");
 
         const newVersion = `v${data.versions.length + 1}`;
@@ -37,39 +45,68 @@ class PromptManager {
             content,
             createdAt: new Date()
         });
-        writeData(promptFile, data);
+
+        try {
+            await connectDB();
+            await Prompt.findOneAndUpdate({ id }, { versions: data.versions });
+        } catch (e) {
+            const promptFile = path.join(PROMPTS_DIR, `${id}.json`);
+            writeData(promptFile, data);
+        }
         return data;
     }
 
-    getPrompt(id) {
+    async getPrompt(id) {
+        try {
+            await connectDB();
+            const prompt = await Prompt.findOne({ id });
+            if (prompt) return prompt;
+        } catch (e) {}
+
         const promptFile = path.join(PROMPTS_DIR, `${id}.json`);
         if (!fs.existsSync(promptFile)) return null;
         return readData(promptFile);
     }
 
-    listPrompts() {
-        if (!fs.existsSync(PROMPTS_DIR)) return [];
-        const files = fs.readdirSync(PROMPTS_DIR).filter(f => f.endsWith('.json'));
-        return files.map(f => {
-            const data = readData(path.join(PROMPTS_DIR, f));
-            return {
-                id: data.id,
-                title: data.title,
-                versionCount: data.versions.length
-            };
-        });
+    async listPrompts() {
+        try {
+            await connectDB();
+            const prompts = await Prompt.find({}).sort({ updatedAt: -1 });
+            return prompts.map(p => ({
+                id: p.id,
+                title: p.title,
+                versionCount: p.versions.length
+            }));
+        } catch (e) {
+            if (!fs.existsSync(PROMPTS_DIR)) return [];
+            const files = fs.readdirSync(PROMPTS_DIR).filter(f => f.endsWith('.json') && f !== 'prompts.json');
+            return files.map(f => {
+                const data = readData(path.join(PROMPTS_DIR, f));
+                return {
+                    id: data.id,
+                    title: data.title,
+                    versionCount: (data.versions || []).length
+                };
+            });
+        }
     }
 
-    rollbackVersion(id, targetVersion) {
-        const promptFile = path.join(PROMPTS_DIR, `${id}.json`);
-        const data = this.getPrompt(id);
+    async rollbackVersion(id, targetVersion) {
+        let data = await this.getPrompt(id);
         if (!data) return null;
 
         const versionIndex = data.versions.findIndex(v => v.version === targetVersion);
         if (versionIndex === -1) return null;
 
         data.versions = data.versions.slice(0, versionIndex + 1);
-        writeData(promptFile, data);
+        
+        try {
+            await connectDB();
+            await Prompt.findOneAndUpdate({ id }, { versions: data.versions });
+        } catch (e) {
+            const promptFile = path.join(PROMPTS_DIR, `${id}.json`);
+            writeData(promptFile, data);
+        }
         return data;
     }
 }

@@ -1708,5 +1708,50 @@
       "totalScore": 7.5
     },
     "timestamp": "2026-04-17T13:30:51.299Z"
+  },
+  {
+    "id": "177684119827363q",
+    "promptId": "p-1776841138942",
+    "promptVersion": "v1",
+    "suiteId": "suite-1776841197457",
+    "input": "{    \"user_id\": \"uuid\",    \"status\": \"string (active, inactive)\",    \"last_login\": \"iso8601_timestamp\",    \"preferences\": {      \"dark_mode\": \"boolean\",      \"notifications\": \"boolean\"    }  }",
+    "output": "### User Information Endpoint\n#### Summary\nThe User Information endpoint returns a JSON object containing details about a user's account status, last login timestamp, and preferences.\n\n#### Fields\n* **user_id**: `string` - Unique identifier for the user, represented as a UUID.\n* **status**: `string` - The current status of the user's account, which can be either \"active\" or \"inactive\".\n* **last_login**: `string` - The timestamp of the user's last login, formatted according to the ISO 8601 standard.\n* **preferences**: `object` - A nested object containing the user's preferences.\n\t+ **dark_mode**: `boolean` - A flag indicating whether the user has enabled dark mode.\n\t+ **notifications**: `boolean` - A flag indicating whether the user has enabled notifications.\n\n#### Example Response\n```json\n{\n  \"user_id\": \"123e4567-e89b-12d3-a456-426655440000\",\n  \"status\": \"active\",\n  \"last_login\": \"2022-01-01T12:00:00Z\",\n  \"preferences\": {\n    \"dark_mode\": true,\n    \"notifications\": false\n  }\n}\n```\nNote: The actual values in the example response are fictional and for demonstration purposes only.",
+    "scores": {
+      "keywordScore": 0,
+      "lengthScore": 2,
+      "manualScore": 2.5,
+      "totalScore": 4.5
+    },
+    "timestamp": "2026-04-22T06:59:58.273Z"
+  },
+  {
+    "id": "1776841199885iv3",
+    "promptId": "p-1776841138942",
+    "promptVersion": "v2",
+    "suiteId": "suite-1776841197457",
+    "input": "{    \"user_id\": \"uuid\",    \"status\": \"string (active, inactive)\",    \"last_login\": \"iso8601_timestamp\",    \"preferences\": {      \"dark_mode\": \"boolean\",      \"notifications\": \"boolean\"    }  }",
+    "output": "### Overview\nThe user endpoint is designed to retrieve or update information about a specific user. This endpoint provides access to user details, including their status, last login time, and preferences.\n\n### Request/Response Body\nThe request or response body for the user endpoint is a JSON object containing the following fields:\n\n* **user_id**: A unique identifier for the user, represented as a UUID string.\n* **status**: A string indicating the user's status, which can be either \"active\" or \"inactive\".\n* **last_login**: The timestamp of the user's last login, represented in ISO 8601 format.\n* **preferences**: An object containing the user's preferences, with the following properties:\n\t+ **dark_mode**: A boolean indicating whether the user has enabled dark mode.\n\t+ **notifications**: A boolean indicating whether the user has enabled notifications.\n\n### Additional Details\nWhen using the user endpoint, developers should be aware of the following:\n\n* The **user_id** field is required and must be a valid UUID.\n* The **status** field can be updated to either \"active\" or \"inactive\".\n* The **last_login** field is automatically updated when the user logs in.\n* The **preferences** object can be updated to reflect changes to the user's preferences.\n* The **dark_mode** and **notifications** properties within the **preferences** object are optional and default to false if not provided.\n\nExample JSON object:\n```json\n{\n  \"user_id\": \"123e4567-e89b-12d3-a456-426655440000\",\n  \"status\": \"active\",\n  \"last_login\": \"2022-01-01T12:00:00Z\",\n  \"preferences\": {\n    \"dark_mode\": true,\n    \"notifications\": false\n  }\n}\n```\nNote: This documentation assumes that the endpoint is used for both retrieving and updating user information. If the endpoint is only used for one of these purposes, the documentation should be adjusted accordingly.",
+    "scores": {
+      "keywordScore": 0,
+      "lengthScore": 2,
+      "manualScore": 4.2,
+      "totalScore": 6.2
+    },
+    "timestamp": "2026-04-22T06:59:59.885Z"
+  },
+  {
+    "id": "1776841201588go3",
+    "promptId": "p-1776841138942",
+    "promptVersion": "v3",
+    "suiteId": "suite-1776841197457",
+    "input": "{    \"user_id\": \"uuid\",    \"status\": \"string (active, inactive)\",    \"last_login\": \"iso8601_timestamp\",    \"preferences\": {      \"dark_mode\": \"boolean\",      \"notifications\": \"boolean\"    }  }",
+    "output": "### User Information Endpoint\n#### Overview\nThe User Information endpoint is designed to retrieve or update a user's profile data. This endpoint plays a crucial role in managing user accounts and preferences within an application.\n\n#### Request/Response JSON Object\nThe JSON object used in this endpoint contains the following fields:\n\n* **user_id**: \n  + Data Type: `string`\n  + Description: A unique identifier for the user, represented as a UUID.\n* **status**: \n  + Data Type: `string`\n  + Description: The current status of the user's account, which can be either \"active\" or \"inactive\".\n* **last_login**: \n  + Data Type: `string`\n  + Description: The timestamp of the user's last login, formatted according to the ISO 8601 standard.\n* **preferences**: \n  + Data Type: `object`\n  + Description: An object containing the user's preferences.\n  + Nested Fields:\n    - **dark_mode**: \n      - Data Type: `boolean`\n      - Description: A flag indicating whether the user has enabled dark mode.\n    - **notifications**: \n      - Data Type: `boolean`\n      - Description: A flag indicating whether the user has enabled notifications.\n\n#### Additional Information\n* **Authentication**: This endpoint requires authentication to ensure that only authorized users can access and modify their profile data. A valid authentication token must be included in the request headers.\n* **Error Responses**: In case of an error, the endpoint will return a JSON object with an error message and a corresponding HTTP status code. The following error codes may be encountered:\n  + 401 Unauthorized: The request lacks valid authentication credentials.\n  + 403 Forbidden: The user is not authorized to access or modify the requested profile data.\n  + 500 Internal Server Error: An unexpected error occurred while processing the request.\n\n#### Example Request/Response\n```json\n// Request\n{\n  \"user_id\": \"123e4567-e89b-12d3-a456-426655440000\",\n  \"status\": \"active\",\n  \"last_login\": \"2022-01-01T12:00:00Z\",\n  \"preferences\": {\n    \"dark_mode\": true,\n    \"notifications\": false\n  }\n}\n\n// Response\n{\n  \"user_id\": \"123e4567-e89b-12d3-a456-426655440000\",\n  \"status\": \"active\",\n  \"last_login\": \"2022-01-01T12:00:00Z\",\n  \"preferences\": {\n    \"dark_mode\": true,\n    \"notifications\": false\n  }\n}\n```\nBy following this documentation, developers can effectively use the User Information endpoint to manage user profiles and preferences within their application.",
+    "scores": {
+      "keywordScore": 0,
+      "lengthScore": 2,
+      "manualScore": 5,
+      "totalScore": 7
+    },
+    "timestamp": "2026-04-22T07:00:01.588Z"
   }
 ]

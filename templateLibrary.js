@@ -3,6 +3,8 @@ import path from 'path';
 import { readData, writeData } from './utils.js';
 import promptManager from './promptManager.js';
 import { exportToN8N } from './lib/n8nClient.js';
+import connectDB from './lib/db.js';
+import Template from './models/Template.js';
 
 const TEMPLATES_FILE = path.join(process.cwd(), 'data', 'templates', 'library.json');
 
@@ -13,9 +15,8 @@ class TemplateLibrary {
         }
     }
 
-    saveTemplate(promptId, versionId, averageScore, bestResponse = "N/A") {
-        const templates = readData(TEMPLATES_FILE);
-        const promptData = promptManager.getPrompt(promptId);
+    async saveTemplate(promptId, versionId, averageScore, bestResponse = "N/A") {
+        const promptData = await promptManager.getPrompt(promptId);
         if (!promptData) throw new Error("Prompt not found");
 
         const versionData = promptData.versions.find(v => v.version === versionId);
@@ -31,14 +32,19 @@ class TemplateLibrary {
             savedAt: new Date().toISOString()
         };
 
-        const existingIdx = templates.findIndex(t => t.id === promptId);
-        if (existingIdx !== -1) {
-            templates[existingIdx] = templateEntry;
-        } else {
-            templates.push(templateEntry);
+        try {
+            await connectDB();
+            await Template.findOneAndUpdate({ id: promptId }, templateEntry, { upsert: true });
+        } catch (e) {
+            const templates = readData(TEMPLATES_FILE);
+            const existingIdx = templates.findIndex(t => t.id === promptId);
+            if (existingIdx !== -1) {
+                templates[existingIdx] = templateEntry;
+            } else {
+                templates.push(templateEntry);
+            }
+            writeData(TEMPLATES_FILE, templates);
         }
-
-        writeData(TEMPLATES_FILE, templates);
         
         // Asynchronous n8n export (non-blocking)
         exportToN8N(templateEntry).catch(e => console.error("N8N Background Export Failed:", e));
@@ -46,8 +52,13 @@ class TemplateLibrary {
         return templateEntry;
     }
 
-    listTemplates() {
-        return readData(TEMPLATES_FILE);
+    async listTemplates() {
+        try {
+            await connectDB();
+            return await Template.find({});
+        } catch (e) {
+            return readData(TEMPLATES_FILE);
+        }
     }
 }
 

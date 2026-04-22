@@ -3,13 +3,13 @@ import { runOptimizationPipeline } from '@/lib/pipelineRunner';
 
 export async function POST(request) {
     try {
-        const { input, model, promptId, versionId } = await request.json();
+        const { input, model, promptId, versionId, suiteId } = await request.json();
         
         let logs = [];
         const captureLog = (msg) => logs.push(msg);
 
         // Run the pipeline directly in-process
-        await runOptimizationPipeline(input, model, promptId, versionId, captureLog);
+        await runOptimizationPipeline(input, model, promptId, versionId, captureLog, suiteId);
         
         const fullOutput = logs.join('\n');
         return NextResponse.json({ raw: fullOutput });

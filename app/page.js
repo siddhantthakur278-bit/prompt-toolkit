@@ -29,6 +29,7 @@ export default function Home() {
   const [compareVersion, setCompareVersion] = useState("");
   const [deployingId, setDeployingId] = useState(null);
   const [copiedId, setCopiedId] = useState(null);
+  const [previousInputs, setPreviousInputs] = useState([]);
 
   const copyToClipboard = (text, id) => {
     navigator.clipboard.writeText(text);
@@ -86,19 +87,22 @@ export default function Home() {
   const fetchAllSystemData = async () => {
     setIsSyncing(true);
     try {
-      const [pRes, sRes, tRes, aRes] = await Promise.all([
+      const [pRes, sRes, tRes, aRes, iRes] = await Promise.all([
         fetch("/api/prompts"),
         fetch("/api/suites"),
         fetch("/api/templates"),
         fetch("/api/analytics"),
+        fetch("/api/inputs"),
       ]);
       const pData = await pRes.json();
       const sData = await sRes.json();
       const tData = await tRes.json();
       const aData = await aRes.json();
+      const iData = await iRes.json();
       if (Array.isArray(pData)) setPrompts(pData);
       if (Array.isArray(sData)) setSuites(sData);
       if (Array.isArray(tData)) setTemplates(tData);
+      if (Array.isArray(iData)) setPreviousInputs(iData);
       if (aData) setAnalytics(aData);
     } catch (e) {
       console.error("System Sync Failure:", e);
@@ -121,13 +125,20 @@ export default function Home() {
     if (!newPrompt.title || !newPrompt.content) return;
     setLoading(true);
     try {
-      await fetch("/api/prompts", {
+      const res = await fetch("/api/prompts", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ ...newPrompt, autoOptimize }),
       });
-      setNewPrompt({ title: "", content: "" });
-      await fetchAllSystemData();
+      const data = await res.json();
+
+      if (data.error) {
+        console.error("Create Prompt Error:", data.error);
+        alert("Failed to save signal: " + data.error);
+      } else {
+        setNewPrompt({ title: "", content: "" });
+        await fetchAllSystemData();
+      }
     } catch (e) {
       console.error("Create Prompt Error:", e);
     }
@@ -911,14 +922,24 @@ export default function Home() {
                       rows="10"
                       placeholder="BASE CORE INSTRUCTIONS..."
                     />
-                    <button
-                      className="btn-primary"
-                      style={{ width: "100%", marginTop: 50 }}
-                      onClick={() => createPrompt(true)}
-                      disabled={loading}
-                    >
-                      {loading ? "OPTIMIZING..." : "🚀 INITIATE TURBO-OPTIMIZE"}
-                    </button>
+                    <div style={{ display: "flex", gap: 20, marginTop: 50 }}>
+                      <button
+                        className="btn-primary"
+                        style={{ flex: 1 }}
+                        onClick={() => createPrompt(true)}
+                        disabled={loading}
+                      >
+                        {loading ? "OPTIMIZING..." : "🚀 TURBO-OPTIMIZE"}
+                      </button>
+                      <button
+                        className="btn-outline"
+                        style={{ flex: 1, padding: "24px" }}
+                        onClick={() => createPrompt(false)}
+                        disabled={loading}
+                      >
+                        {loading ? "SAVING..." : "💾 SAVE ONLY"}
+                      </button>
+                    </div>
                   </div>
 
                   <div className="glass-card" style={{ padding: "40px" }}>
@@ -1441,14 +1462,61 @@ export default function Home() {
                     </select>
                   </div>
                   {!execConfig.suiteId && (
-                    <input
-                      value={execConfig.input}
-                      onChange={(e) =>
-                        setExecConfig({ ...execConfig, input: e.target.value })
-                      }
-                      placeholder="INPUT TEST VECTOR..."
-                      style={{ marginBottom: 50 }}
-                    />
+                    <div style={{ position: "relative", marginBottom: 50 }}>
+                      <input
+                        value={execConfig.input}
+                        onChange={(e) =>
+                          setExecConfig({
+                            ...execConfig,
+                            input: e.target.value,
+                          })
+                        }
+                        placeholder="INPUT TEST VECTOR..."
+                        style={{ marginBottom: 0 }}
+                      />
+                      {previousInputs.length > 0 && (
+                        <div
+                          style={{
+                            marginTop: 15,
+                            display: "flex",
+                            gap: 10,
+                            flexWrap: "wrap",
+                          }}
+                        >
+                          <span
+                            style={{
+                              fontSize: "0.65rem",
+                              fontWeight: 900,
+                              opacity: 0.4,
+                              alignSelf: "center",
+                            }}
+                          >
+                            RECENT_VECTORS:
+                          </span>
+                          {previousInputs.slice(0, 5).map((i) => (
+                            <button
+                              key={i.id}
+                              className="badge badge-outline"
+                              style={{
+                                cursor: "pointer",
+                                padding: "5px 12px",
+                                fontSize: "0.6rem",
+                              }}
+                              onClick={() =>
+                                setExecConfig({
+                                  ...execConfig,
+                                  input: i.content,
+                                })
+                              }
+                            >
+                              {i.content.length > 20
+                                ? i.content.substring(0, 20) + "..."
+                                : i.content}
+                            </button>
+                          ))}
+                        </div>
+                      )}
+                    </div>
                   )}
                   <button
                     className="btn-primary"

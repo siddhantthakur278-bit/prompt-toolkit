@@ -33,5 +33,23 @@
     "bestResponse": "N/A",
     "averageScore": "10.00",
     "savedAt": "2026-04-22T10:32:15.618Z"
+  },
+  {
+    "id": "p-1776861936956",
+    "title": "E-commerce Support - Refund Assistant",
+    "versionId": "v3",
+    "content": "Dear valued customer, I apologize for the issue with your order and appreciate you reaching out to us. We've taken immediate action, and I'm pleased to confirm that the refund for Order # [ORDER_ID] has been initiated. You can expect the credit to be reflected in your account within 5-7 business days. At EliteGear, we're committed to providing the best possible experience, and I regret that we fell short in your case. As a token of our commitment to your satisfaction, I'd like to offer you a 10% discount code, ELITE10, for your next purchase, which you can use to enjoy an even better experience with us in the future.",
+    "bestResponse": "N/A",
+    "averageScore": "7.00",
+    "savedAt": "2026-04-22T12:46:25.153Z"
+  },
+  {
+    "id": "p-1776865159723",
+    "title": "Invoice Data Extractor",
+    "versionId": "v3",
+    "content": "Extract the following entities from the provided email text and respond with a JSON object: Identify the Vendor Name, determine the Date of Transaction, and calculate the Total Amount including the currency. The response should be in the format { \"vendor\": \"\", \"date\": \"\", \"total\": \"\" }, ensuring all extracted entities are accurately populated.",
+    "bestResponse": "N/A",
+    "averageScore": "10.00",
+    "savedAt": "2026-04-22T13:40:56.338Z"
   }
 ]

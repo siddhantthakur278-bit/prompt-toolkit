@@ -1798,5 +1798,95 @@
       "totalScore": 10
     },
     "timestamp": "2026-04-22T10:32:15.613Z"
+  },
+  {
+    "id": "1776861982612wf3",
+    "promptId": "p-1776861936956",
+    "promptVersion": "v1",
+    "suiteId": "suite-1776861981331",
+    "input": "Order #88291. I received the package yesterday but the headphones are completely dead.  They won't even charge. I'm really upset because I needed these for a flight tomorrow.  I want a full refund immediately.",
+    "output": "I'm so sorry to hear that the headphones you received aren't working, especially since you needed them for your flight tomorrow. I can imagine how frustrating and disappointing that must be for you.\n\nI want to assure you that we're taking immediate action to resolve this issue. The refund for Order #88291 has been initiated, and you can expect to receive a full refund. Please allow 5-7 business days for the credit to appear in your account.\n\nI want to thank you for reaching out to us and giving us the opportunity to make things right. We value your business and appreciate your patience and understanding. As a gesture of goodwill, we'd like to offer you a 10% discount on your next purchase with us. Just use the code ELITE10 at checkout to receive your discount.\n\nAgain, I apologize for the inconvenience this has caused, and I hope you have a safe and enjoyable flight tomorrow. If there's anything else we can do to help, please don't hesitate to reach out.",
+    "scores": {
+      "keywordScore": 0,
+      "lengthScore": 2,
+      "manualScore": 2.5,
+      "totalScore": 4.5
+    },
+    "timestamp": "2026-04-22T12:46:22.612Z"
+  },
+  {
+    "id": "1776861984225pp0",
+    "promptId": "p-1776861936956",
+    "promptVersion": "v2",
+    "suiteId": "suite-1776861981331",
+    "input": "Order #88291. I received the package yesterday but the headphones are completely dead.  They won't even charge. I'm really upset because I needed these for a flight tomorrow.  I want a full refund immediately.",
+    "output": "I'm so sorry to hear that the headphones arrived in a non-functional state, and I can imagine how frustrating this must be, especially with your flight scheduled for tomorrow. I'm here to help, and I want to assure you that I'll do everything I can to resolve this issue as quickly as possible.\n\nI've located your order, Order #88291, and I'm pleased to inform you that I've initiated the refund process. You will receive a full refund for the defective headphones, and I'll make sure that it's processed immediately.\n\nRegarding the refund, I want to explain that it may take some time for the credit to appear in your account, but I'll do my best to expedite the process. You can expect to see the refund within 5-7 business days.\n\nIn addition to the refund, I'd like to offer you a gesture of goodwill for the inconvenience you've experienced. I'm providing you with a 10% discount code, ELITE10, for your next purchase, which you can use to get a replacement or try out a different product.\n\nHowever, I understand that this doesn't solve your immediate problem, and you need a working pair of headphones for your flight tomorrow. I'd like to offer an alternative solution. I can arrange for an expedited replacement or provide a prepaid return shipping label so you can return the defective headphones and get a replacement as soon as possible.\n\nPlease let me know which option you prefer, and I'll do my best to accommodate your needs. Your satisfaction is my top priority, and I appreciate your patience and understanding in this matter.",
+    "scores": {
+      "keywordScore": 0,
+      "lengthScore": 2,
+      "manualScore": 4.2,
+      "totalScore": 6.2
+    },
+    "timestamp": "2026-04-22T12:46:24.225Z"
+  },
+  {
+    "id": "1776861985147s8w",
+    "promptId": "p-1776861936956",
+    "promptVersion": "v3",
+    "suiteId": "suite-1776861981331",
+    "input": "Order #88291. I received the package yesterday but the headphones are completely dead.  They won't even charge. I'm really upset because I needed these for a flight tomorrow.  I want a full refund immediately.",
+    "output": "I'm so sorry to hear that the headphones arrived in a non-functional state, especially given your urgent need for them. I can imagine how frustrating this must be, especially with your flight tomorrow.\n\nI've located your order, #88291, and I'm happy to inform you that I'm processing a full refund immediately. You can expect the refund to be credited back to your original payment method within 24-48 hours.\n\nAdditionally, I'd like to offer you a prepaid return shipping label so you can easily send back the defective headphones. Please let me know if you'd like me to email you the label, and I'll take care of it right away.\n\nAs a gesture of goodwill, I'd also like to provide you with a 20% discount code, FLY20, for your next purchase. This way, you can enjoy a discount on a future order and experience the quality products we strive to provide.\n\nIf there's anything else I can do to make things right, please don't hesitate to let me know. Your satisfaction is our top priority, and I'm committed to ensuring you have a positive experience with EliteGear.",
+    "scores": {
+      "keywordScore": 0,
+      "lengthScore": 2,
+      "manualScore": 5,
+      "totalScore": 7
+    },
+    "timestamp": "2026-04-22T12:46:25.147Z"
+  },
+  {
+    "id": "1776865254266v76",
+    "promptId": "p-1776865159723",
+    "promptVersion": "v1",
+    "suiteId": "suite-1776865253512",
+    "input": "Your Uber ride on Friday, Oct 12 was $14.50. Thanks for riding!",
+    "output": "{\"vendor\": \"Uber\", \"date\": \"Oct 12\", \"total\": \"$14.50\"}",
+    "scores": {
+      "keywordScore": 0,
+      "lengthScore": 5,
+      "manualScore": 2.5,
+      "totalScore": 7.5
+    },
+    "timestamp": "2026-04-22T13:40:54.266Z"
+  },
+  {
+    "id": "1776865255388zgy",
+    "promptId": "p-1776865159723",
+    "promptVersion": "v2",
+    "suiteId": "suite-1776865253512",
+    "input": "Your Uber ride on Friday, Oct 12 was $14.50. Thanks for riding!",
+    "output": "To extract the required entities from the provided email text, I will follow the step-by-step chain of thought as outlined earlier. \n\n1. **Vendor Name**: The vendor name can be identified by looking for keywords such as 'vendor,' 'supplier,' or 'company' within the text. In this case, the vendor name is 'Uber' since it is the company providing the ride service.\n\n2. **Date of Transaction**: The date of transaction can be determined by searching for specific date formats within the text. The text mentions 'Friday, Oct 12,' which can be interpreted as October 12. However, the year is not provided in the text, so it will be left as is.\n\n3. **Total Amount including Currency**: The total amount including the currency can be found by scanning for numerical values followed by a currency symbol or abbreviation. The text mentions '$14.50,' indicating the total amount for the Uber ride.\n\nUsing the extracted information, the JSON object can be populated as follows:\n```json\n{\n  \"vendor\": \"Uber\",\n  \"date\": \"Oct 12\",\n  \"total\": \"$14.50\"\n}\n```",
+    "scores": {
+      "keywordScore": 0,
+      "lengthScore": 2,
+      "manualScore": 4.2,
+      "totalScore": 6.2
+    },
+    "timestamp": "2026-04-22T13:40:55.388Z"
+  },
+  {
+    "id": "1776865256328y3y",
+    "promptId": "p-1776865159723",
+    "promptVersion": "v3",
+    "suiteId": "suite-1776865253512",
+    "input": "Your Uber ride on Friday, Oct 12 was $14.50. Thanks for riding!",
+    "output": "```json\n{\n  \"vendor\": \"Uber\",\n  \"date\": \"Friday, Oct 12\",\n  \"total\": \"$14.50\"\n}\n```",
+    "scores": {
+      "keywordScore": 0,
+      "lengthScore": 5,
+      "manualScore": 5,
+      "totalScore": 10
+    },
+    "timestamp": "2026-04-22T13:40:56.328Z"
   }
 ]

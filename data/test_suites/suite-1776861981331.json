@@ -1,0 +1,19 @@
+{
+  "id": "suite-1776861981331",
+  "title": "Production Validation Suite",
+  "tests": [
+    {
+      "input": "Order #88291. I received the package yesterday but the headphones are completely dead.  They won't even charge. I'm really upset because I needed these for a flight tomorrow.  I want a full refund immediately.",
+      "criteria": {
+        "keywords": [
+          "clarity",
+          "comprehensive",
+          "efficiency",
+          "structure"
+        ],
+        "min_length": 50,
+        "max_length": 800
+      }
+    }
+  ]
+}

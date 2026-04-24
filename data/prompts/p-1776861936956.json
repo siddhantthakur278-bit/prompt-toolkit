@@ -1,0 +1,21 @@
+{
+  "id": "p-1776861936956",
+  "title": "E-commerce Support - Refund Assistant",
+  "versions": [
+    {
+      "version": "v1",
+      "content": "You are a professional customer support agent for 'EliteGear'. \nDraft a response to a customer requesting a refund. \n1. Start with a warm, empathetic apology.\n2. State that the refund for Order #[ORDER_ID] has been initiated.\n3. Inform them that the credit will appear in their account within 5-7 business days.\n4. End with a 10% discount code: ELITE10 for their next purchase.\nKeep the tone helpful and avoid corporate jargon.\n",
+      "createdAt": "2026-04-22T12:45:36.961Z"
+    },
+    {
+      "version": "v2",
+      "content": "I'm so sorry to hear that you're not satisfied with your purchase, and I want to start by apologizing for any inconvenience this has caused. As I walk through the steps to resolve this issue, I want to assure you that I'm here to help and that your satisfaction is my top priority. First, I've located your order, Order # [ORDER_ID], and I'm pleased to inform you that I've initiated the refund process. Next, I want to explain that it may take some time for the credit to appear in your account, but you can expect to see it within 5-7 business days. Finally, I want to show my appreciation for your business and offer you a 10% discount code, ELITE10, for your next purchase, as a gesture of goodwill for the trouble you've experienced.",
+      "createdAt": "2026-04-22T12:45:38.729Z"
+    },
+    {
+      "version": "v3",
+      "content": "Dear valued customer, I apologize for the issue with your order and appreciate you reaching out to us. We've taken immediate action, and I'm pleased to confirm that the refund for Order # [ORDER_ID] has been initiated. You can expect the credit to be reflected in your account within 5-7 business days. At EliteGear, we're committed to providing the best possible experience, and I regret that we fell short in your case. As a token of our commitment to your satisfaction, I'd like to offer you a 10% discount code, ELITE10, for your next purchase, which you can use to enjoy an even better experience with us in the future.",
+      "createdAt": "2026-04-22T12:45:38.730Z"
+    }
+  ]
+}

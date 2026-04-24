@@ -1,0 +1,21 @@
+{
+  "id": "p-1776865159723",
+  "title": "Invoice Data Extractor",
+  "versions": [
+    {
+      "version": "v1",
+      "content": "Extract the following entities from the provided email text: \n1. Vendor Name\n2. Date of Transaction\n3. Total Amount (including currency)\nRespond ONLY with a valid JSON object using these keys: \n{\"vendor\": \"\", \"date\": \"\", \"total\": \"\"}\n",
+      "createdAt": "2026-04-22T13:39:19.725Z"
+    },
+    {
+      "version": "v2",
+      "content": "To accurately extract the required entities from the provided email text, I will follow a step-by-step chain of thought. Firstly, I will identify the Vendor Name by looking for keywords such as 'vendor,' 'supplier,' or 'company' within the text. Next, I will determine the Date of Transaction by searching for specific date formats such as 'MM/DD/YYYY' or 'DD MMM YYYY.' Lastly, I will calculate the Total Amount including the currency by scanning for numerical values followed by a currency symbol or abbreviation ($, €, etc.). The extracted information will then be used to populate the JSON object with the corresponding keys: { \"vendor\": \"\", \"date\": \"\", \"total\": \"\" }.",
+      "createdAt": "2026-04-22T13:39:20.992Z"
+    },
+    {
+      "version": "v3",
+      "content": "Extract the following entities from the provided email text and respond with a JSON object: Identify the Vendor Name, determine the Date of Transaction, and calculate the Total Amount including the currency. The response should be in the format { \"vendor\": \"\", \"date\": \"\", \"total\": \"\" }, ensuring all extracted entities are accurately populated.",
+      "createdAt": "2026-04-22T13:39:20.993Z"
+    }
+  ]
+}

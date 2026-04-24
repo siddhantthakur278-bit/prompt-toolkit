@@ -1,0 +1,19 @@
+{
+  "id": "suite-1776865253512",
+  "title": "Production Validation Suite",
+  "tests": [
+    {
+      "input": "Your Uber ride on Friday, Oct 12 was $14.50. Thanks for riding!",
+      "criteria": {
+        "keywords": [
+          "clarity",
+          "comprehensive",
+          "efficiency",
+          "structure"
+        ],
+        "min_length": 50,
+        "max_length": 800
+      }
+    }
+  ]
+}
